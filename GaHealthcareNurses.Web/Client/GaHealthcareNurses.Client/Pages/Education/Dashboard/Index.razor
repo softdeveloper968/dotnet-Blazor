@@ -1,0 +1,29 @@
+﻿@page "/education";
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IToastService toastService
+@inject NavigationManager navigation
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@inject IJSRuntime jsRunTime
+@using Microsoft.JSInterop
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@inject IJSRuntime jsRunTime
+<GaHealthcareNurses.Client.Shared.EducationHeader />
+
+
+
+
+<div class="top-entry-area client_dashboard">
+    <div class="container">
+        <div>
+            <h1 class="text-center">Coming Soon!</h1>
+        </div>
+
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter/>
+
+@code {
+
+}

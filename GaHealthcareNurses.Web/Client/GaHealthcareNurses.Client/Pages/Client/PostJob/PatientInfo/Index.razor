@@ -1,0 +1,295 @@
+﻿@page "/client/patient-info"
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IMapper _mapper
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment env
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+
+
+
+<GaHealthcareNurses.Client.Shared.ClientHeader />
+
+<div class="frontend default-padding">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Patient  <span>Info</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm Model="@careRecipient" class="formSec" OnValidSubmit="()=>RegisterCareRecipient(careRecipient)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="First Name" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.FirstName" Type="InputType.Text" class="form-control" />
+                            <ValidationMessage For="@(() => careRecipient.FirstName)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Middle Name" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.MiddleInitial" Type="InputType.Text" class="form-control" />
+                            <ValidationMessage For="@(() => careRecipient.MiddleInitial)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Last Name" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.LastName" Type="InputType.Text" class="form-control" />
+                            <ValidationMessage For="@(() => careRecipient.LastName)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfNumericTextBox Min="1"  Placeholder="Age" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.Age" class="form-control" />
+                            <ValidationMessage For="@(() => careRecipient.Age)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.AddressLine1" Type="InputType.Text" class="form-control" />
+                            <ValidationMessage For="@(() => careRecipient.AddressLine1)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfDropDownList class="form-control" EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.StateId" TValue="int" TItem="State" Placeholder="State" AllowFiltering="true" DataSource="@stateList">
+                                <DropDownListEvents TItem="State" TValue="int" ValueChange="OnStateChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Name" Value="StateId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                            <ValidationMessage For="@(() => careRecipient.StateId)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfDropDownList class="form-control"  EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.CityId" TValue="int" TItem="City" Placeholder="City" AllowFiltering="true" DataSource="@cityList">
+                                <DropDownListEvents TItem="City" TValue="int" ValueChange="OnCityChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="NameAndZipcode" Value="CityId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                            <ValidationMessage For="@(() => careRecipient.CityId)" />
+                        </div>
+                        <div class="inputFiled form-group brow_fl">
+                            <SfTextBox Placeholder="Postal Code" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" disabled @bind-Value="careRecipient.PostalCode" class="form-control" />
+                            <ValidationMessage For="@(() => careRecipient.PostalCode)" />
+                        </div>
+                        <div class="inputFiled form-group brow_fl">
+                            <SfDropDownList class="form-control"  EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.GenderPreference" TValue="string" TItem="GenderPreference" Placeholder="Gender" AllowFiltering="true" DataSource="@genderPreferences">
+                                <DropDownListFieldSettings Text="Name" Value="Name"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                            <ValidationMessage For="@(() => careRecipient.GenderPreference)" />
+                        </div>
+
+                        <div class="inputFiled form-group">
+                            <SfDropDownList class="form-control"  EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.JobTitleId" TValue="int" TItem="JobTitle" Placeholder="Request" AllowFiltering="true" DataSource="@jobTitleList">
+                                <DropDownListEvents TItem="JobTitle" TValue="int" ValueChange="OnJobChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Title" Value="JobTitleId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                            <ValidationMessage For="@(() => careRecipient.JobTitleId)" />
+                        </div>
+                        <div class="inputFiled form-group text_are">
+                            <SfTextBox Placeholder="Job Description" FloatLabelType="@FloatLabelType.Auto" @bind-Value="careRecipient.MoreInformation" Type="InputType.Text" class="form-control" Multiline="true" />
+                            <ValidationMessage For="@(() => careRecipient.MoreInformation)" />
+                        </div>
+                        <div class="pat_buttobox">
+                            <a @onclick="() => NavigateToBack()" class="create_account btn-theme border prev_button">
+                                Back
+                            </a>
+                            @*<button type="button" @onclick="() => Back()" name="submit" class="create_account btn-theme border prev_button">
+            Backhref="client/request-service"
+        </button>*@
+
+                            @if (careRecipientLocal != null)
+                            {
+                                <button type="submit" name="submit" class="create_account btn-theme border ">
+                                    Update
+                                </button>
+                            }
+                            else
+                            {
+                                <button type="submit" name="submit" class="create_account btn-theme border ">
+                                    Next
+                                </button>
+                            }
+                        </div>
+                    </EditForm>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter/>
+
+@code{
+    private List<State> stateList = new List<State>();
+    private List<JobTitle> jobTitleList = new List<JobTitle>();
+    private int stateId = 0;
+    private List<City> cityList = new List<City>();
+    CareRecipientInformationModel careRecipient = new CareRecipientInformationModel();
+    BasicInformationViewModel serviceRequest = new BasicInformationViewModel();
+    LoginViewModel<UserDetails> clientData = new LoginViewModel<UserDetails>();
+    CareRecipientInformationModel careRecipientLocal = new CareRecipientInformationModel();
+
+    private List<GenderPreference> genderPreferences = new List<GenderPreference>() {
+        new GenderPreference(){ Id=1, Name= "Male" },
+        new GenderPreference(){ Id= 2, Name= "Female" },
+        new GenderPreference(){ Id= 3, Name= "Unspecified" }
+     };
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+
+        if (firstRender)
+        {
+            serviceRequest = await localStorage.GetItemAsync<BasicInformationViewModel>("serviceRequest");
+            clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+
+            careRecipientLocal = await localStorage.GetItemAsync<CareRecipientInformationModel>("patientInfo");
+
+            if (careRecipientLocal != null)
+            {
+                careRecipient = careRecipientLocal;
+
+                var httpResponseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={careRecipient.StateId}");
+                var responseCity = httpResponseMessage.Content.ReadAsStringAsync().Result;
+                cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(responseCity)).Data;
+            }
+            StateHasChanged();
+        }
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + "State");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        stateList = (JsonConvert.DeserializeObject<Response<List<State>>>(response)).Data;
+        var responseJobTitle = await Http.GetAsync(wsp.Path + "JobTitle/GetAll");
+        var responseData = responseJobTitle.Content.ReadAsStringAsync().Result;
+        jobTitleList = (JsonConvert.DeserializeObject<Response<List<JobTitle>>>(responseData)).Data;
+
+    }
+
+    private async Task StateHasChanged(int value)
+    {
+        careRecipient.StateId = value;
+        stateId = value;
+
+        if (value == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(value);
+        }
+    }
+
+    private async Task CityHasChanged(int value)
+    {
+        careRecipient.CityId = value;
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={careRecipient.CityId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+        careRecipient.PostalCode = city.ZipCode.ToString();
+
+    }
+
+    private async Task LoadCities(int stateId)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={stateId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(response)).Data;
+    }
+
+    private async Task JobTitleHasChanged(int value)
+    {
+        careRecipient.JobTitleId = value;
+    }
+
+
+    public async Task RegisterCareRecipient(CareRecipientInformationModel careRecipient)
+    {
+        careRecipient.ServiceListId = serviceRequest.ServiceListId;
+        careRecipient.Date = serviceRequest.Date.ToString();
+        careRecipient.Time = serviceRequest.Time.ToString();
+        careRecipient.WhenToStart = serviceRequest.WhenToStart;
+        careRecipient.EndDate = serviceRequest.EndDate.ToString();
+        careRecipient.Frequency = serviceRequest.Frequency;
+        careRecipient.ClientId = clientData.UserDetails.UserId;
+        careRecipient.TotalHours = serviceRequest.TotalHours.ToString();
+
+        var httpResponseMessage = await Http.GetAsync(wsp.Path + $"State/GetById?id={careRecipient.StateId}");
+        var responseState = httpResponseMessage.Content.ReadAsStringAsync().Result;
+        var state = (JsonConvert.DeserializeObject<Response<State>>(responseState)).Data;
+
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={careRecipient.CityId}");
+        var responseCity = responseMessage.Content.ReadAsStringAsync().Result;
+        var city = (JsonConvert.DeserializeObject<Response<City>>(responseCity)).Data;
+
+        var response = await Http.GetAsync(wsp.Path + $"ServiceList/GetById?id={careRecipient.ServiceListId}");
+        var responseService = response.Content.ReadAsStringAsync().Result;
+        var service = (JsonConvert.DeserializeObject<Response<ServiceList>>(responseService)).Data;
+
+        var responseMessageJobTitle = await Http.GetAsync(wsp.Path + $"JobTitle/GetById?id={careRecipient.JobTitleId}");
+        var responseJobTitle = responseMessageJobTitle.Content.ReadAsStringAsync().Result;
+        var jobTitle = (JsonConvert.DeserializeObject<Response<JobTitle>>(responseJobTitle)).Data;
+
+
+        careRecipient.ServiceList = service;
+        careRecipient.State = state;
+        careRecipient.City = city;
+        careRecipient.JobTitle = jobTitle;
+
+        await localStorage.SetItemAsync("patientInfo", careRecipient);
+        navigation.NavigateTo("client/patient-info-review");
+
+    }
+
+    public async Task OnStateChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, State> args)
+    {
+        careRecipient.StateId = args.ItemData.StateId;
+        stateId = args.ItemData.StateId;
+
+        if (stateId == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(stateId);
+        }
+    }
+
+    public async Task OnCityChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, City> args)
+    {
+        if (args.ItemData != null)
+        {
+            careRecipient.CityId = args.ItemData.CityId;
+            var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={careRecipient.CityId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+            careRecipient.PostalCode = city.ZipCode.ToString();
+        }
+    }
+
+    public async Task OnJobChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, JobTitle> args)
+    {
+        if (args.ItemData != null)
+        {
+            careRecipient.JobTitleId = args.ItemData.JobTitleId;
+        }
+    }
+
+
+    public async void NavigateToBack()
+    {
+
+        await localStorage.SetItemAsync("patientInfo", careRecipient);
+        navigation.NavigateTo("client/request-service");
+    }
+}

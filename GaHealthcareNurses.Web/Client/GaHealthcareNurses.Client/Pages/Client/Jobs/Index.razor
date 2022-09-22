@@ -1,0 +1,87 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout;
+@page "/client/jobs";
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@using GaHealthcareNurses.Entity.Models;
+@inject IToastService toastService
+@inject NavigationManager navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Syncfusion.Blazor.Inputs
+
+
+<GaHealthcareNurses.Client.Shared.ClientHeader />
+
+<div class="breadcrumb-area shadow dark bg-fixed text-light" style="background-image: url(assets/img/1304194.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 data-aos="fade-down">My Service Requests</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="frontend default-padding">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="site-heading text-center">
+                <h2 data-aos="fade-up">My Service  <span>Requests</span></h2>
+
+            </div>
+        </div>
+    </div>
+    <div class="login_box job_box">
+        <div class="center_login formSec jobs_sec">
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+                @foreach (var job in jobs)
+                {
+                    <tr>
+                        <td>@job.JobTitle.Title</td>
+                        <td>@job.Description</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    LoginViewModel<UserDetails> clientData = new LoginViewModel<UserDetails>();
+    UserDetails user = new UserDetails();
+    IEnumerable<Job> jobs = new List<Job>();
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+            if (clientData == null)
+            {
+                navigation.NavigateTo("client/signin");
+            }
+
+            else
+            {
+                user = clientData.UserDetails;
+                var responseMessage = await Http.GetAsync(wsp.Path + $"Job/GetByClientId?id={clientData.UserDetails.UserId}");
+                var response = responseMessage.Content.ReadAsStringAsync().Result;
+                jobs = (JsonConvert.DeserializeObject<Response<IEnumerable<Job>>>(response)).Data.OrderByDescending(x => x.JobId);
+
+                //var httpResponseMessage = await Http.GetAsync(wsp.Path + $"ServiceList/GetById?id={jobs.}");
+                //var responseCity = httpResponseMessage.Content.ReadAsStringAsync().Result;
+
+                StateHasChanged();
+            }
+        }
+    }
+}

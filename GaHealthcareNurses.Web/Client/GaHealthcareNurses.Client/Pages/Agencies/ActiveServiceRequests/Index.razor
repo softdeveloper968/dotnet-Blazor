@@ -1,0 +1,233 @@
+﻿@page "/agency/service-requests";
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IToastService toastService
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using GaHealthcareNurses.Entity.Models;
+@using Microsoft.AspNetCore.Http.Extensions
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Charts
+@inject IJSRuntime jsRunTime
+@using Syncfusion.Blazor.Popups
+@using Microsoft.JSInterop
+@using Syncfusion.Blazor.Spinner
+@using Syncfusion.Blazor.Buttons
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+<!-- Header
+============================================= -->
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="top-entry-area client_dashboard">
+    <div class="container">
+        <ul class="nav nav-pills">
+            @if (agencyInformation != null)
+            {
+                <li>
+                    <div style="float:left;padding:45px;padding-top:0">
+                        @if (agencyInformation.Logo != null)
+                        {
+                            <img class="photo" src="@UriHelper.ToAbsoluteUri(agencyInformation.Logo)" alt="@agencyInformation.Name" />
+                        }
+                        else
+                        {
+                            <img class="photo" src="assets/img/DefaultAgencyLogo.png" alt="@agencyInformation.Name" />
+                        }
+                        <br />
+                        <div style="text-align:center">@agencyInformation.Name</div>
+                    </div>
+                </li>
+            }
+
+
+            <li>
+                <a href="agency/dashboard" aria-expanded="false">
+                    <i class="fas fa-th-large"></i> Service Requests (All)
+                </a>
+            </li>
+            <li>
+                <a href="agency/apply_job" aria-expanded="false">
+                    <i class="fas fa-tasks"></i>Bid for Job
+                </a>
+            </li>
+
+            <li class="active">
+                <a data-toggle="tab" href="#tab6" aria-expanded="true">
+                    <i class="fas fa-user-cog"></i> Service Requests (Active)
+                </a>
+            </li>
+
+            <li>
+                <a href="agency/tasklist" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Assign Tasks
+                </a>
+            </li>
+            <li>
+                <a href="/agency/uploaded_docs" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Documents
+                </a>
+            </li>
+
+        </ul>
+        <div class="col-md-12">
+
+            <div class="tab-content tab-content-info">
+
+                <div id="tab6" class="tab-pane fade active in ">
+
+
+
+                    <SfGrid DataSource="@hiredAgencies" AllowPaging="true">
+                        <GridTemplates>
+                            <DetailTemplate>
+                                @{
+                                    var job = (context as JobApplyForAgency);
+                                    <SfGrid TValue="JobApply">
+                                        <SfDataManager Url="@($"https://gahealthcarenurseswebapi.azurewebsites.net/api/JobApply/GetHiredNurses?jobId={job.JobId}&statusId={1}")" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+                                        <GridTemplates>
+                                            <DetailTemplate Context="NurseContext">
+                                                @{
+                                                    var nurse = (NurseContext as JobApply);
+                                                    <SfGrid TValue="TaskList" AllowPaging="true">
+                                                        <GridPageSettings PageSize="8"></GridPageSettings>
+                                                        <SfDataManager Url="@($"https://gahealthcarenurseswebapi.azurewebsites.net/api/TaskList/GetTaskListForHiredNurse?jobId={nurse.JobId}&nurseId={nurse.Nurse.Id}")" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+                                                        <GridColumns>
+                                                            <GridColumn Field="@nameof(TaskList.TaskName)" HeaderText="Task Name" Width="110"> </GridColumn>
+                                                            <GridColumn Field="@nameof(TaskList.Date)" Format="d" Type="ColumnType.Date" HeaderText="Date" Width="110"> </GridColumn>
+                                                            @*<GridColumn Field="@nameof(TaskList.TaskStatus)" HeaderText="Task Status" Width="110"> </GridColumn>*@
+                                                            <GridColumn HeaderText="Task Status" Width="100" TextAlign="TextAlign.Left">
+                                                                <Template Context="TaskListContext">
+                                                                    @{
+                                                                        var task = (TaskListContext as TaskList);
+
+                                                                    }
+                                                                    @if (task.TaskStatus == true)
+                                                                    {
+                                                                        <span>Completed</span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <span>Pending</span>
+                                                                    }
+
+                                                                </Template>
+                                                            </GridColumn>
+                                                        </GridColumns>
+
+                                                    </SfGrid>
+                                                }
+                                            </DetailTemplate>
+                                        </GridTemplates>
+                                        <GridColumns>
+
+                                            <GridColumn Field="Nurse.FirstName" HeaderText="First Name" Width="110"> </GridColumn>
+                                            <GridColumn Field="Nurse.LastName" HeaderText="Last Name" Width="110"></GridColumn>
+                                            <GridColumn Field="Nurse.EmailAddress" HeaderText="Email Address" Width="110"></GridColumn>
+                                            <GridColumn CustomAttributes="@(new Dictionary<string, object>(){ { "class", "Clear_Task" }})" Width="110">
+                                                <HeaderTemplate Context="Header">
+                                                    <div>
+                                                        <SfButton @onclick="() => ClearTaskList(job)">Clear Task List</SfButton>
+                                                    </div>
+                                                </HeaderTemplate>
+
+                                                @*<Template Context="TaskListContext">
+                                                        @{
+
+                                                            <SfButton @onclick="() => ClearTaskList(job)">Clear Task List</SfButton>
+                                                        }
+
+                                                    </Template>*@
+                                            </GridColumn>
+                                        </GridColumns>
+                                    </SfGrid>
+                                }
+                            </DetailTemplate>
+                        </GridTemplates>
+                        <GridColumns>
+                            <GridColumn Field="Job.JobTitle.Title" HeaderText="Service Request" Width="110"> </GridColumn>
+                            <GridColumn Field="Job.CareRecipient.City.Name" HeaderText="Location" Width="110"></GridColumn>
+                        </GridColumns>
+                    </SfGrid>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<SfSpinner @ref="sfSpinner" Size="40" Type="SpinnerType.Bootstrap4" Visible="false"></SfSpinner>
+
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    List<JobApplyForAgency> hiredAgencies = new List<JobApplyForAgency>();
+    List<JobApply> hiredNurse = new List<JobApply>();
+    List<TaskList> taskListForNurse = new List<TaskList>();
+    SfSpinner sfSpinner;
+    LoginViewModel<UserDetails> agencyData = new LoginViewModel<UserDetails>();
+    Employer agencyInformation = new Employer();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            agencyData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("agencyData");
+            if (agencyData != null)
+            {
+                var hiredAgenciesResponseMessage = await Http.GetAsync(wsp.Path + $"JobApplyForEmployer/GetByStatusId?employerId={agencyData.UserDetails.UserId}&statusId={13}");
+                var hiredAgenciesResponse = hiredAgenciesResponseMessage.Content.ReadAsStringAsync().Result;
+                hiredAgencies = (JsonConvert.DeserializeObject<Response<List<JobApplyForAgency>>>(hiredAgenciesResponse)).Data;
+
+                var agencyResponseMessage = await Http.GetAsync(wsp.Path + $"Employer/GetById?id={agencyData.UserDetails.UserId}");
+                var agencyResponse = agencyResponseMessage.Content.ReadAsStringAsync().Result;
+                agencyInformation = (JsonConvert.DeserializeObject<Response<Employer>>(agencyResponse)).Data;
+
+                StateHasChanged();
+            }
+            else
+            {
+                navigation.NavigateTo("agency/sign-in");
+            }
+        }
+    }
+
+    public async Task NurseSelected(RowSelectEventArgs<JobApplyForAgency> Args)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"JobApply/GetByJobIdAndStatusId?jobId={Args.Data.JobId}&statusId={1}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        hiredNurse = (JsonConvert.DeserializeObject<Response<List<JobApply>>>(response)).Data;
+    }
+
+
+    public async Task TaskListSelected(RowSelectEventArgs<JobApply> Args)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"TaskList/GetByJobIdAndNurseId?jobId={Args.Data.JobId}&nurseId={Args.Data.NurseId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        taskListForNurse = (JsonConvert.DeserializeObject<Response<List<TaskList>>>(response)).Data;
+    }
+
+    public async Task ClearTaskList(JobApplyForAgency job)
+    {
+        await sfSpinner.ShowAsync();
+        var responseMessage = await Http.DeleteAsync(wsp.Path + $"TaskList/Delete?id={job.JobId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var result = (JsonConvert.DeserializeObject<Response<string>>(response));
+        if (result.Status == "Success")
+        {
+            await sfSpinner.HideAsync();
+            toastService.ShowSuccess("Tasklist cleared!");
+            await Task.Delay(2000);
+            navigation.NavigateTo("agency/service-requests", forceLoad: true);
+        }
+
+    }
+}

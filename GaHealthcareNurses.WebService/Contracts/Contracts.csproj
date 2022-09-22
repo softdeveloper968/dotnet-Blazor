@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RepositoryContracts\IRequiredServiceRepository.cs" />
+    <Compile Remove="ServiceContracts\IRequiredService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GaHealthcareNurses.Entity\GaHealthcareNurses.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

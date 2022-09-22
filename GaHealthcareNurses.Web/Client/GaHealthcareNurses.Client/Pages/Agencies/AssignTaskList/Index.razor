@@ -1,0 +1,394 @@
+﻿@page "/agency/tasklist";
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IToastService toastService
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using GaHealthcareNurses.Entity.Models;
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@inject IJSRuntime jsRunTime
+@using Syncfusion.Blazor.Popups
+@using Microsoft.JSInterop
+@using Syncfusion.Blazor.Spinner
+@using Syncfusion.Blazor.Buttons
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+<!-- Header
+============================================= -->
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="top-entry-area client_dashboard">
+    <div class="container">
+        <ul class="nav nav-pills">
+            @if (agencyInformation != null)
+            {
+
+                <li>
+                    <div style="float:left;padding:45px;padding-top:0">
+                        @if (agencyInformation.Logo != null)
+                        {
+                            <img class="photo" src="@UriHelper.ToAbsoluteUri(agencyInformation.Logo)" alt="@agencyInformation.Name" />
+                        }
+                        else
+                        {
+                            <img class="photo" src="assets/img/DefaultAgencyLogo.png" alt="@agencyInformation.Name" />
+                        }
+                        <br />
+                        <div style="text-align:center">@agencyInformation.Name</div>
+                    </div>
+                </li>
+            }
+
+            <li>
+                <a href="agency/dashboard" aria-expanded="false">
+                    <i class="fas fa-th-large"></i> Service Requests (All)
+                </a>
+            </li>
+            <li>
+                <a href="agency/apply_job" aria-expanded="false">
+                    <i class="fas fa-tasks"></i>Bid for Job
+                </a>
+            </li>
+            <li>
+                <a href="agency/service-requests" aria-expanded="false">
+                    <i class="fas fa-user-cog"></i> Service Requests (Active)
+                </a>
+            </li>
+            <li class="active">
+                <a data-toggle="tab" href="#tab3" aria-expanded="true">
+                    @*<a href="agency/tasklist" aria-expanded="true">*@
+                    <i class="fas fa-clipboard-list"></i> Assign Tasks
+                </a>
+            </li>
+            <li>
+                <a href="/agency/uploaded_docs" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Documents
+                </a>
+            </li>
+        </ul>
+        <div class="col-md-12">
+
+            <div class="tab-content tab-content-info">
+                <!-- Single Item -->
+                <div id="tab3" class="tab-pane fade active in">
+
+                    @*!--<SfComboBox Query="@query" TValue="string" TItem="JobApplyForAgency" Placeholder="Select Service Request" CssClass="e-multi-column" AllowFiltering="true" PopupHeight="200px">
+                    <SfDataManager Url="@($"http://localhost:52994/api/JobApplyForEmployer/GetByStatusId?employerId={agencyData.UserDetails.UserId}&statusId={13}")" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>-->*@
+                    @*<ComboBoxEvents TValue="string" TItem="JobApplyForAgency" ValueChange="OnServiceRequestChange"></ComboBoxEvents>*@
+                    <!--<ComboBoxTemplates TItem="JobApplyForAgency">
+                        <HeaderTemplate>
+                            <table><tr><th class="e-text-center combo-width">Service Request</th><th>Care Recipient</th><th>Location</th><th>Date</th></tr></table>
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            @{
+                                var test = (context as JobApplyForAgency);
+                }
+                            <table><tbody><tr><td class="e-text-center combo-width">@((context as JobApplyForAgency).Job.JobTitle.Title)</td><td>@((context as JobApplyForAgency).Job.CareRecipient.FirstName)</td><td>@((context as JobApplyForAgency).Job.CareRecipient.City.Name)</td><td>@((context as JobApplyForAgency).Job.PostedTime.Date.ToShortDateString())</td></tr> </tbody></table>
+                        </ItemTemplate>
+
+                    </ComboBoxTemplates>
+
+                    <ComboBoxFieldSettings Text="Job.JobTitle.Title" Value="Id"></ComboBoxFieldSettings>
+                </SfComboBox>-->
+
+                    @if (agencyData.UserDetails != null)
+                    {
+                        <EditForm Model="jobApplyForAgency">
+                            <InputSelectNumber class="form-control"
+                                               ValueChanged="@((int value) => OnServiceRequestChange(value))"
+                                               ValueExpression="@(() => jobApplyForAgency.JobId)"
+                                               Value="@jobApplyForAgency.JobId">
+                                <option value="0">Select Service Request</option>
+                                @foreach (var job in hiredAgencies)
+                                {
+                                    <option value="@job.JobId">
+                                        @job.Job.JobTitle.Title
+                                    </option>
+                                }
+                            </InputSelectNumber>
+                        </EditForm>@foreach (var nurse in hiredNurseData) { 
+                        <span><b>Nurse:</b> @nurse.Nurse.FirstName @nurse.Nurse.LastName</span>
+                            }
+                    }
+
+                    @if (agencyData.UserDetails != null)
+                    {
+                        <SfGrid @ref="DefaultGrid" TValue="TaskListTemplate" AllowPaging="true" AllowSelection="true" Toolbar="@(new List<string>() { "Search" })">
+                            <GridSelectionSettings CheckboxOnly="true" PersistSelection="true"></GridSelectionSettings>
+                            <GridEvents DataBound="Data" TValue="TaskListTemplate"></GridEvents>
+                            <SfDataManager Url="@($"https://gahealthcarenurseswebapi.azurewebsites.net/api/TaskListTemplate/GetAll?id={agencyData.UserDetails.UserId}")" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+                            <GridPageSettings EnableQueryString="true"></GridPageSettings>
+                            <GridColumns>
+                                <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
+                                <GridColumn Field="@nameof(TaskListTemplate.TaskName)" HeaderText="Task Name" TextAlign="TextAlign.Left" Width="120"></GridColumn>
+                                <GridColumn Field="TaskListCategory.Category" TextAlign="TextAlign.Left" HeaderText="Task Category" Width="120"></GridColumn>
+
+                            </GridColumns>
+                        </SfGrid>
+                    }
+
+                    <SfButton @onclick="SendTask">Add Task</SfButton>
+
+                    <SfButton class="assign_task" @onclick="AssignToNurse">Assign To Nurse</SfButton>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<SfDialog ResizeHandles="@dialogResizeDirections" EnableResize="true" AllowDragging="true" IsModal="true" ShowCloseIcon="true" Width="400px" Visible="false" @ref="TaskListDialogObj">
+    <DialogEvents Closed="@DialogClose"></DialogEvents>
+    <DialogPositionData X="center" Y="center"></DialogPositionData>
+    <DialogTemplates>
+        <Header>
+            <h3>Create Task for the Day</h3>
+        </Header>
+        <Content>
+            <div class="agen_taskform">
+                <EditForm Model="@addTask" OnValidSubmit="()=>AddTask(addTask)" class="formSec task_form">
+                    <DataAnnotationsValidator />
+                    <div class="inputFiled form-group">
+                        <SfTextBox Placeholder="Task Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@addTask.TaskName" />
+                        <ValidationMessage For="@(() => addTask.TaskName)" />
+                    </div>
+                    <SfDropDownList class="form-control"  @bind-Value="addTask.TaskCategoryId" TValue="int" TItem="TaskListCategory" Placeholder="Category" AllowFiltering="true" DataSource="@taskListCategories">
+                        <DropDownListEvents TItem="TaskListCategory" TValue="int" ValueChange="OnCategoryChange"></DropDownListEvents>
+                        <DropDownListFieldSettings Text="Category" Value="TaskListCategoryId"></DropDownListFieldSettings>
+                    </SfDropDownList>
+
+                    <div class="agc_sndcncl">
+                        <button type="submit" class="btn btn-theme btn-md">Add Task</button>
+                    </div>
+                </EditForm>
+            </div>
+
+        </Content>
+    </DialogTemplates>
+    <DialogAnimationSettings Effect="@DialogEffect.Zoom"></DialogAnimationSettings>
+</SfDialog>
+
+
+<SfSpinner @ref="sfSpinner" Type="SpinnerType.Bootstrap4" Visible="false"></SfSpinner>
+
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    private SfGrid<TaskListTemplate> DefaultGrid;
+    LoginViewModel<UserDetails> agencyData = new LoginViewModel<UserDetails>();
+    List<TaskListCategory> taskListCategories = new List<TaskListCategory>();
+    List<JobApplyForAgency> hiredAgencies = new List<JobApplyForAgency>();
+    AddTaskViewModel addTask = new AddTaskViewModel();
+    List<JobApply> hiredNurseData = new List<JobApply>();
+    SfDialog TaskListDialogObj;
+    public List<double> SelectedNodeIndex = new List<double>();
+    SfSpinner sfSpinner;
+    List<double> SelectIndex { get; set; }
+    JobApplyForAgency jobApplyForAgency = new JobApplyForAgency();
+    Employer agencyInformation = new Employer();
+
+    private ResizeDirection[] dialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseCategoryMessage = await Http.GetAsync(wsp.Path + "TaskListCategory/GetAll");
+        var responseCategory = responseCategoryMessage.Content.ReadAsStringAsync().Result;
+        taskListCategories = (JsonConvert.DeserializeObject<Response<List<TaskListCategory>>>(responseCategory)).Data;
+    }
+
+
+    public void DialogClose(object args)
+    {
+        TaskListDialogObj.Hide();
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            agencyData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("agencyData");
+            jobApplyForAgency = await localStorage.GetItemAsync<JobApplyForAgency>("serviceRequest");
+            if (jobApplyForAgency==null)
+            {
+                jobApplyForAgency = new JobApplyForAgency();
+            }
+            if (agencyData != null)
+            {
+                var hiredAgenciesResponseMessage = await Http.GetAsync(wsp.Path + $"JobApplyForEmployer/GetByStatusId?employerId={agencyData.UserDetails.UserId}&statusId={13}");
+                var hiredAgenciesResponse = hiredAgenciesResponseMessage.Content.ReadAsStringAsync().Result;
+                hiredAgencies = (JsonConvert.DeserializeObject<Response<List<JobApplyForAgency>>>(hiredAgenciesResponse)).Data;
+
+                var agencyResponseMessage = await Http.GetAsync(wsp.Path + $"Employer/GetById?id={agencyData.UserDetails.UserId}");
+                var agencyResponse = agencyResponseMessage.Content.ReadAsStringAsync().Result;
+                agencyInformation = (JsonConvert.DeserializeObject<Response<Employer>>(agencyResponse)).Data;
+
+                StateHasChanged();
+            }
+            else
+            {
+                navigation.NavigateTo("agency/sign-in");
+            }
+        }
+    }
+
+    public async Task SendTask()
+    {
+        if (jobApplyForAgency.JobId == 0)
+        {
+            toastService.ShowError("Please select service request");
+        }
+        else if (hiredNurseData.Count == 0 || hiredNurseData == null)
+        {
+            toastService.ShowError("Nurse not hired");
+            return;
+        }
+        else
+            await TaskListDialogObj.Show();
+    }
+
+
+    public async Task AddTask(AddTaskViewModel addTask)
+    {
+        TaskListTemplate taskListTemplate = new TaskListTemplate();
+        taskListTemplate.EmployerId = agencyData.UserDetails.UserId;
+        taskListTemplate.TaskName = addTask.TaskName;
+        taskListTemplate.TaskListCategoryId = addTask.TaskCategoryId;
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "TaskListTemplate/Add", taskListTemplate);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var data = (JsonConvert.DeserializeObject<Response<TaskListTemplate>>(response)).Data;
+        if (data != null)
+        {
+            if (jobApplyForAgency.JobId != 0)
+            {
+                await localStorage.SetItemAsync<JobApplyForAgency>("serviceRequest", jobApplyForAgency);
+            }
+            toastService.ShowSuccess("Task Added!");
+            await TaskListDialogObj.Hide();
+            await Task.Delay(2000);
+            navigation.NavigateTo("agency/tasklist", forceLoad: true);
+            //taskList.Add(data);
+            //var taskListTemplates = taskList.OrderByDescending(x => x.TaskListTemplateId);
+            //taskList = taskListTemplates.ToList();
+            //DefaultGrid.Refresh();
+        }
+        else
+        {
+            toastService.ShowError("Failed.Please try again");
+        }
+    }
+
+    public async Task Data(object args)
+    {
+        var selectedRecords= await DefaultGrid.GetSelectedRecords();
+
+        var Source = await DefaultGrid.GetCurrentViewRecords();
+        var IndexNum = 0;
+        SelectIndex = new List<double>();
+        foreach (var record in Source)
+        {
+            if (record.EmployerId != null)
+            {
+                SelectIndex.Add(IndexNum);
+            }
+            IndexNum++;
+        }
+        await DefaultGrid.SelectRows(SelectIndex.ToArray());
+    }
+
+    public async Task AssignToNurse()
+    {
+
+        var taskList = DefaultGrid.GetSelectedRecords().Result;
+        if (jobApplyForAgency.JobId == 0)
+        {
+            toastService.ShowError("Please select service request");
+        }
+        else if (taskList.Count == 0)
+        {
+            toastService.ShowError("Please select atleast one task");
+        }
+        else if (hiredNurseData.Count==0 || hiredNurseData==null)
+        {
+            toastService.ShowError("Nurse not hired");
+            return;
+        }
+        else
+        {
+            var httpresponseMessage = await Http.GetAsync(wsp.Path + $"TaskList/GetByJobId?id={jobApplyForAgency.JobId}");
+            var httpResponse = httpresponseMessage.Content.ReadAsStringAsync().Result;
+            var tasks = (JsonConvert.DeserializeObject<Response<List<TaskList>>>(httpResponse)).Data;
+
+            if (tasks.Count != 0)
+            {
+                toastService.ShowError("Task list is already assigned!");
+                return;
+            }
+
+            sfSpinner.ShowAsync();
+            List<TaskListAddTemplateViewModel> taskListTemplates = new List<TaskListAddTemplateViewModel>();
+
+            foreach (var task in taskList)
+            {
+                TaskListAddTemplateViewModel taskListTemplateViewModel = new TaskListAddTemplateViewModel
+                {
+                    TaskName = task.TaskName,
+                    TaskDescription = task.TaskListCategory.Category
+                };
+                taskListTemplates.Add(taskListTemplateViewModel);
+            }
+            AddTaskListViewModel addTask = new AddTaskListViewModel
+            {
+                JobId = jobApplyForAgency.JobId,
+                EmployerId = agencyData.UserDetails.UserId,
+                TaskListAddTemplates = taskListTemplates
+            };
+
+            var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "TaskList/Add", addTask);
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            var data = (JsonConvert.DeserializeObject<Response<string>>(response));
+
+            if (data.Status == "Success")
+            {
+                await localStorage.RemoveItemAsync("serviceRequest");
+                toastService.ShowSuccess("Tasklist assigned to nurse!");
+                sfSpinner.HideAsync();
+                await Task.Delay(2000);
+                navigation.NavigateTo("agency/tasklist", forceLoad: true);
+            }
+            else
+            {
+                sfSpinner.HideAsync();
+                toastService.ShowError(data.Message);
+            }
+        }
+    }
+
+    private async Task OnServiceRequestChange(int value)
+    {
+        jobApplyForAgency.JobId = value;
+        var responseMessage = await Http.GetAsync(wsp.Path + $"JobApply/GetByJobIdAndStatusId?jobId={value}&statusId={1}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        hiredNurseData = (JsonConvert.DeserializeObject<Response<List<JobApply>>>(response)).Data;
+
+    }
+
+    public async Task OnCategoryChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, TaskListCategory> args)
+    {
+        addTask.TaskCategoryId = args.ItemData.TaskListCategoryId;
+    }
+
+}

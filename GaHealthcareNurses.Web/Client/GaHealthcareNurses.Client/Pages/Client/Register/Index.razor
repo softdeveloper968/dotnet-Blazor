@@ -1,0 +1,201 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/client/register";
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IMapper _mapper
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment env
+@using System.IO
+@inject IToastService toastService
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+
+<GaHealthcareNurses.Client.Shared.ClientHeader />
+
+<div class="frontend default-padding">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Sign Up : <span>To Create service request</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm Model="@signUp" class="formSec" OnValidSubmit="() => RegisterClient(signUp)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="First Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.FirstName" />
+                            <ValidationMessage For="@(() => signUp.FirstName)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Middle Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.MiddleInitial" />
+                            <ValidationMessage For="@(() => signUp.MiddleInitial)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Last Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.LastName" />
+                            <ValidationMessage For="@(() => signUp.LastName)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Email" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.EmailAddress" />
+                            <ValidationMessage For="@(() => signUp.EmailAddress)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUp.Password" />
+                            <ValidationMessage For="@(() => signUp.Password)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Confirm Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUp.RepeatPassword" />
+                            <ValidationMessage For="@(() => signUp.RepeatPassword)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.AddressLine1" />
+                            <ValidationMessage For="@(() => signUp.AddressLine1)" />
+                        </div>
+                        <div class="inputFiled form-group brow_fl">
+
+                            <SfDropDownList class="form-control" EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUp.StateId" TValue="int" TItem="State" Placeholder="Select a state" AllowFiltering="true" DataSource="@stateList">
+                                <DropDownListEvents TItem="State" TValue="int" ValueChange="OnStateChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Name" Value="StateId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => signUp.StateId)" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+                            <SfDropDownList class="form-control" EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUp.CityId" TValue="int" TItem="City" Placeholder="Select a city" AllowFiltering="true" DataSource="@cityList">
+                                <DropDownListEvents TItem="City" TValue="int" ValueChange="OnCityChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="NameAndZipcode" Value="CityId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => signUp.CityId)" />
+                        </div>
+
+                        <div class="inputFiled form-group">
+                            <SfMaskedTextBox FloatLabelType="@FloatLabelType.Auto" Placeholder="Phone No" @bind-Value="signUp.Phone1" Mask="000-000-0000" class="form-control" />
+                            @*<input class="form-control" placeholder=" " type="text" />*@
+                            <ValidationMessage For="@(() => signUp.Phone1)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox FloatLabelType="@FloatLabelType.Auto" Placeholder="How you hear about us ?" class="form-control" @bind-Value="signUp.HowYouHeardAboutUs" />
+                            <ValidationMessage For="@(() => signUp.HowYouHeardAboutUs)" />
+                        </div>
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Create Account <i class="fa fa-paper-plane"></i>
+                        </button>
+                        <div class="formFooterLink text-center"><p class="subheading"> Or <span><br /><a href="client/sign-in">Sign In</a></span></p></div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    ClientSignUp signUp = new ClientSignUp();
+    private List<State> stateList = new List<State>();
+    private int stateId = 0;
+    private List<City> cityList = new List<City>();
+    InputMask mask { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + "State");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        stateList = (JsonConvert.DeserializeObject<Response<List<State>>>(response)).Data;
+    }
+
+    private async Task StateHasChanged(int value)
+    {
+        signUp.StateId = value;
+        stateId = value;
+
+        if (value == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(value);
+        }
+    }
+
+    private async Task CityHasChanged(int value)
+    {
+        signUp.CityId = value;
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUp.CityId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+
+    }
+
+
+    private async Task LoadCities(int stateId)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={stateId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(response)).Data;
+    }
+
+
+    public async Task RegisterClient(ClientSignUp signUpObject)
+    {
+        //var unmasked = signUpObject.Phone1;
+        //signUpObject.Phone1 = mask.rawValue;
+        var client = _mapper.Map<ClientViewModel>(signUpObject);
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "Register/Client", client);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var data = (JsonConvert.DeserializeObject<Response<UserDetails>>(response)).Data;
+        if (data != null)
+        {
+            toastService.ShowSuccess("Client Registered Successfully!");
+            navigation.NavigateTo("client/sign-in");
+        }
+        else
+        {
+            //signUpObject.Phone1 = unmasked;
+            toastService.ShowError("Email is already exist!");
+        }
+    }
+
+
+    public async Task OnStateChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, State> args)
+    {
+        signUp.StateId = args.ItemData.StateId;
+        stateId = args.ItemData.StateId;
+
+        if (stateId == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(stateId);
+        }
+    }
+
+
+    public async Task OnCityChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, City> args)
+    {
+        if (args.ItemData != null)
+        {
+            signUp.CityId = args.ItemData.CityId;
+            var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUp.CityId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+        }
+    }
+}
+

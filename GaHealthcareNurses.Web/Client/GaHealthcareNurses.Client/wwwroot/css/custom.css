@@ -1,0 +1,2985 @@
+﻿body, html {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Optima';
+    font-weight: 400;
+}
+
+
+.blazored-toast-message {
+    color: white;
+    font-size:50px
+}
+
+.formSec .invalid {
+    border-color: red !important;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+
+.brow_fl label {
+    top: 4px !important;
+}
+
+
+.inputFiled input[type=file] {
+    color: #239ACD !important;
+}
+
+a
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a, button {
+    outline: none !important;
+}
+
+    a:focus {
+        outline: 0px !important;
+        text-decoration: none;
+    }
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+/*--Input placeholder css start here --*/
+
+input.form-control::-webkit-input-placeholder {
+    color: #788795;
+}
+
+input.form-control::-moz-placeholder {
+    color: #788795;
+}
+
+input.form-control:-ms-input-placeholder {
+    color: #788795;
+}
+
+input.form-control:-moz-placeholder {
+    color: #788795;
+}
+/*--Input placeholder css closed here --*/
+b, strong {
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #63626b;
+    font-weight: 400;
+    margin: 0 0 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*-- css start here --*/
+header {
+    background: #dce0ff;
+    position: relative;
+    z-index: 99;
+}
+
+    header nav.navbar {
+        background: none;
+        padding: 0;
+    }
+
+    header .navbar-brand {
+        margin: 0 25px 0 0;
+    }
+
+        header .navbar-brand img {
+            max-width: 95px;
+        }
+
+    header ul.navbar-nav li.nav-item {
+        padding: 28px 28px;
+        position: relative;
+    }
+
+    header ul.navbar-nav li .nav-link {
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #63626b !important;
+        font-family: 'Optima-Medium';
+        padding: 5px;
+    }
+
+    header ul.navbar-nav li.active .nav-link {
+        color: #191723 !important;
+        font-family: 'Optima-Bold';
+    }
+
+    header ul.navbar-nav li:after {
+        content: '';
+        border-bottom: 4px solid transparent;
+        position: absolute;
+        bottom: 1px;
+        width: 100%;
+        left: 0;
+    }
+
+    header ul.navbar-nav li.active:after {
+        border-bottom: 4px solid #2391c4;
+    }
+
+.postJobsSec .contentPart {
+    padding: 86px 0px 105px 50px;
+}
+
+.pageHead {
+    font-size: 48px;
+    letter-spacing: 1px;
+    color: #191723;
+    font-weight: normal;
+    font-family: 'Optima-Bold';
+    margin: 0 0 50px;
+}
+
+.postJobsSec {
+    overflow: hidden;
+}
+
+    .postJobsSec h3 {
+        font-size: 24px;
+        letter-spacing: 0px;
+        color: #63626b;
+        margin: 0 0 27px;
+    }
+
+    .postJobsSec .pageHead {
+        margin: 0 0 60px;
+    }
+
+.howWorkSec {
+    padding: 108px 0 120px;
+}
+
+.gutters28 {
+    margin: 0 -27px;
+}
+
+    .gutters28 > div {
+        padding: 0 27px;
+    }
+
+.gutters32 {
+    margin: 0 -32px;
+}
+
+    .gutters32 > div {
+        padding: 0 32px;
+    }
+
+.worksBox {
+    background: #ebeaff;
+    border-radius: 28px;
+    padding: 42px 35px 50px;
+    text-align: center;
+    position: relative;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+}
+
+    .worksBox.hove_box::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        margin: 0 auto;
+        box-shadow: 0 23px 23px -20px #4c4c4c;
+        width: 88%;
+        height: 50px;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+        -ms-transition: ease-in-out .5s;
+    }
+
+    .worksBox.hove_box {
+        background: #dce0ff;
+    }
+
+    .worksBox h3 {
+        font-size: 24px;
+        letter-spacing: 0px;
+        color: #191723;
+        font-weight: normal;
+        font-family: 'Optima-Bold';
+        margin: 0 0 8px;
+        min-height: 56px;
+    }
+
+    .worksBox p {
+        font-size: 16px;
+        margin: 0;
+        font-family: 'Lato-Medium';
+        min-height: 120px;
+    }
+
+    .worksBox .iconsBox {
+        display: inline-block;
+        margin: 0 0 48px;
+    }
+
+.caringSec {
+    padding: 58px 0 46px;
+    background: #ebeaff;
+}
+
+    .caringSec .pageHead {
+        margin: 0 0 54px;
+    }
+
+.bluebtn {
+    background: #2391c4;
+    border-radius: 9px;
+    padding: 11px 35px 11px 35px !important;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: normal;
+    font-family: 'Optima-Bold';
+    display: flex;
+    align-items: center;
+    align-self: center;
+    max-width: 235px;
+    outline: none !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25) !important;
+    height: 50px;
+    border: none;
+    position: relative;
+    justify-content: center;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+}
+
+    .bluebtn span {
+        position: relative;
+        display: block;
+        max-width: 125px;
+        min-width: 125px;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+        .bluebtn span:after {
+            content: '\00bb';
+            content: "\f054";
+            position: absolute;
+            opacity: 1;
+            top: 50%;
+            right: -1px;
+            transition: 0.5s;
+            font-size: 17px;
+            line-height: 17px;
+            transform: translate(0px, -50%);
+            font-family: Font Awesome\ 5 Free;
+            font-weight: 600;
+            color: #fff;
+        }
+
+    .bluebtn:hover span:after {
+        opacity: 1;
+        right: -15px;
+    }
+
+    .bluebtn::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        border: 0;
+        z-index: -1;
+        margin: 0 auto;
+        box-shadow: 0px 6px 15px 12px rgb(95 95 103 / 56%);
+        width: 70%;
+        height: auto;
+        border-radius: 9px;
+    }
+
+    .bluebtn:hover, .bluebtn:focus {
+        background: #2391c4;
+        color: #fff;
+    }
+
+.postInnerDiv .bluebtn {
+    padding: 11px 35px 11px 42px;
+    justify-content: flex-start;
+}
+
+    .postInnerDiv .bluebtn span {
+        max-width: 135px;
+        min-width: 135px;
+    }
+
+.caringBox {
+    background: #fff;
+    border-radius: 13px;
+    padding: 27px 35px 25px;
+    text-align: center;
+    margin: 0px 0 30px;
+}
+
+    .caringBox h3 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 19px;
+        color: #191723;
+        font-weight: normal;
+        font-family: 'Optima-Bold';
+        margin: 0 0 5px;
+    }
+
+    .caringBox h4 {
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 16px;
+        color: #191723;
+        font-weight: normal;
+        font-family: 'Optima-Bold';
+    }
+
+.imgBox {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin: 0 0 18px;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+    .imgBox img {
+        max-height: 100px;
+    }
+
+.starsDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .starsDiv i {
+        color: #ff2f1a;
+        margin: 0 4px;
+        font-size: 18px;
+    }
+
+.hireBtnDiv {
+    margin: 45px 0 0;
+}
+
+.btnsDiv {
+    position: relative;
+    z-index: 9;
+}
+
+.hireBtnDiv .bluebtn {
+    margin: 0 auto;
+    padding: 11px 35px;
+    justify-content: center;
+    width: 100%;
+    max-width: 236px;
+    text-align: center;
+}
+
+.hireBtnDiv .bluebtn {
+    margin: 0 auto;
+    padding: 11px 35px;
+    justify-content: center;
+}
+
+.topSecImage {
+    background: url(img/home_top_img.png) no-repeat;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0 0 0 55px;
+    overflow: hidden;
+    min-height: 465px;
+}
+
+.getJobSec {
+    padding: 105px 0 150px;
+}
+
+    .getJobSec .hireBtnDiv .bluebtn {
+        margin: 0;
+    }
+
+    .getJobSec .pageHead {
+        margin: 0 0 20px;
+    }
+
+    .getJobSec .contentPart {
+        padding: 15px 0 24px;
+        max-width: 450px;
+    }
+
+    .getJobSec .imagePart {
+        background: url(img/getJobs.jpg) no-repeat;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        min-height: 420px;
+    }
+
+    .getJobSec .contentPart p {
+        max-width: 385px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+
+.footer {
+    background: #204980;
+    padding: 30px 0;
+}
+
+    .footer p {
+        color: #fff;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    .footer ul li {
+        display: inline-block;
+        margin-right: 60px;
+    }
+
+        .footer ul li:last-child {
+            margin-right: 0;
+        }
+
+        .footer ul li a {
+            color: #fff;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+.container {
+    max-width: 1920px;
+    padding: 0 100px;
+}
+
+.smallContainer {
+    max-width: 1170px;
+    padding: 0 15px;
+}
+
+.postInnerDiv {
+    margin-right: -100px;
+}
+
+/* Agency Page CSS Start here */
+
+.agencyTopImage {
+    background: url(img/agency_top_img.png) no-repeat;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0 0 0 55px;
+    overflow: hidden;
+    min-height: 465px;
+}
+
+.dateSpan {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #63626b;
+    font-weight: 400;
+    margin: 0 0 15px;
+    font-family: 'Lato', sans-serif;
+    display: block;
+}
+
+.opportunity_item {
+    padding: 18px 30px;
+    text-align: left;
+    margin: 0;
+    background: #fff;
+    border-radius: 13px;
+}
+
+.locationTxt b {
+    color: #191723;
+}
+
+.opportunity_item h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 19px;
+    color: #191723;
+    font-weight: normal;
+    font-family: 'Optima-Bold';
+    margin: 0 0 5px;
+}
+
+.opportunitiesSec .owl-dots {
+    display: none;
+}
+
+.opportunitiesSec .owl-slider {
+    padding: 0 0 22px;
+}
+
+.subscriptionSec {
+    padding: 95px 0 180px;
+}
+
+.plansDiv {
+    max-width: 880px;
+    margin: 0 auto 10px;
+    padding: 0 15px;
+}
+
+.demo {
+    padding-top: 130px;
+}
+
+.pricingTable {
+    text-align: center;
+    background: #fff;
+    margin: 0;
+    border-radius: 50px;
+    color: #cad0de;
+    transition: all .5s ease 0s;
+    padding: 50px 38px 30px;
+    border: 2px solid #bcbcd4;
+    position: relative;
+    top: 0;
+}
+
+    .pricingTable::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        margin: 0 auto;
+        box-shadow: 0 23px 23px -20px transparent;
+        width: 80%;
+        height: 50px;
+        transition: ease-in-out .5s;
+        -webkit-transition: ease-in-out .5s;
+        -moz-transition: ease-in-out .5s;
+        -ms-transition: ease-in-out .5s;
+    }
+
+    .pricingTable:hover:after, .pricingTable.active:after {
+        box-shadow: 0 23px 23px -20px #4c4c4c;
+    }
+
+    .pricingTable:hover, .pricingTable.active {
+        background: #dce0ff;
+        border-color: #dce0ff;
+        z-index: 9;
+        top: -60px;
+    }
+
+.startNowDiv {
+    position: relative;
+    z-index: 9;
+}
+
+.pricingTable .pricingTable-header {
+    padding: 0 0 48px;
+}
+
+.pricingTable .heading {
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: #191723;
+    font-weight: normal;
+    font-family: 'Optima-Bold';
+    margin: 0 0 28px;
+}
+
+.pricingTable .price-value {
+    font-size: 24px;
+    color: #2391c4;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-family: 'Optima-Bold';
+}
+
+.pricing-content {
+    padding: 0 0 48px;
+}
+
+.pricingTable .bluebtn::after {
+    display: none;
+}
+
+.pricing-content p {
+    text-align: left;
+    margin: 0;
+}
+
+.gutters35 {
+    margin: 0 -36px;
+}
+
+    .gutters35 > div {
+        padding: 0 36px;
+    }
+
+.pricingTable .bluebtn {
+    margin: 0 auto;
+}
+
+/* Nurse Page CSS Start here */
+.nurseTopImage {
+    background: url(img/nurse_top_img.png) no-repeat;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0 0 0 55px;
+    overflow: hidden;
+    min-height: 465px;
+}
+
+.download_icons img {
+    margin: 0 0 15px;
+}
+
+.downloadAppSec {
+    padding: 150px 0 50px;
+}
+
+    .downloadAppSec .hireBtnDiv {
+        margin: 70px 0 0;
+    }
+
+    .downloadAppSec .contentPart {
+        padding: 0 0 20px;
+    }
+
+
+
+
+/*--Login and Register pages css start here --*/
+.frontend {
+    background: #f4f4f4;
+    width: 100%;
+    padding: 20px 0 40px 0;
+}
+
+.login_box {
+    background: #ffffff;
+    max-width: 640px;
+    margin: 30px auto 20px;
+    border-radius: 15px;
+    box-shadow: 0 0px 85px rgb(0 0 0 / 5%);
+    text-align: center;
+    color: #fff;
+}
+
+.login_logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+    .login_logo a {
+        display: block;
+    }
+
+.inner_box .subheading {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+    background: #2391c4;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 22px 0;
+    font-weight: bold;
+}
+
+.login_box .formSec {
+    padding: 40px 70px 50px 70px;
+}
+
+.login_box .form-control {
+    font-size: 16px;
+    height: auto !important;
+    padding: 22px 22px 14px 22px;
+    color: #222;
+    transition: ease-in-out .2s;
+    border: 2px solid #d6d5d5;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.form_links {
+    margin-top: 20px;
+}
+
+    .form_links .bluetxt {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+.bluetxt {
+    color: #239ACD !important;
+}
+
+.login_box .form-control[type="submit"] {
+    background: #239ACD;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #fff;
+    transition: ease-in-out .5s;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 12px 15px;
+    height: 65px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.bluetxt:hover {
+    color: #0e76bc;
+}
+
+.login_box .form-group {
+    margin-bottom: 25px;
+}
+
+.center_login {
+    padding: 10px;
+}
+
+.margin6 {
+    margin: 0 -7px;
+}
+
+    .margin6 > div {
+        padding: 0 7px;
+    }
+
+.registerPage {
+    max-width: 630px;
+}
+
+    .registerPage .inner_box {
+        padding: 0 12px;
+        max-width: 100%;
+    }
+
+.btnDiv {
+    padding-top: 10px;
+    margin-bottom: 5px !important;
+}
+
+.registerPage .form-control[type="submit"] {
+    max-width: 225px;
+    margin: 0 auto;
+}
+
+.login_logo img {
+    max-width: 230px;
+}
+
+.formFooterLink p {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #191723;
+}
+
+.formFooterLink span {
+    color: #2391c4;
+    margin-left: 25px;
+}
+
+    .formFooterLink span a {
+        color: #2391c4;
+        padding: 0 5px;
+    }
+
+
+.inputFiled {
+    position: relative;
+}
+
+    .inputFiled input:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .inputFiled label {
+        position: absolute;
+        pointer-events: none;
+        left: 22px;
+        top: 22px;
+        transition: 0.2s ease all;
+        font-size: 14px;
+        font-family: 'Lato', sans-serif;
+        color: #63626b;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .inputFiled input:focus ~ label,
+    .inputFiled input:not(:placeholder-shown) ~ label {
+        top: 8px;
+        font-size: 14px;
+        color: #63626b;
+        opacity: 1;
+        left: 22px;
+        z-index: 9;
+    }
+/*--Login and Register pages css end here --*/
+
+
+
+
+.topHeader .container {
+    max-width: 1440px;
+    padding: 0 25px;
+}
+
+.searchBbarForm {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+}
+
+.outerDiv {
+    flex: 99 1 0%;
+    display: flex;
+}
+
+.searchBtn {
+    border: 0px;
+    border-radius: 4px;
+    background-color: #239ACD;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    line-height: 28px;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0px 0px 0px auto;
+    transition: max-width 0.7s ease-in-out 0s;
+    padding: 0px 15px;
+    margin: 12px 12px 12px 0px;
+    max-width: 56px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0;
+}
+
+    .searchBtn:hover, .searchBtn:focus {
+        max-width: 200px;
+        font-size: 18px;
+    }
+
+.bLSmTI:focus ~ .searchBtn {
+    max-width: 200px;
+    font-size: 18px;
+}
+
+.hgttpc {
+    flex: 1 1 0%;
+}
+
+    .hgttpc:first-of-type {
+        position: relative;
+    }
+
+        .hgttpc:first-of-type::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgb(230, 231, 232);
+            margin: 16px 0px;
+        }
+
+.fieldLabel {
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(33, 33, 33);
+    line-height: 24px;
+    text-transform: none;
+    margin: 0;
+}
+
+.hgttpc label {
+    display: flex;
+}
+
+.searchInput {
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    transition: width 0.3s ease-in-out 0s;
+    margin: 0px 8px;
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 21px;
+    color: rgb(78, 79, 92);
+    border: none;
+    padding: 24px;
+    outline: none;
+}
+
+.LocationInput {
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+    height: 80px;
+    transition: width 0.3s ease-in-out 0s;
+    border-radius: 4px;
+    margin: 0px 8px;
+    font-weight: 400;
+    line-height: 28px;
+    font-size: 21px;
+    color: rgb(78, 79, 92);
+    border: none;
+    padding: 24px;
+    outline: none;
+}
+
+.SvgIcon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+    margin: 0 5px;
+}
+
+.login_box .form-control.invalid {
+    border-color: red;
+}
+
+.validation-message {
+    color: red;
+    list-style: none;
+    text-align: left;
+}
+
+.chose_serv {
+    padding: 11px 20px 11px 20px !important;
+}
+
+    .chose_serv span:after {
+        right: -15px;
+    }
+
+    .chose_serv:hover span:after {
+        opacity: 1;
+        right: -25px;
+    }
+
+.dis_sign {
+    background: #65b2d6 !important;
+    pointer-events: none;
+}
+/*====    Post new job pages css start  =======*/
+.post_sec {
+    background: #f4f4f4;
+}
+
+.job_main {
+    max-width: 952px;
+    padding: 60px 15px;
+    margin: 0 auto;
+}
+
+.post_head {
+    font-size: 24px;
+    font-family: 'Optima-Bold';
+    color: #191723;
+}
+
+.postj_box {
+    border: 2px solid #e1e1e1;
+    background: #fff;
+}
+
+.job_ser {
+    font-size: 20px;
+    font-family: 'Optima';
+    color: #191723;
+    opacity: 0.7;
+}
+
+.post_tb {
+    border-bottom: 1px solid #c4c4c4;
+    padding: 20px 60px;
+}
+
+.post_head {
+    padding: 0 60px 60px;
+}
+
+.chos_serv {
+    padding: 30px 60px;
+}
+
+.post_tb li:not(:last-child) .job_ser {
+    margin-right: 30px
+}
+
+.job_ser i {
+    margin-left: 22px;
+}
+
+.job_ser.active {
+    opacity: 1;
+    font-family: 'Optima-Bold';
+    color: #2391c4;
+}
+
+.chos_head {
+    color: #191723;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 25px;
+    max-width: 472px;
+    width: 100%;
+}
+
+    .custom-dropdown select {
+        background-color: #fff;
+        color: #2391c4;
+        font-size: 16px;
+        padding: 12px 25px;
+        padding-right: 2.5em;
+        border: 0;
+        margin: 0;
+        border-radius: 5px;
+        text-indent: 0.01px;
+        text-overflow: '';
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        font-family: 'Lato';
+        font-weight: 700;
+        border: 2px solid #2391c4;
+        width: 100%;
+        outline: none;
+        cursor: pointer;
+    }
+        /*Hiding the select arrow for IE10*/
+        .custom-dropdown select::-ms-expand {
+            display: none;
+        }
+
+    .custom-dropdown::before,
+    .custom-dropdown::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .custom-dropdown::after {
+        content: "\f078";
+        height: 1em;
+        font-size: 16px;
+        line-height: 1;
+        right: 1.2em;
+        top: 50%;
+        margin-top: -.5em;
+        color: #2391c4;
+        font-weight: 900;
+        font-family: 'Font Awesome 5 Free';
+    }
+
+    .custom-dropdown::before {
+        width: 2em;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: 0 3px 3px 0;
+        background-color: transparent;
+    }
+
+    .custom-dropdown select[disabled] {
+        color: rgba(0,0,0,.25);
+    }
+
+.post_next {
+    max-width: 201px;
+    width: 100%;
+    text-align: center;
+    background: #2391c4;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 700;
+    height: 51px;
+    border-radius: 5px;
+    margin: 22px 0 50px;
+    border: 2px solid #2391c4;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.in_nxt {
+    background: #65b2d6;
+    pointer-events: none;
+    border-color: transparent;
+}
+
+.bot_post {
+    font-size: 16px;
+    font-family: 'Lato';
+    color: #63626b;
+    margin: 50px 0;
+}
+
+.custom_inn {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.custom-choose {
+    margin-top: 25px;
+}
+
+    .custom-choose input[type='radio'], .custom-choose input[type='checkbox'], .tickbox_inn input[type='checkbox'] {
+        display: none;
+    }
+
+        .custom-choose input[type='radio'] + label, .custom-choose input[type='radio']:not(checked) + label, .custom-choose input[type='checkbox'] + label, .custom-choose input[type='checkbox']:not(checked) + label {
+            padding: 9.5px 10px 9.5px 20px;
+            border-radius: 4px;
+            text-align: center;
+            margin-right: 20px;
+            transition: .4s;
+            background: transparent;
+            color: #2391c4;
+            font-size: 16px;
+            font-family: 'lato';
+            font-weight: 700;
+            width: 100%;
+            max-width: 157px;
+            border: solid 2px #2391c4;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .custom-choose input[type='radio']:checked + label, .custom-choose input[type='checkbox']:checked + label {
+            position: relative;
+            transition: .4s;
+        }
+
+.freq-day span {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 3px solid #91c8e1;
+    margin-right: 15px;
+    position: relative;
+}
+
+.custom-choose input[type='radio']:checked + label.freq-day span,
+.custom-choose input[type='checkbox']:checked + label.freq-day span {
+    border-color: #2391c4;
+}
+
+    .custom-choose input[type='radio']:checked + label.freq-day span:before,
+    .custom-choose input[type='checkbox']:checked + label.freq-day span:before {
+        content: "";
+        width: 11px;
+        height: 11px;
+        background: #2391c4;
+        position: absolute;
+        border-radius: 50%;
+        left: 45%;
+        margin: 0 auto;
+        top: 50%;
+        transform: translate(-48%, -55%);
+        padding: 0;
+    }
+
+.chos_date {
+    margin-top: 36px;
+}
+
+.fre_boxx {
+    display: inline-block;
+    margin-right: 8px;
+    max-width: 160px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.slect_date {
+    max-width: 472px;
+}
+/*====    Post new job pages css end  =======*/
+/*==== Patient info page css start here ====*/
+.shadow-none {
+    box-shadow: none !important;
+}
+
+.form_box {
+    background-color: #fff;
+    padding: 12px 25px;
+    border: 0;
+    margin: 0;
+    border-radius: 5px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #91c8e1;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+    .form_box .form-control, .post_rhd {
+        color: #191723;
+        font-size: 16px;
+        font-family: 'Lato';
+        font-weight: 700;
+    }
+
+    .form_box:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+    .form_box select {
+        color: #191723;
+    }
+
+    .form_box label, .post_rhd span {
+        color: #63626b;
+        font-size: 16px;
+        font-family: 'Lato';
+        font-weight: 500;
+        margin: 0 10px 0 0;
+    }
+
+
+    .form_box textarea {
+        resize: none;
+        height: 145px;
+        margin-top: 10px;
+    }
+
+.post_rviebox input::-webkit-input-placeholder {
+    color: #191723;
+}
+
+.post_rviebox input::-moz-placeholder {
+    color: #191723;
+}
+
+.post_rviebox input:-ms-input-placeholder {
+    color: #191723;
+}
+
+.post_rviebox input:-moz-placeholder {
+    color: #191723;
+}
+
+.post_rviebox .form_box {
+    pointer-events: none;
+    border: none;
+}
+
+.send_post {
+    max-width: 236px;
+    cursor: pointer;
+}
+
+.post_next:hover {
+    background: transparent;
+    color: #2391c4;
+}
+
+.edit_post {
+    background: #fff;
+    color: #2391c4;
+    width: auto;
+    margin-left: 50px;
+}
+
+.model_sz {
+    max-width: 701px;
+}
+
+.reqsent_hd {
+    font-size: 24px;
+    font-family: 'Optima-Bold';
+    color: #191723;
+    margin: 75px 0 43px;
+}
+
+.submit_modal .modal-body {
+    padding: 48px;
+}
+
+.sing_link {
+    max-width: 36px;
+}
+
+.active.myser_hd {
+    color: #191723;
+}
+
+.no_reqbox {
+    font-size: 48px;
+    color: #191723;
+    opacity: 0.3;
+    font-family: 'Optima-Bold';
+    height: 200px;
+}
+
+.how_works {
+    margin-top: 58px;
+}
+
+.req_sbhd {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Lato';
+    color: #191723;
+}
+
+.req_sbpar {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Lato';
+    color: #63626b;
+    line-height: 20px;
+}
+
+.req_sbox {
+    border-bottom: 1px solid #c4c4c4;
+    padding: 30px 210px 30px 60px;
+}
+
+.serv_tophd:not(:last-child) {
+    margin-bottom: 30px;
+}
+/*==== Patient info page css start here ====*/
+
+/*==== Homepage new changes ======*/
+.postJobsSec .hm_phone {
+    font-size: 24px;
+    font-family: 'Optima-Bold';
+    color: #191723;
+    margin-bottom: 60px;
+}
+
+    .postJobsSec .hm_phone span {
+        margin-left: 26px;
+    }
+
+.postJobsSec .home_Pghead {
+    margin-bottom: 25px;
+}
+
+.postInnerDiv .req_serv {
+    padding: 11px 25px;
+}
+
+.req_serv span:after {
+    right: -35px;
+}
+
+.req_serv {
+    width: 100%;
+    padding-left: 20px !important;
+}
+
+.sing_link {
+    cursor: pointer;
+}
+
+
+.req_serv:hover span:after {
+    opacity: 1;
+    right: -45px;
+}
+
+.verticalFlip {
+    width: 100%;
+    display: block;
+    min-height: 114px;
+}
+
+    .verticalFlip span {
+        animation: vertical 18s linear infinite 0s;
+        -ms-animation: vertical 18s linear infinite 0s;
+        -webkit-animation: vertical 18s linear infinite 0s;
+        color: #191723;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+        .verticalFlip span:nth-child(2) {
+            animation-delay: 4.2s;
+            -ms-animation-delay: 4.2s;
+            -webkit-animation-delay: 4.2s;
+        }
+
+        .verticalFlip span:nth-child(3) {
+            animation-delay: 8.5s;
+            -ms-animation-delay: 8.5s;
+            -webkit-animation-delay: 8.5s;
+        }
+
+        .verticalFlip span:nth-child(4) {
+            animation-delay: 13s;
+            -ms-animation-delay: 13s;
+            -webkit-animation-delay: 13s;
+        }
+
+@-moz-keyframes vertical {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+        -moz-transform: rotateX(180deg);
+    }
+
+    10% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+    }
+
+    25% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+    }
+
+    30% {
+        opacity: 1;
+        -moz-transform: translateY(0px);
+    }
+
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes vertical {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+        -webkit-transform: rotateX(180deg);
+    }
+
+    10% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    25% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    30% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+    }
+
+    35% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes vertical {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 0;
+        -ms-transform: rotateX(180deg);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-transform: translateY(0px);
+    }
+
+    25% {
+        opacity: 1;
+        -ms-transform: translateY(0px);
+    }
+
+    30% {
+        opacity: 0;
+        -ms-transform: translateY(0px);
+    }
+
+    35% {
+        opacity: 0;
+        -webkit-transform: translateY(0px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.our_service li {
+    font-size: 24px;
+    font-family: 'Optima-Bold';
+    color: #191723;
+    position: relative;
+    padding-left: 25px;
+}
+
+    .our_service li:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #191723;
+    }
+
+    .our_service li:not(:last-child) {
+        margin-bottom: 18px;
+    }
+
+.ped_hd {
+    font-size: 24px;
+    font-family: 'Optima-Bold';
+    color: #191723;
+    margin-top: 20px;
+}
+
+.ped_thumb {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 241px;
+}
+
+.serv_belowlist li {
+    display: inline-block;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 0 12px;
+    margin-bottom: 60px;
+}
+/*==== Homepage new changes ======*/
+
+
+.slect_date .custom-dropdown input {
+    width: 100%;
+    height: 52px;
+    padding: 12px 15px 12px 25px;
+    outline: none !important;
+    border: 2px solid #2391c4;
+    border-radius: 5px;
+}
+
+/*=== Patient info chages css start here ===*/
+.fis_namb {
+    padding: 12px 25px;
+}
+
+.left_nm {
+    color: #191723;
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 700;
+}
+
+.right_nm {
+    color: #63626b;
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 500;
+    margin: 0 10px 0 0;
+}
+
+.fis_namb:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.detail_txr {
+    display: block;
+    margin-top: 10px;
+}
+
+.post_rhD {
+    color: #63626b;
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 500;
+    margin: 0 10px 0 0;
+}
+
+.post_rhD span {
+    color: #191723;
+    font-size: 16px;
+    font-family: 'Lato';
+    font-weight: 700;
+}
+
+.patin_drop .form_box:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.patin_drop .form_box:not(:first-child) {
+    margin-top: 18px;
+}
+
+.custom-dropdown.post_rviebox:after {
+    display: none;
+}
+
+.custom-dropdown.patin_drop:after {
+    display: none;
+}
+/*=== Patient info chages css end here ===*/
+/*====date picker changes start ====*/
+.dt_picker {
+    position: relative;
+}
+
+    .dt_picker:after {
+        z-index: 0;
+        font-size: 20px;
+        color: #239acd;
+        background: none;
+        position: absolute;
+        top: 18px;
+        right: 25px;
+        content: "\f073";
+        font-family: 'Font Awesome 5 Free';
+        cursor: pointer;
+    }
+
+.enchilada {
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    background: none !important;
+}
+
+::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+}
+
+    ::-webkit-calendar-picker-indicator:hover {
+        cursor: pointer;
+    }
+
+/*====date picker changes end ====*/
+
+/*===== 02 March 2021 css start  =====*/
+.bootstrap-datetimepicker-widget.dropdown-menu {
+    border: 1px solid #34495e;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    min-height: 135px;
+    max-width: 100%;
+    width: 100%;
+}
+
+    .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before, .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+        display: none;
+    }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu table td,
+    .bootstrap-datetimepicker-widget.dropdown-menu table th {
+        border-radius: 0;
+    }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu table td.old, .bootstrap-datetimepicker-widget.dropdown-menu table td.new {
+            color: #bbb;
+        }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu table td.today:before {
+            border-bottom-color: #0095ff;
+        }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu table td.active,
+        .bootstrap-datetimepicker-widget.dropdown-menu table td.active:hover,
+        .bootstrap-datetimepicker-widget.dropdown-menu table td span.active {
+            background-color: #0095ff;
+            text-shadow: none;
+        }
+
+            .bootstrap-datetimepicker-widget.dropdown-menu table td.active.today:before,
+            .bootstrap-datetimepicker-widget.dropdown-menu table td.active:hover.today:before,
+            .bootstrap-datetimepicker-widget.dropdown-menu table td span.active.today:before {
+                border-bottom-color: #fff;
+            }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu table th {
+        height: 40px;
+        padding: 0;
+        width: 25px;
+    }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu table th.picker-switch {
+            width: auto;
+        }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu table tr:first-of-type th {
+        border-bottom: 1px solid #34495e;
+    }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu table td.day {
+        height: 40px;
+        line-height: 35px;
+        padding: 0;
+        width: auto;
+    }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu table td span {
+        border-radius: 0;
+        height: 40px;
+        line-height: 40px;
+        margin: 0;
+        width: 25%;
+    }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-months tbody tr td,
+    .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-years tbody tr td,
+    .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-decades tbody tr td {
+        padding: 0;
+    }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-decades tbody tr td {
+        height: 40px;
+        line-height: 40px;
+    }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-decades tbody tr td span {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 46px;
+            line-height: 46px !important;
+            padding: 0;
+        }
+
+            .bootstrap-datetimepicker-widget.dropdown-menu .datepicker-decades tbody tr td span:not(.decade) {
+                display: none;
+            }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td {
+        padding: 0;
+        width: 20%;
+        height: 40px;
+        line-height: 40px;
+    }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td:nth-child(2) {
+            width: 10%;
+        }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td a,
+        .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td span,
+        .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td button {
+            border: none;
+            border-radius: 0;
+            height: 40px;
+            line-height: 40px;
+            padding: 0;
+            width: 100%;
+        }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td span {
+            color: #333;
+            margin-top: -1px;
+        }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td button {
+            background-color: #fff;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+            .bootstrap-datetimepicker-widget.dropdown-menu .timepicker-picker table td button:hover {
+                background-color: #eee;
+            }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu .picker-switch table td {
+        border-top: 1px solid #34495e;
+    }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu .picker-switch table td a, .bootstrap-datetimepicker-widget.dropdown-menu .picker-switch table td span {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            padding: 0;
+            width: 100%;
+        }
+
+span#timepicker .input-group-addon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7px;
+    width: 40px;
+    z-index: 999;
+    height: 90%;
+    cursor: pointer;
+}
+
+    span#timepicker .input-group-addon i {
+        color: #2391c4;
+    }
+span#timepicker input {
+    pointer-events:none;
+}
+/*===== 02 March 2021 css end  =====*/
+
+.slect_date .custom-dropdown::after {
+    top: 27px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.slect_date .custom-dropdown::before {
+    position: absolute;
+    z-index: 99;
+    background: #fff;
+    right: 3px;
+    top: 3px;
+    height: 60%;
+    bottom: auto;
+}
+
+input[type="date"] {
+    padding-right: 0;
+}
+
+
+/* Media CSS Start here */
+@media(min-width:768px) {
+    .get_profmob {
+        display: none;
+    }
+    /*==== Homepage new changes  media start here ======*/
+    .our_service {
+        background: url(img/our-service-banner.jpg) no-repeat;
+        background-size: cover;
+        background-position: top right;
+        height: 650px;
+    }
+    /*==== Homepage new changes  media end here ======*/
+}
+
+@media (min-width: 992px) {
+    .colLg7 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 52%;
+        flex: 0 0 52%;
+        max-width: 52%;
+    }
+
+    .colLg5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+    /*==== Homepage new changes  media start here ======*/
+    .topSecImage {
+        position: absolute;
+        right: -600px;
+        -webkit-animation: slide 1s forwards;
+        -webkit-animation-delay: 0s;
+        animation: slide 1s forwards;
+        animation-delay: 0s;
+        width: 100%;
+        min-height: 465px;
+    }
+
+    @-webkit-keyframes slide {
+        100% {
+            right: 0px;
+        }
+    }
+
+    @keyframes slide {
+        100% {
+            right: 0px;
+        }
+    }
+
+    .ped_hd {
+        min-height: 56px;
+    }
+    /*==== Homepage new changes  media end here ======*/
+}
+
+@media (max-width:1370px) {
+    .container {
+        padding: 0 80px;
+    }
+
+    .smallContainer {
+        padding: 0 15px;
+    }
+
+    .postInnerDiv {
+        margin-right: -80px;
+    }
+
+    .worksBox {
+        padding: 40px 30px 45px;
+    }
+
+    .gutters28 {
+        margin: 0 -22px;
+    }
+
+        .gutters28 > div {
+            padding: 0 22px;
+        }
+
+    .gutters32 {
+        margin: 0 -25px;
+    }
+
+        .gutters32 > div {
+            padding: 0 25px;
+        }
+}
+
+@media (max-width:1299px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .smallContainer {
+        padding: 0 15px;
+    }
+
+    .postInnerDiv {
+        margin-right: -30px;
+    }
+
+    .gutters28 {
+        margin: 0 -18px;
+    }
+
+        .gutters28 > div {
+            padding: 0 18px;
+        }
+
+    .worksBox {
+        padding: 40px 25px 45px;
+    }
+
+    .howWorkSec {
+        padding: 95px 0 110px;
+    }
+
+    .postJobsSec .contentPart {
+        padding: 80px 0px 80px 35px;
+    }
+}
+
+@media (max-width:1199px) {
+    .container, .smallContainer {
+        padding: 0 25px;
+    }
+
+    .smallContainer {
+        padding: 0 15px;
+    }
+
+    .pageHead {
+        font-size: 46px;
+        margin: 0 0 48px;
+    }
+
+    .caringSec .pageHead {
+        margin: 0 0 50px;
+    }
+
+    .gutters32 {
+        margin: 0 -20px;
+    }
+
+        .gutters32 > div {
+            padding: 0 20px;
+        }
+
+    .worksBox {
+        padding: 32px 20px 37px;
+    }
+
+    .gutters28 {
+        margin: 0 -15px;
+    }
+
+        .gutters28 > div {
+            padding: 0 15px;
+        }
+
+    .worksBox h3 {
+        font-size: 22px;
+        margin: 0 0 6px;
+    }
+
+    .worksBox p {
+        min-height: 96px;
+    }
+
+    .getJobSec {
+        padding: 95px 0 125px;
+    }
+
+    header ul.navbar-nav li.nav-item {
+        padding: 23px 20px;
+    }
+
+    .worksBox .iconsBox {
+        margin: 0 0 40px;
+    }
+
+    .imgBox {
+        margin: 0 0 15px;
+    }
+
+    .caringBox {
+        padding: 27px 30px 25px;
+    }
+
+    .opportunity_item {
+        padding: 27px 30px 25px;
+    }
+    /*==== Homepage new changes media start here === */
+    .our_service {
+        background-position: center;
+    }
+
+    .serv_belowlist li {
+        width: 33%;
+    }
+    /*==== Homepage new changes media end here === */
+}
+
+@media (max-width:991px) {
+    .container, .smallContainer {
+        padding: 0 15px;
+        max-width: 745px;
+    }
+
+    .postInnerDiv {
+        margin: 27px 0 0;
+    }
+
+        .postInnerDiv .row .colLg7 {
+            order: 2;
+        }
+
+        .postInnerDiv .row .colLg5 {
+            order: 1;
+        }
+
+    .postJobsSec .contentPart {
+        padding: 50px 0px 25px 30px;
+    }
+
+    .postJobsSec h3 {
+        font-size: 22px;
+        margin: 0 0 20px;
+    }
+
+    .pageHead {
+        font-size: 42px;
+        margin: 0 0 42px;
+    }
+
+    .postJobsSec .pageHead {
+        margin: 0 0 50px;
+    }
+
+    .bluebtn {
+        max-width: 228px;
+    }
+
+    .howWorkSec {
+        padding: 75px 0 90px;
+    }
+
+    .worksBox h3 {
+        font-size: 20px;
+        margin: 0 0 5px;
+        min-height: 48px;
+    }
+
+    .worksBox p {
+        min-height: 105px;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+
+    .worksBox {
+        padding: 27px 15px 30px;
+    }
+
+        .worksBox .iconsBox {
+            margin: 0 0 30px;
+        }
+
+    .gutters28 {
+        margin: 0 -8px;
+    }
+
+        .gutters28 > div {
+            padding: 0 8px;
+        }
+
+    .caringSec .pageHead {
+        margin: 0 0 42px;
+    }
+
+    .gutters32 {
+        margin: 0 -15px;
+    }
+
+        .gutters32 > div {
+            padding: 0 15px;
+        }
+
+    .getJobSec {
+        padding: 80px 0 90px;
+    }
+
+    .footer {
+        background: #204980;
+        padding: 25px 0;
+    }
+
+    .hireBtnDiv {
+        margin: 35px 0 0;
+    }
+
+    .caringBox {
+        padding: 25px 20px 20px;
+    }
+
+    .opportunity_item {
+        padding: 25px 20px 20px;
+    }
+
+    .getJobSec .contentPart {
+        padding: 40px 0 15px;
+        max-width: 450px;
+    }
+
+    .downloadAppSec .contentPart {
+        padding: 0 0 15px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .navbar-toggler {
+        padding: 4px 8px;
+        font-size: 15px;
+    }
+
+    header ul.navbar-nav li.nav-item {
+        padding: 8px 15px;
+    }
+
+    header ul.navbar-nav li .nav-link {
+        font-size: 14px;
+        padding: 0;
+        text-align: center;
+    }
+
+    header ul.navbar-nav {
+        max-width: 130px;
+        margin: 0 auto;
+    }
+
+    div#navbarSupportedContent {
+        background: #dce0ff;
+        margin: 0;
+        padding: 10px 15px;
+        position: absolute;
+        width: auto;
+        left: -15px;
+        right: -15px;
+        border-radius: 0;
+        top: 60px;
+        height: auto !important;
+        display: block;
+        transform: translateY(250px);
+        overflow: hidden;
+        opacity: 0;
+        position: absolute !important;
+        pointer-events: none;
+        transition: ease-in-out .3s;
+        -webkit-transition: ease-in-out .3s;
+    }
+
+        div#navbarSupportedContent.show, header .navbar-collapse.show {
+            opacity: 1 !important;
+            overflow: visible !important;
+            pointer-events: all !important;
+            transform: translateY(0) !important;
+        }
+
+    .caringSec .row {
+        margin: 0 -8px;
+    }
+
+        .caringSec .row > div {
+            padding: 0 8px;
+        }
+
+    .caringBox p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+    .caringBox h4 {
+        min-height: 32px;
+    }
+
+    .subscriptionSec {
+        padding: 90px 0 140px;
+    }
+
+    .gutters35 {
+        margin: 0 -15px;
+    }
+
+        .gutters35 > div {
+            padding: 0 22px;
+        }
+
+    .pricingTable {
+        padding: 45px 30px 30px;
+    }
+
+        .pricingTable:hover, .pricingTable.active {
+            top: -50px;
+        }
+
+    .demo {
+        padding-top: 100px;
+    }
+
+    .download_icons {
+        text-align: left !important;
+    }
+    /*==== Homepage new changes media start here === */
+    .our_service {
+        background-position: center;
+    }
+    /*==== Homepage new changes media end here === */
+}
+
+@media (max-width:767px) {
+    .postJobsSec .contentPart {
+        padding: 25px 5px 25px 8px;
+    }
+
+    .postJobsSec h3 {
+        font-size: 20px;
+        margin: 0 0 18px;
+    }
+
+    .postJobsSec .pageHead {
+        margin: 0 0 35px;
+    }
+
+    .pageHead {
+        font-size: 36px;
+        margin: 0 0 28px;
+    }
+
+    .howWorkSec {
+        padding: 55px 0 55px;
+    }
+
+    .worksBox {
+        padding: 25px 15px 30px;
+        margin-bottom: 30px;
+    }
+
+        .worksBox h3 {
+            font-size: 19px;
+            min-height: auto;
+        }
+
+        .worksBox p {
+            min-height: auto;
+            font-size: 13px;
+            -webkit-line-clamp: inherit;
+        }
+
+        .worksBox .iconsBox {
+            margin: 0 0 25px;
+        }
+
+    .caringSec .pageHead {
+        margin: 0 0 30px;
+    }
+
+    .caringBox h3 {
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 0 3px;
+    }
+
+    .caringBox h4 {
+        font-size: 13px;
+        line-height: 15px;
+        min-height: auto;
+    }
+
+    .caringBox p {
+        -webkit-line-clamp: inherit;
+    }
+
+    .opportunity_item h3 {
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 0 3px;
+    }
+
+    p {
+        font-size: 13px;
+        margin: 0 0 12px;
+    }
+
+    .starsDiv i {
+        font-size: 14px;
+    }
+
+    .imgBox {
+        height: 90px;
+        width: 90px;
+    }
+
+    .caringBox {
+        padding: 25px 15px 20px;
+        margin: 0px 0 20px;
+    }
+
+    .opportunity_item {
+        padding: 25px 15px 20px;
+    }
+
+    .bluebtn {
+        padding: 11px 25px 11px 25px;
+        max-width: 205px;
+        font-size: 15px;
+    }
+
+    .postInnerDiv .bluebtn {
+        padding: 11px 33px 11px 33px;
+        justify-content: flex-start;
+    }
+
+        .postInnerDiv .bluebtn span {
+            max-width: 125px;
+            min-width: 125px;
+        }
+
+    .bluebtn span {
+        max-width: 120px;
+        min-width: 120px;
+    }
+
+    .hireBtnDiv .bluebtn {
+        padding: 11px 25px;
+    }
+
+    .getJobSec {
+        padding: 65px 0 70px;
+    }
+
+    .hireBtnDiv {
+        margin: 30px 0 0;
+    }
+
+    .getJobSec .contentPart {
+        padding: 35px 0 15px;
+    }
+
+    .downloadAppSec .contentPart {
+        padding: 20px 0 15px;
+    }
+
+    .downloadAppSec .pageHead {
+        margin: 0 0 10px;
+    }
+
+    .footer {
+        padding: 18px 0;
+    }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+    .caringSec {
+        padding: 50px 0 42px;
+    }
+
+    .postInnerDiv {
+        margin: 15px 0 0;
+    }
+
+    .downloadAppSec .hireBtnDiv {
+        margin: 40px 0 0;
+    }
+
+    .dateSpan {
+        font-size: 13px;
+        margin: 0 0 10px;
+    }
+
+    .locationTxt {
+        margin: 0 0 5px;
+    }
+
+    .opportunitiesSec .owl-slider {
+        padding: 0 0 15px;
+    }
+
+    .pricingTable {
+        padding: 34px 15px 30px;
+        max-width: 350px;
+        margin: 0 auto 40px;
+        border-radius: 35px;
+    }
+
+        .pricingTable .pricingTable-header {
+            padding: 0 0 30px;
+        }
+
+        .pricingTable .heading {
+            font-size: 20px;
+            line-height: 23px;
+            margin: 0 0 20px;
+        }
+
+    .pricing-content {
+        padding: 0 0 30px;
+    }
+
+    .pricingTable .price-value {
+        font-size: 20px;
+        margin-bottom: 22px;
+    }
+
+    .pricingTable-header img {
+        max-width: 75px;
+    }
+
+    .pricingTable:hover, .pricingTable.active {
+        top: -25px;
+    }
+
+    .demo {
+        padding-top: 40px;
+    }
+
+    .subscriptionSec {
+        padding: 65px 0;
+    }
+
+    .bluebtn span:after {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .gutters35 > div {
+        padding: 0 16px;
+    }
+
+    .get_prof {
+        background: none !important;
+        min-height: auto !important;
+    }
+    /*=== postjob page media ===*/
+    .post_tb, .chos_serv {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .post_head {
+        padding: 0 15px 20px;
+    }
+
+    .job_main {
+        padding: 30px 15px;
+    }
+
+    .post_head {
+        font-size: 20px;
+    }
+
+    .job_ser, .chos_head {
+        font-size: 18px;
+    }
+
+    .custom-dropdown select {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .custom-dropdown {
+        margin-top: 10px;
+    }
+    /*=== postjob page media ===*/
+    /*=== Patient info page media start ===*/
+    .form_box {
+        padding: 10px 15px;
+    }
+
+        .form_box label, .form_box .form-control {
+            font-size: 14px;
+        }
+
+    .no_reqbox {
+        line-height: normal;
+        text-align: center;
+        font-size: 28px;
+        height: 150px;
+    }
+
+    .edit_post {
+        margin-left: 52px;
+        margin-right: 30px;
+    }
+
+    .req_sbox {
+        padding: 20px 15px;
+    }
+
+    /*=== Patient info page media end ===*/
+    /*=== Homepage new changes start  ====*/
+    .serv_belowlist li {
+        width: 50%;
+    }
+
+    .ped_hd {
+        font-size: 20px;
+    }
+
+    .serv_belowlist li {
+        margin-bottom: 20px;
+    }
+
+    .our_service li {
+        font-size: 22px;
+    }
+    /*=== Homepage new changes end  ====*/
+}
+
+@media (max-width:575px) {
+    .login_box .formSec {
+        padding: 30px 20px;
+    }
+
+    .center_login {
+        padding: 10px 20px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+        .footer p {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+    /*=== Homepage new changes start  ====*/
+    .serv_belowlist li {
+        width: 100%;
+    }
+    /*=== Homepage new changes end  ====*/
+}
+
+@media (max-width:400px) {
+    .topSecImage, .agencyTopImage, .nurseTopImage {
+        min-height: 265px;
+        border-radius: 0 0 0 40px;
+    }
+
+    .getJobSec .imagePart {
+        min-height: 250px;
+    }
+
+    .pageHead br {
+        display: none;
+    }
+}
+
+@media (max-width:374px) {
+    .pageHead {
+        font-size: 32px;
+    }
+}
+
+
+/*=== Nurses side login page css start ===*/
+.nurses_inner {
+    padding-bottom: 50px;
+}
+
+.downl_apphd {
+    font-family: 'Optima-Bold';
+    color: #191723;
+    font-size: 24px;
+    padding: 0 35px;
+}
+
+.nurser_appservice .download_icons {
+    max-width: 216px;
+    margin: 40px auto 0px;
+}
+
+.need_accntbform {
+    margin-top: 80px;
+}
+
+.downl_apphd {
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.label_up label {
+    top: 8px;
+}
+
+.shadow-none {
+    box-shadow: none !important;
+}
+
+.form_box {
+    background-color: #fff;
+    padding: 12px 25px;
+    border: 0;
+    margin: 0;
+    border-radius: 5px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #91c8e1;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+    .form_box .form-control, .post_rhd {
+        color: #191723;
+        font-size: 16px;
+        font-family: 'Lato';
+        font-weight: 700;
+    }
+
+    .form_box:not(:last-child) {
+        margin-bottom,: 18px;
+    }
+
+    .form_box select {
+        color: #191723;
+    }
+
+    .form_box label, .post_rhd span {
+        color: #63626b;
+        font-size: 16px;
+        font-family: 'Lato';
+        font-weight: 500;
+        margin: 0 10px 0 0;
+    }
+
+
+
+    .form_box textarea {
+        resize: none;
+        height: 145px;
+        margin-top: 10px;
+    }
+
+.post_rviebox input::-webkit-input-placeholder {
+    color: #191723;
+}
+
+.post_rviebox input::-moz-placeholder {
+    color: #191723;
+}
+
+.post_rviebox input:-ms-input-placeholder {
+    color: #191723;
+}
+
+.post_rviebox input:-moz-placeholder {
+    color: #191723;
+}
+
+.post_rviebox .form_box {
+    pointer-events: none;
+    border: none;
+}
+
+.send_post {
+    max-width: 236px;
+    cursor: pointer;
+}
+
+.post_next:hover {
+    background: transparent;
+    color: #2391c4;
+}
+
+.edit_post {
+    background: #fff;
+    color: #2391c4;
+    width: auto;
+    margin-left: 50px;
+}
+
+.model_sz {
+    max-width: 701px;
+}
+
+.reqsent_hd {
+    font-size: 24px;
+    font-family: 'Optima-Bold';
+    color: #191723;
+    margin: 75px 0 43px;
+}
+
+.submit_modal .modal-body {
+    padding: 48px;
+}
+
+.sing_link {
+    max-width: 36px;
+}
+
+.active.myser_hd {
+    color: #191723;
+}
+
+.no_reqbox {
+    font-size: 48px;
+    color: #191723;
+    opacity: 0.3;
+    font-family: 'Optima-Bold';
+    height: 200px;
+}
+
+.how_works {
+    margin-top: 58px;
+}
+
+.req_sbhd {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Lato';
+    color: #191723;
+}
+
+.req_sbpar {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Lato';
+    color: #63626b;
+    line-height: 20px;
+}
+
+.req_sbox {
+    border-bottom: 1px solid #c4c4c4;
+    padding: 30px 210px 30px 60px;
+}
+
+.serv_tophd:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.form_box {
+    padding: 10px 15px;
+}
+
+    .form_box label, .form_box .form-control {
+        font-size: 14px;
+    }
+
+.no_reqbox {
+    line-height: normal;
+    text-align: center;
+    font-size: 28px;
+    height: 150px;
+}
+
+.edit_post {
+    margin-left: 52px;
+    margin-right: 30px;
+}
+
+.req_sbox {
+    padding: 20px 15px;
+}
+
+
+
+
+.spinner {
+    border: 16px solid silver;
+    border-top: 16px solid #337AB7;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 700ms linear infinite;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    position: absolute;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

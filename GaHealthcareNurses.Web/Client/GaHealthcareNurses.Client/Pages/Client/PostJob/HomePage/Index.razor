@@ -1,0 +1,175 @@
+﻿@page "/client/home"
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout;
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@using GaHealthcareNurses.Entity.Models;
+@inject IToastService toastService
+@inject NavigationManager navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+
+<GaHealthcareNurses.Client.Shared.RequestServiceHeader/>
+
+<section class="post_sec">
+    <div class="job_main">
+        <div class="d-flex align-items-center justify-content-between post_head pr-0">
+            <h3 class="m-0 post_head p-0">Hi @user.UserName</h3>
+            <a href="client/post-job" class="post_next d-flex align-items-center justify-content-center send_post m-0">Send Service Request</a>
+            @*<a href="client/dashboard" class="post_next d-flex align-items-center justify-content-center send_post m-0">Dashboard</a>*@
+        </div>
+        @*<table class="table table-bordered bg-light">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Agency</th>
+                    <th scope="col">Type of Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var job in jobs)
+                {
+                <tr>
+                    <td>@job.Title</td>
+                    <td>@job.PostedTime</td>
+                    <td>Test</td>
+                    <td>@job.CareRecipient.ServiceList</td>
+                </tr>
+                }
+            </tbody>
+        </table>*@
+
+        <div class="postj_box">
+            <div class="post_tb">
+                <h2 class="job_ser active myser_hd m-0">My Service Request</h2>
+            </div>
+            @foreach (var job in jobs)
+            {
+                <div class="chos_serv serv_reuestbox">
+                    <div class="req_sbtxt serv_tophd">
+                        <h3 class="req_sbhd">@job.JobTitle.Title</h3>
+                        <h3 class="req_sbpar">@job.Description </h3>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+
+        <div class="postj_box how_works">
+            <div class="post_tb">
+                <h2 class="job_ser active myser_hd m-0">How it works</h2>
+            </div>
+            <div class="how_clntwork">
+                <div class="req_sbox">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-3 col-sm-2">
+                            <div class="req_sbimage">
+                                <img src="css/img/desktop-service.png" />
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10">
+                            <div class="req_sbtxt">
+                                <h3 class="req_sbhd">Request a service</h3>
+                                <h3 class="req_sbpar">We allow you to post a free service request on our  platform, type all your requirements and let expert handle it.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="req_sbox">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-3 col-sm-2">
+                            <div class="req_sbimage">
+                                <img src="css/img/profession-helpyou.png" />
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10">
+                            <div class="req_sbtxt">
+                                <h3 class="req_sbhd">Professional will help you</h3>
+                                <h3 class="req_sbpar">GAH has nursing agencies listed with us. Agency makes sure you get a certified nurse for your service.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="req_sbox">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-3 col-sm-2">
+                            <div class="req_sbimage">
+                                <img src="css/img/qualified-nursesyou.png" />
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10">
+                            <div class="req_sbtxt">
+                                <h3 class="req_sbhd">Qualified Nurse for you</h3>
+                                <h3 class="req_sbpar">Agency will shortlist a perfect nurse with required skills for your service and will be traced everyday at her job</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="req_sbox border-0">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-3 col-sm-2">
+                            <div class="req_sbimage">
+                                <img src="css/img/nurses-app-icon.png" />
+                            </div>
+                        </div>
+                        <div class="col-9 col-sm-10">
+                            <div class="req_sbtxt">
+                                <h3 class="req_sbhd">Georgia Healthcare Nurses App</h3>
+                                <h3 class="req_sbpar">Our app for nurses will make it sure that whole procedure is automated and job is done perfectly crossed checked with the help of technology.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<GaHealthcareNurses.Client.Shared.Footer />
+
+@code{
+    LoginViewModel<UserDetails> clientData = new LoginViewModel<UserDetails>();
+    UserDetails user = new UserDetails();
+    IEnumerable<Job> jobs = new List<Job>();
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+            if (clientData == null)
+            {
+                navigation.NavigateTo("client/signin");
+            }
+
+            else
+            {
+                user = clientData.UserDetails;
+                var responseMessage = await Http.GetAsync(wsp.Path + $"Job/GetByClientId?id={clientData.UserDetails.UserId}");
+                var response = responseMessage.Content.ReadAsStringAsync().Result;
+                jobs = (JsonConvert.DeserializeObject<Response<IEnumerable<Job>>>(response)).Data.OrderByDescending(x=>x.JobId);
+
+                //var httpResponseMessage = await Http.GetAsync(wsp.Path + $"ServiceList/GetById?id={jobs.}");
+                //var responseCity = httpResponseMessage.Content.ReadAsStringAsync().Result;
+
+                StateHasChanged();
+            }
+        }
+    }
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+    //    user = clientData.UserDetails;
+    //    var responseMessage = await Http.GetAsync(wsp.Path + $"Job/GetByClientId?id={clientData.UserDetails.UserId}");
+    //    var response = responseMessage.Content.ReadAsStringAsync().Result;
+    //    jobs = (JsonConvert.DeserializeObject<Response<IEnumerable<Job>>>(response)).Data;
+    //}
+
+}

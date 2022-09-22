@@ -1,0 +1,304 @@
+﻿@page "/admin";
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using Newtonsoft.Json;
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Spinner
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Buttons
+@inject IJSRuntime jsRunTime
+@inject IToastService toast
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.SplitButtons
+@using Syncfusion.Blazor.Popups
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+<header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default attr-border navbar-sticky bootsnav on no-full desktop_head">
+
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/logo.png" class="logo logo-display" alt="Logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle active" data-toggle="dropdown">Admin  &nbsp;<i class="fas fa-user"></i></a>
+                    <ul class="dropdown-menu animated">
+                        <li><a @onclick="SignOut">Sign Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+
+</header>
+<!-- End Header -->
+
+@if (sendInvitation == true)
+{
+    <div class="top-entry-area client_dashboard">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="active">
+                <a data-toggle="tab" href="#tab1" aria-expanded="true">
+                    <i class="fas fa-th-large"></i> Service Requests
+                </a>
+            </li>
+            <li>
+                <a href="admin/nurses-list" aria-expanded="false">
+                    <i class="fas fa-tasks"></i>Nurses List
+                </a>
+            </li>       
+        </ul>
+        <div class="">
+            <div class="tab-content tab-content-info">
+                
+    <div class="top-entry-area client_dashboard">
+        <div class="container">
+            <div class="row dahboard_box">
+                <!--<div class="col-md-3 d_flx">
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a @onclick="RemoveClass" data-toggle="tab" href="#tab1" aria-expanded="true">
+                                <i class="fas fa-box"></i> Service Requests
+                            </a>
+                        </li>-->
+                        @*<li>
+                                <a data-toggle="tab" href="#tab2" aria-expanded="false">
+                                    <i class="fas fa-tasks"></i> Assign Agency
+                                </a>
+                            </li>*@
+                    <!--</ul>
+                </div>-->
+                <div class="col-md-12">
+
+                    <div id="tab_content" class="tab-content tab-content-info">
+                        <div id="tab1" class="tab-pane fade active in">
+                            <SfGrid AllowSelection="true" @ref="JobGrid" TValue="GetJobsForAgencyViewModel" AllowPaging="true" Toolbar="@(new List<string>() { "Search" })">
+                                <GridEvents RowDeselected="RowDeselectHandler" RowDeselecting="RowDeselectingHandler" RowSelected="RowSelectedHandler" RowSelecting="RowSelectingHandler" TValue="GetJobsForAgencyViewModel"></GridEvents>
+                                <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Single"></GridSelectionSettings>
+                                <GridPageSettings PageSize="4"></GridPageSettings>
+                                <SfDataManager Url="https://gahealthcarenurseswebapi.azurewebsites.net/api/Job/GetAllForAgency" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+                             
+                                <GridPageSettings EnableQueryString="true" PageSizes="@PageSizes"></GridPageSettings>
+                                <GridColumns>
+                                    <GridColumn Field="JobTitle.Title" HeaderText="Job Title" Type="ColumnType.String" TextAlign="TextAlign.Left" Width="300"></GridColumn>
+                                    <GridColumn Field="CareRecipient.City.Name" HeaderText="Location" Type="ColumnType.String" TextAlign="TextAlign.Left" Width="300"></GridColumn>
+                                    <GridColumn Width="100" TextAlign="TextAlign.Right">
+                                        <Template>
+
+                                            @{
+                                                var job = (context as GetJobsForAgencyViewModel);
+
+                                            }
+                                            @if (job != null)
+                                            {
+                                                @if (job.StatusId == 5)
+                                                {
+                                                    <SfButton @onclick="Send">Select</SfButton>
+                                                }
+                                                else if (job.StatusId == 13)
+                                                {
+                                                    <SfButton Disabled="true">Active</SfButton>
+                                                }
+                                                else
+                                                {
+                                                    <SfButton Disabled="true">Pending</SfButton>
+                                                }
+                                            }
+                                        </Template>
+                                    </GridColumn>
+                                </GridColumns>
+                            </SfGrid>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+        </div>
+}
+
+else
+{
+    <div class="spin-row">
+        <SfSpinner Size="40" Type="SpinnerType.Material" Visible="true"></SfSpinner>
+    </div>
+}
+
+
+<SfDialog ResizeHandles="@dialogResizeDirections" EnableResize="true" AllowDragging="true" IsModal="true" ShowCloseIcon="true" Width="500px" Visible="false" @ref="DialogObj">
+    <DialogEvents Closed="@DialogClose"></DialogEvents>
+    <DialogPositionData X="center" Y="center"></DialogPositionData>
+    <DialogTemplates>
+        <Header>
+            Select Agencies
+        </Header>
+        <Content>
+            <SfMultiSelect @bind-Value="selectedEmployers" TValue="string[]" TItem="Employer" AllowFiltering="true" Placeholder="Select agencies" Mode="@VisualMode.CheckBox" ShowSelectAll="@ShowSelectAllCheckBox" ShowDropDownIcon="@EnableDropDownIcon" DataSource="@agencyList" FilterBarPlaceholder="Search agency" PopupHeight="350px">
+                <MultiSelectFieldSettings Text="Name" Value="Id"></MultiSelectFieldSettings>
+            </SfMultiSelect>
+            <SfButton CssClass="invite-bid" @onclick="SendData">Invite To Bid</SfButton>
+        </Content>
+    </DialogTemplates>
+    <DialogAnimationSettings Effect="@DialogEffect.Zoom"></DialogAnimationSettings>
+</SfDialog>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+@code
+{
+    SfDialog DialogObj;
+    string[] selectedEmployers;
+    private SfGrid<GetJobsForAgencyViewModel> JobGrid;
+    private SfGrid<Employer> AgencyGrid;
+    List<Job> selectedJobs = new List<Job>();
+    List<Employer> selectedAgencies = new List<Employer>();
+    public bool sendInvitation = true;
+    List<Employer> agencyList = new List<Employer>();
+    public bool ShowSelectAllCheckBox { get; set; } = true;
+    public bool EnableDropDownIcon { get; set; } = true;
+    private ResizeDirection[] dialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
+    Response<string> admin = new Response<string>();
+
+    public int[] PageSizes { get; } = { 10, 20, 30, 40, 50 };
+
+    public void RowSelectingHandler(RowSelectingEventArgs<GetJobsForAgencyViewModel> args)
+    {
+        //args.Cancel = true;
+    }
+
+    public void RowSelectedHandler(RowSelectEventArgs<GetJobsForAgencyViewModel> Args)
+    {
+
+    }
+
+    public void RowDeselectingHandler(RowDeselectEventArgs<GetJobsForAgencyViewModel> args)
+    {
+
+    }
+
+    public void RowDeselectHandler(RowDeselectEventArgs<GetJobsForAgencyViewModel> args)
+    {
+        // Here you can customize your code
+    }
+
+    public async Task Send()
+    {
+        DialogObj.Show();
+    }
+
+    public async Task SendData()
+    {
+        if (selectedEmployers != null)
+        {
+            DialogObj.Hide();
+            List<SendJobViewModel> sendJobs = new List<SendJobViewModel>();
+            List<SendEmployerViewModel> agencies = new List<SendEmployerViewModel>();
+            sendInvitation = false;
+            var jobs = await JobGrid.GetSelectedRecords();
+            foreach (var job in jobs)
+            {
+                SendJobViewModel sendJobViewModel = new SendJobViewModel
+                {
+                    JobId = job.JobId,
+                    JobTitle = job.JobTitle.Title,
+                    JobLocation = job.CareRecipient.City.Name
+                };
+                sendJobs.Add(sendJobViewModel);
+            }
+
+            foreach (var employer in selectedEmployers)
+            {
+                SendEmployerViewModel sendEmployerViewModel = new SendEmployerViewModel
+                {
+                    EmployerId = employer
+                };
+                agencies.Add(sendEmployerViewModel);
+            }
+
+            JobInvitationViewModel jobInvitationViewModel = new JobInvitationViewModel
+            {
+                Jobs = sendJobs,
+                Employers = agencies
+            };
+
+            var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "SendJobInvitation", jobInvitationViewModel);
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            var data = (JsonConvert.DeserializeObject<Response<string>>(response));
+            if (data.Status == "Success")
+            {
+                toast.ShowSuccess("Job invitation sent!");
+                sendInvitation = true;
+                navigation.NavigateTo("admin", forceLoad: true);
+            }
+            else
+            {
+                sendInvitation = true;
+                toast.ShowError(data.Message);
+            }
+        }
+        else
+        {
+            toast.ShowError("Please select agencies");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + "Employer/GetAll");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        agencyList = (JsonConvert.DeserializeObject<Response<List<Employer>>>(response)).Data;
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            admin = await localStorage.GetItemAsync<Response<string>>("adminData");
+            if (admin == null)
+            {
+                navigation.NavigateTo("admin/sign-in");
+            }
+        }
+    }
+    public async Task RemoveClass()
+    {
+        await jsRunTime.InvokeVoidAsync("RemoveClass");
+    }
+
+    public void DialogClose(object args)
+    {
+        DialogObj.Hide();
+    }
+
+    public async Task SignOut()
+    {
+        await localStorage.RemoveItemAsync("adminData");
+        toastService.ShowSuccess("Logout successfull!");
+        Task.Delay(2000);
+        navigation.NavigateTo("/");
+    }
+}

@@ -1,0 +1,68 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/client/forgot-password";
+@inject IToastService toastService
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@using Microsoft.AspNetCore.Components.Forms
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Syncfusion.Blazor.Inputs
+
+
+
+<GaHealthcareNurses.Client.Shared.ClientHeader />
+
+<div class="frontend default-padding signin_page">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Reset <span>Password</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm class="formSec" Model="@resetPassword" OnValidSubmit="()=>ResetPassword(resetPassword)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Email" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" @bind-Value="resetPassword.Email" class="form-control" />
+                            <ValidationMessage For="@(() => resetPassword.Email)" />
+                        </div>
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Send reset password<i class="fa fa-paper-plane"></i>
+                        </button>
+                        <div class="formFooterLink text-center"><p class="subheading"> Or <span><br /><a href="client/sign-in">Sign In</a></span></p></div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    ResetPasswordViewModel resetPassword = new ResetPasswordViewModel();
+    AccountViewModel accountData = new AccountViewModel();
+    public async Task ResetPassword(ResetPasswordViewModel resetPassword)
+    {
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "ForgotPassword", resetPassword);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        accountData = (JsonConvert.DeserializeObject<Response<AccountViewModel>>(response)).Data;
+        if (accountData == null)
+            toastService.ShowError("Enter valid email");
+        else
+            toastService.ShowSuccess("Forgot link sent");
+
+        resetPassword.Email = string.Empty;
+    }
+
+
+}

@@ -1,0 +1,238 @@
+﻿@page "/agency/apply_job";
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IToastService toastService
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Data
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Entity.Models;
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@inject IJSRuntime jsRunTime
+@using Syncfusion.Blazor.Popups
+@using Microsoft.JSInterop
+@using Syncfusion.Blazor.Spinner
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@using Microsoft.AspNetCore.WebUtilities
+<!-- Header
+============================================= -->
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="top-entry-area client_dashboard">
+    <div class="container">
+        <ul class="nav nav-pills">
+            @if (agencyInformation != null)
+            {
+                <li>
+                    <div style="float:left;padding:45px;padding-top:0">
+                        @if (agencyInformation.Logo != null)
+                        {
+                            <img class="photo" src="@UriHelper.ToAbsoluteUri(agencyInformation.Logo)" alt="@agencyInformation.Name" />
+                        }
+                        else
+                        {
+                            <img class="photo" src="assets/img/DefaultAgencyLogo.png" alt="@agencyInformation.Name" />
+                        }
+                        <br />
+                        <div style="text-align:center">@agencyInformation.Name</div>
+                    </div>
+                </li>
+            }
+
+            <li>
+                <a href="agency/dashboard" aria-expanded="true">
+                    <i class="fas fa-th-large"></i> Service Requests (All)
+                </a>
+            </li>
+            <li class="active">
+                <a data-toggle="tab" href="#tab2" aria-expanded="true">
+                    <i class="fas fa-tasks"></i>Bid for Job
+                </a>
+            </li>
+            <li>
+                <a href="agency/service-requests" aria-expanded="false">
+                    <i class="fas fa-user-cog"></i> Service Requests (Active)
+                </a>
+            </li>
+
+            <li>
+                <a href="agency/tasklist" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Assign Tasks
+                </a>
+            </li>
+            <li>
+                <a href="/agency/uploaded_docs" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Documents
+                </a>
+            </li>
+        </ul>
+        <div class="col-md-12">
+            <div class="tab-content tab-content-info">
+                <div id="tab2" class="tab-pane fade active in">
+                    <div class="info title">
+                        <h3>Your Service Requests</h3>
+                        <div class="job_list">
+                            @if (jobsInvited.Count>0)
+                            {
+                                @foreach (var job in jobsInvited)
+                                {
+                                    <div class="job_bx">
+                                        <div class="dat_loc">
+                                            <div class="opp_dte locationTxt">
+                                                Published: <b>@job.Job.PostedTime.ToShortDateString()</b>
+                                            </div>
+                                            <div class="opp_dte locationTxt">
+                                                Locaton: <b>@job.Job.CareRecipient.City.Name</b>
+                                            </div>
+                                        </div>
+                                        <div class="titl_inv">
+                                            <h5>@job.Job.JobTitle.Title</h5>
+                                            <span class="invited">@job.Status.Name</span>
+                                        </div>
+                                        <p>
+                                            @job.Job.Description
+                                        </p>
+                                        @if (@job.StatusId == 11)
+                                        {
+                                            <a @onclick="()=>OpenPopUp(job.Id)" id="open_popup" data-jobId="@job.JobId" data-empId="@job.EmployerId" class="btn btn-theme effect btn-md accept_btn" href="#" data-toggle="modal" data-target="#acceptmodal">Accept</a>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-theme effect btn-md accept_btn" disabled data-toggle="modal" data-target="#acceptmodal">Accepted</button>
+                                        }
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p>No service request to show</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<SfDialog ResizeHandles="@dialogResizeDirections" EnableResize="true" AllowDragging="true" IsModal="true" ShowCloseIcon="true" Width="400px" Visible="false" @ref="DialogObj" class="hourlyRateModal">
+    <DialogEvents Closed="@DialogClose"></DialogEvents>
+    <DialogPositionData X="center" Y="center"></DialogPositionData>
+    <DialogTemplates>
+        <Header>
+            <h3>Submit Your Hourly Rate</h3>
+        </Header>
+        <Content>
+            <div class="agen_taskform hourlyRateForm">
+                <div class="formSec task_form">
+                    <input id="sendid" type="hidden" />
+                    <span class="rate_hour">$ <input id="hourly_rate" class="form-control" />/hour</span>
+                    <div class="agc_sndcncl">
+                        <button type="button" @onclick="AcceptInvitation" class="btn btn-theme btn-md">Send</button>
+                    </div>
+                </div>
+            </div>
+        </Content>
+    </DialogTemplates>
+    <DialogAnimationSettings Effect="@DialogEffect.Zoom"></DialogAnimationSettings>
+</SfDialog>
+
+<SfSpinner @ref="sfSpinner" Size="40" Type="SpinnerType.Bootstrap4" Visible="false"></SfSpinner>
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    LoginViewModel<UserDetails> agencyData = new LoginViewModel<UserDetails>();
+    List<JobApplyForAgency> jobsInvited = new List<JobApplyForAgency>();
+    SfDialog DialogObj;
+    SfSpinner sfSpinner;
+    Employer agencyInformation = new Employer();
+    private ResizeDirection[] dialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
+    System.Uri uri;
+    string agencyId = string.Empty;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        uri = navigation.ToAbsoluteUri(navigation.Uri);
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("id", out var aVal))
+        {
+            agencyId = aVal;
+        }
+    }
+
+
+
+    public void DialogClose(object args)
+    {
+        DialogObj.Hide();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            agencyData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("agencyData");
+            if (agencyData != null)
+            {
+                if (!string.IsNullOrEmpty(agencyId))
+                {
+                    if (agencyData.UserDetails.UserId != agencyId)
+                    {
+                        navigation.NavigateTo("agency/sign-in");
+                    }
+                }
+
+                var httpResponseMessage = await Http.GetAsync(wsp.Path + $"JobApplyForEmployer/GetByEmployerId?id={agencyData.UserDetails.UserId}");
+                var result = httpResponseMessage.Content.ReadAsStringAsync().Result;
+                var data = (JsonConvert.DeserializeObject<Response<List<JobApplyForAgency>>>(result)).Data;
+                jobsInvited = data.OrderByDescending(x => x.Id).ToList();
+
+                var agencyResponseMessage = await Http.GetAsync(wsp.Path + $"Employer/GetById?id={agencyData.UserDetails.UserId}");
+                var agencyResponse = agencyResponseMessage.Content.ReadAsStringAsync().Result;
+                agencyInformation = (JsonConvert.DeserializeObject<Response<Employer>>(agencyResponse)).Data;
+
+                StateHasChanged();
+            }
+            else
+            {
+                navigation.NavigateTo("agency/sign-in");
+            }
+        }
+    }
+
+    public async Task OpenPopUp(int id)
+    {
+        await DialogObj.Show();
+        await jsRunTime.InvokeVoidAsync("OpenPopUp", id);
+    }
+
+    public async Task AcceptInvitation()
+    {
+        DialogObj.Hide();
+        sfSpinner.ShowAsync();
+        var dotNetObjRef = DotNetObjectReference.Create(this);
+        await jsRunTime.InvokeVoidAsync("AcceptInvitation", dotNetObjRef);
+    }
+
+    [JSInvokable]
+    public async Task Response(string response)
+    {
+        if (response == "Success")
+        {
+            sfSpinner.HideAsync();
+            toastService.ShowSuccess("Invitation Accepted!");
+            await Task.Delay(2000);
+            navigation.NavigateTo("agency/apply_job", forceLoad: true);
+
+        }
+        else
+        {
+            sfSpinner.HideAsync();
+            toastService.ShowError("Invitation accept failed.Please try again");
+        }
+    }
+
+}

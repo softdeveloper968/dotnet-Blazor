@@ -1,0 +1,72 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/admin/sign-in";
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@using GaHealthcareNurses.Entity.Models;
+@inject IToastService toastService
+@using Syncfusion.Blazor.Inputs
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject NavigationManager navigation
+
+<GaHealthcareNurses.Client.Shared.HomepageHeader />
+
+<div class="frontend default-padding signin_page">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Sign In : <span>Admin</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm Model="@login" class="formSec" OnValidSubmit="()=>Login(login)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Email" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" @bind-Value="login.Email" class="form-control" />
+                            <ValidationMessage For="@(() => login.Email)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" @bind-Value="login.Password" class="form-control" />
+                            <ValidationMessage For="@(() => login.Password)" />
+                        </div>
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Sign In<i class="fa fa-paper-plane"></i>
+                        </button>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+
+    LoginModel login = new LoginModel();
+
+    public async Task Login(LoginModel login)
+    {
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "admin", login);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var data = (JsonConvert.DeserializeObject<Response<string>>(response));
+        if (data.Status=="Success")
+        {
+                await localStorage.SetItemAsync("adminData", data);
+                toastService.ShowSuccess("Login Successfull!");
+                navigation.NavigateTo("admin");
+
+        }
+        else
+            toastService.ShowError("Enter valid email and password");
+
+        login.Email = string.Empty;
+        login.Password = string.Empty;
+    }
+}

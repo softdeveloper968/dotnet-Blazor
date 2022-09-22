@@ -1,0 +1,1675 @@
+2021-04-12 09:11:46.1102 Info Message Template Auto Format enabled
+2021-04-12 09:11:46.1246 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 09:11:46.1830 Info Adding target FileTarget(Name=alldata)
+2021-04-12 09:11:46.2273 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 09:11:46.2731 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 10:42:13.3160 Info Message Template Auto Format enabled
+2021-04-12 10:42:13.3347 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 10:42:13.3865 Info Adding target FileTarget(Name=alldata)
+2021-04-12 10:42:13.3976 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 10:42:13.4341 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 11:16:41.9280 Info Message Template Auto Format enabled
+2021-04-12 11:16:42.0867 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 11:16:42.1775 Info Adding target FileTarget(Name=alldata)
+2021-04-12 11:16:42.1775 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 11:16:42.2212 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 11:24:40.0504 Info Message Template Auto Format enabled
+2021-04-12 11:24:40.0668 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 11:24:40.1171 Info Adding target FileTarget(Name=alldata)
+2021-04-12 11:24:40.1171 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 11:24:40.1687 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 12:37:16.7785 Info Message Template Auto Format enabled
+2021-04-12 12:37:16.7940 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 12:37:16.8423 Info Adding target FileTarget(Name=alldata)
+2021-04-12 12:37:16.8525 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 12:37:16.8962 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 12:49:14.8250 Info Message Template Auto Format enabled
+2021-04-12 12:49:14.8372 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 12:49:14.9120 Info Adding target FileTarget(Name=alldata)
+2021-04-12 12:49:14.9120 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 12:49:14.9608 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 12:51:56.3727 Info Message Template Auto Format enabled
+2021-04-12 12:51:56.3937 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 12:51:56.4622 Info Adding target FileTarget(Name=alldata)
+2021-04-12 12:51:56.4738 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 12:51:56.5120 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 12:54:25.4881 Info Message Template Auto Format enabled
+2021-04-12 12:54:25.5047 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 12:54:25.5626 Info Adding target FileTarget(Name=alldata)
+2021-04-12 12:54:25.5806 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 12:54:25.6215 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 12:57:24.8549 Info Message Template Auto Format enabled
+2021-04-12 12:57:24.8704 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 12:57:24.9280 Info Adding target FileTarget(Name=alldata)
+2021-04-12 12:57:24.9280 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 12:57:24.9782 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 13:00:45.4047 Info Message Template Auto Format enabled
+2021-04-12 13:00:45.4239 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 13:00:45.4768 Info Adding target FileTarget(Name=alldata)
+2021-04-12 13:00:45.4884 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 13:00:45.5291 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 13:01:17.6595 Info Message Template Auto Format enabled
+2021-04-12 13:01:17.6748 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 13:01:17.7265 Info Adding target FileTarget(Name=alldata)
+2021-04-12 13:01:17.7265 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 13:01:17.7776 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 15:49:53.1563 Info Message Template Auto Format enabled
+2021-04-12 15:49:53.1687 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 15:49:53.2171 Info Adding target FileTarget(Name=alldata)
+2021-04-12 15:49:53.2261 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 15:49:53.2604 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-12 15:58:36.6763 Info Message Template Auto Format enabled
+2021-04-12 15:58:36.6902 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-12 15:58:36.7367 Info Adding target FileTarget(Name=alldata)
+2021-04-12 15:58:36.7437 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-12 15:58:36.7753 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 15:17:59.4686 Info Message Template Auto Format enabled
+2021-04-15 15:17:59.4686 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 15:17:59.5314 Info Adding target FileTarget(Name=alldata)
+2021-04-15 15:17:59.5851 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 15:17:59.6486 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:07:33.1684 Info Message Template Auto Format enabled
+2021-04-15 16:07:33.1959 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:07:33.2545 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:07:33.2732 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:07:33.3170 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:09:30.4109 Info Message Template Auto Format enabled
+2021-04-15 16:09:30.4225 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:09:30.4764 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:09:30.4867 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:09:30.5252 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:13:02.5483 Info Message Template Auto Format enabled
+2021-04-15 16:13:02.5483 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:13:02.6119 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:13:02.6239 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:13:02.6855 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:16:32.3506 Info Message Template Auto Format enabled
+2021-04-15 16:16:32.3794 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:16:32.5048 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:16:32.5381 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:16:32.5877 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:29:31.1158 Info Message Template Auto Format enabled
+2021-04-15 16:29:31.1285 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:29:31.1727 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:29:31.1727 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:29:31.2141 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:36:50.2939 Info Message Template Auto Format enabled
+2021-04-15 16:36:50.3071 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:36:50.3560 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:36:50.3633 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:36:50.3973 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:39:51.4799 Info Message Template Auto Format enabled
+2021-04-15 16:39:51.4943 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:39:51.5519 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:39:51.5519 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:39:51.6013 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 16:50:16.5013 Info Message Template Auto Format enabled
+2021-04-15 16:50:16.5147 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 16:50:16.5584 Info Adding target FileTarget(Name=alldata)
+2021-04-15 16:50:16.5678 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 16:50:16.5962 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:19:06.5529 Info Message Template Auto Format enabled
+2021-04-15 17:19:06.5748 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:19:06.6198 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:19:06.6274 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:19:06.6607 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:20:08.3440 Info Message Template Auto Format enabled
+2021-04-15 17:20:08.3440 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:20:08.4149 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:20:08.4253 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:20:08.4734 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:21:10.4854 Info Message Template Auto Format enabled
+2021-04-15 17:21:10.5010 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:21:10.5496 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:21:10.5496 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:21:10.5897 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:26:52.9420 Info Message Template Auto Format enabled
+2021-04-15 17:26:52.9603 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:26:53.0131 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:26:53.0251 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:26:53.0620 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:29:06.0782 Info Message Template Auto Format enabled
+2021-04-15 17:29:06.0782 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:29:06.1476 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:29:06.1590 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:29:06.1974 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:30:16.2546 Info Message Template Auto Format enabled
+2021-04-15 17:30:16.2696 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:30:16.3321 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:30:16.3450 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:30:16.3802 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:31:13.4867 Info Message Template Auto Format enabled
+2021-04-15 17:31:13.5162 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:31:13.5645 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:31:13.5645 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:31:13.6118 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:32:48.1299 Info Message Template Auto Format enabled
+2021-04-15 17:32:48.1422 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:32:48.1878 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:32:48.2059 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:32:48.2544 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:36:42.2748 Info Message Template Auto Format enabled
+2021-04-15 17:36:42.2925 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:36:42.3477 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:36:42.3477 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:36:42.4023 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:40:50.3675 Info Message Template Auto Format enabled
+2021-04-15 17:40:50.4013 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:40:50.4570 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:40:50.4570 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:40:50.5032 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-15 17:43:33.0540 Info Message Template Auto Format enabled
+2021-04-15 17:43:33.0689 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-15 17:43:33.1185 Info Adding target FileTarget(Name=alldata)
+2021-04-15 17:43:33.1294 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-15 17:43:33.1693 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 15:08:21.6804 Info Message Template Auto Format enabled
+2021-04-16 15:08:21.7155 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 15:08:21.7951 Info Adding target FileTarget(Name=alldata)
+2021-04-16 15:08:21.8236 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 15:08:21.8733 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 15:13:38.8333 Info Message Template Auto Format enabled
+2021-04-16 15:13:38.8491 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 15:13:38.9027 Info Adding target FileTarget(Name=alldata)
+2021-04-16 15:13:38.9297 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 15:13:38.9884 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 15:16:23.8818 Info Message Template Auto Format enabled
+2021-04-16 15:16:23.9044 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 15:16:23.9587 Info Adding target FileTarget(Name=alldata)
+2021-04-16 15:16:23.9705 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 15:16:24.0135 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 15:17:17.7495 Info Message Template Auto Format enabled
+2021-04-16 15:17:17.7789 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 15:17:17.8645 Info Adding target FileTarget(Name=alldata)
+2021-04-16 15:17:17.8874 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 15:17:17.9485 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 15:22:00.9419 Info Message Template Auto Format enabled
+2021-04-16 15:22:00.9579 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 15:22:01.0575 Info Adding target FileTarget(Name=alldata)
+2021-04-16 15:22:01.0714 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 15:22:01.1075 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 15:39:01.0021 Info Message Template Auto Format enabled
+2021-04-16 15:39:01.0183 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 15:39:01.0710 Info Adding target FileTarget(Name=alldata)
+2021-04-16 15:39:01.0857 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 15:39:01.1292 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 16:35:29.3407 Info Message Template Auto Format enabled
+2021-04-16 16:35:29.3833 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 16:35:29.4460 Info Adding target FileTarget(Name=alldata)
+2021-04-16 16:35:29.4771 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 16:35:29.5638 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 16:44:11.2480 Info Message Template Auto Format enabled
+2021-04-16 16:44:11.2922 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 16:44:11.3703 Info Adding target FileTarget(Name=alldata)
+2021-04-16 16:44:11.3828 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 16:44:11.4251 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 16:47:28.3885 Info Message Template Auto Format enabled
+2021-04-16 16:47:28.4119 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 16:47:28.4674 Info Adding target FileTarget(Name=alldata)
+2021-04-16 16:47:28.4896 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 16:47:28.5380 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 16:54:53.5376 Info Message Template Auto Format enabled
+2021-04-16 16:54:53.5514 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 16:54:53.5982 Info Adding target FileTarget(Name=alldata)
+2021-04-16 16:54:53.5982 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 16:54:53.6429 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 16:57:41.2162 Info Message Template Auto Format enabled
+2021-04-16 16:57:41.2351 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 16:57:41.3105 Info Adding target FileTarget(Name=alldata)
+2021-04-16 16:57:41.3429 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 16:57:41.4268 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:03:01.8073 Info Message Template Auto Format enabled
+2021-04-16 17:03:01.8216 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:03:01.8632 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:03:01.8632 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:03:01.9027 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:04:52.2604 Info Message Template Auto Format enabled
+2021-04-16 17:04:52.2816 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:04:52.3294 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:04:52.3446 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:04:52.3786 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:22:25.5232 Info Message Template Auto Format enabled
+2021-04-16 17:22:25.5358 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:22:25.5807 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:22:25.5807 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:22:25.6254 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:23:48.6732 Info Message Template Auto Format enabled
+2021-04-16 17:23:48.6908 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:23:48.7444 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:23:48.7657 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:23:48.8141 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:25:50.3167 Info Message Template Auto Format enabled
+2021-04-16 17:25:50.3472 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:25:50.4102 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:25:50.4102 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:25:50.4598 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:27:31.4167 Info Message Template Auto Format enabled
+2021-04-16 17:27:31.4415 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:27:31.4872 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:27:31.5116 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:27:31.5464 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:29:17.9283 Info Message Template Auto Format enabled
+2021-04-16 17:29:17.9533 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:29:18.0214 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:29:18.0414 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:29:18.0883 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:31:22.1395 Info Message Template Auto Format enabled
+2021-04-16 17:31:22.1628 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:31:22.2175 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:31:22.2175 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:31:22.2782 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:32:49.6334 Info Message Template Auto Format enabled
+2021-04-16 17:32:49.7187 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:32:49.8268 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:32:49.8523 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:32:49.9446 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:39:48.9067 Info Message Template Auto Format enabled
+2021-04-16 17:39:48.9263 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:39:48.9713 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:39:48.9713 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:39:49.0308 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:41:34.0967 Info Message Template Auto Format enabled
+2021-04-16 17:41:34.1202 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:41:34.1989 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:41:34.2071 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:41:34.2412 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-16 17:51:48.7863 Info Message Template Auto Format enabled
+2021-04-16 17:51:48.8001 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-16 17:51:48.8465 Info Adding target FileTarget(Name=alldata)
+2021-04-16 17:51:48.8465 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-16 17:51:48.8903 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 09:27:27.4621 Info Message Template Auto Format enabled
+2021-04-19 09:27:28.4478 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 09:27:28.5367 Info Adding target FileTarget(Name=alldata)
+2021-04-19 09:27:28.5787 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 09:27:28.6641 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 09:42:55.6261 Info Message Template Auto Format enabled
+2021-04-19 09:42:55.6389 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 09:42:55.6833 Info Adding target FileTarget(Name=alldata)
+2021-04-19 09:42:55.6833 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 09:42:55.7345 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 09:45:42.0726 Info Message Template Auto Format enabled
+2021-04-19 09:45:42.0874 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 09:45:42.1365 Info Adding target FileTarget(Name=alldata)
+2021-04-19 09:45:42.1365 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 09:45:42.1913 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 10:12:16.6230 Info Message Template Auto Format enabled
+2021-04-19 10:12:16.6361 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 10:12:16.6806 Info Adding target FileTarget(Name=alldata)
+2021-04-19 10:12:16.6806 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 10:12:17.5692 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 10:14:29.5566 Info Message Template Auto Format enabled
+2021-04-19 10:14:29.5723 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 10:14:29.6332 Info Adding target FileTarget(Name=alldata)
+2021-04-19 10:14:29.6426 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 10:14:29.6857 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 10:18:30.6849 Info Message Template Auto Format enabled
+2021-04-19 10:18:30.7001 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 10:18:30.7474 Info Adding target FileTarget(Name=alldata)
+2021-04-19 10:18:30.7596 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 10:18:30.8063 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 10:20:38.3678 Info Message Template Auto Format enabled
+2021-04-19 10:20:38.3808 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 10:20:38.4310 Info Adding target FileTarget(Name=alldata)
+2021-04-19 10:20:38.4310 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 10:20:38.4788 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 12:54:03.1330 Info Message Template Auto Format enabled
+2021-04-19 12:54:03.1537 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 12:54:03.2100 Info Adding target FileTarget(Name=alldata)
+2021-04-19 12:54:03.2250 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 12:54:03.2716 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 12:54:50.2160 Info Message Template Auto Format enabled
+2021-04-19 12:54:50.2427 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 12:54:50.3088 Info Adding target FileTarget(Name=alldata)
+2021-04-19 12:54:50.3237 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 12:54:50.4181 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 12:58:45.7364 Info Message Template Auto Format enabled
+2021-04-19 12:58:45.7515 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 12:58:45.7988 Info Adding target FileTarget(Name=alldata)
+2021-04-19 12:58:45.8073 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 12:58:45.8485 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 13:02:25.6533 Info Message Template Auto Format enabled
+2021-04-19 13:02:25.6776 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 13:02:25.7421 Info Adding target FileTarget(Name=alldata)
+2021-04-19 13:02:25.7523 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 13:02:25.7941 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 13:08:38.0765 Info Message Template Auto Format enabled
+2021-04-19 13:08:38.0904 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 13:08:38.1431 Info Adding target FileTarget(Name=alldata)
+2021-04-19 13:08:38.1535 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 13:08:38.2004 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 13:16:14.3247 Info Message Template Auto Format enabled
+2021-04-19 13:16:14.3469 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 13:16:14.3961 Info Adding target FileTarget(Name=alldata)
+2021-04-19 13:16:14.4068 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 13:16:14.4522 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 13:19:28.7516 Info Message Template Auto Format enabled
+2021-04-19 13:19:28.7682 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 13:19:28.8223 Info Adding target FileTarget(Name=alldata)
+2021-04-19 13:19:28.8223 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 13:19:28.8762 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 13:23:02.1189 Info Message Template Auto Format enabled
+2021-04-19 13:23:02.1344 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 13:23:02.1856 Info Adding target FileTarget(Name=alldata)
+2021-04-19 13:23:02.1856 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 13:23:02.2433 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 13:44:58.6544 Info Message Template Auto Format enabled
+2021-04-19 13:44:58.7275 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 13:44:58.8268 Info Adding target FileTarget(Name=alldata)
+2021-04-19 13:44:58.8509 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 13:44:58.9063 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 16:35:55.3931 Info Message Template Auto Format enabled
+2021-04-19 16:35:55.4200 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 16:35:55.5009 Info Adding target FileTarget(Name=alldata)
+2021-04-19 16:35:55.5373 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 16:35:55.6139 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 16:45:32.7469 Info Message Template Auto Format enabled
+2021-04-19 16:45:32.7690 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 16:45:32.8521 Info Adding target FileTarget(Name=alldata)
+2021-04-19 16:45:32.8767 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 16:45:32.9340 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 16:53:16.1268 Info Message Template Auto Format enabled
+2021-04-19 16:53:16.1446 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 16:53:16.1977 Info Adding target FileTarget(Name=alldata)
+2021-04-19 16:53:16.2098 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 16:53:16.2485 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 16:53:59.9966 Info Message Template Auto Format enabled
+2021-04-19 16:54:00.0276 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 16:54:00.1125 Info Adding target FileTarget(Name=alldata)
+2021-04-19 16:54:00.1382 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 16:54:00.2107 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 16:59:40.6619 Info Message Template Auto Format enabled
+2021-04-19 16:59:40.6744 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 16:59:40.7254 Info Adding target FileTarget(Name=alldata)
+2021-04-19 16:59:40.7254 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 16:59:40.7633 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:02:23.6332 Info Message Template Auto Format enabled
+2021-04-19 17:02:23.6482 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:02:23.7035 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:02:23.7330 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:02:23.7743 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:04:27.5567 Info Message Template Auto Format enabled
+2021-04-19 17:04:27.5980 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:04:27.6814 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:04:27.7689 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:04:27.8123 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:09:58.1387 Info Message Template Auto Format enabled
+2021-04-19 17:09:58.1714 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:09:58.2452 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:09:58.2550 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:09:58.2939 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:12:21.5711 Info Message Template Auto Format enabled
+2021-04-19 17:12:21.5846 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:12:21.6293 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:12:21.6293 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:12:21.6704 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:21:21.9687 Info Message Template Auto Format enabled
+2021-04-19 17:21:21.9687 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:21:22.0284 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:21:22.0386 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:21:22.0751 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:24:45.8508 Info Message Template Auto Format enabled
+2021-04-19 17:24:45.8814 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:24:45.9602 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:24:46.0799 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:24:46.1622 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:27:17.4039 Info Message Template Auto Format enabled
+2021-04-19 17:27:17.4440 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:27:17.4987 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:27:17.5067 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:27:17.5428 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:35:39.9796 Info Message Template Auto Format enabled
+2021-04-19 17:35:39.9922 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:35:40.0334 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:35:40.0334 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:35:40.0734 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:38:44.6112 Info Message Template Auto Format enabled
+2021-04-19 17:38:44.6247 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:38:44.6779 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:38:44.6868 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:38:44.7222 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:39:28.9139 Info Message Template Auto Format enabled
+2021-04-19 17:39:28.9296 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:39:28.9837 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:39:28.9837 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:39:29.0434 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:40:17.5775 Info Message Template Auto Format enabled
+2021-04-19 17:40:17.6087 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:40:17.6738 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:40:17.6738 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:40:17.7192 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:44:37.5238 Info Message Template Auto Format enabled
+2021-04-19 17:44:37.5467 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:44:37.6169 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:44:37.6267 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:44:37.6664 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:45:51.0275 Info Message Template Auto Format enabled
+2021-04-19 17:45:51.1307 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:45:51.2047 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:45:51.2300 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:45:51.2660 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:47:29.8038 Info Message Template Auto Format enabled
+2021-04-19 17:47:29.8176 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:47:29.8819 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:47:29.8932 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:47:29.9326 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 17:48:50.4280 Info Message Template Auto Format enabled
+2021-04-19 17:48:50.4450 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 17:48:50.5029 Info Adding target FileTarget(Name=alldata)
+2021-04-19 17:48:50.5029 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 17:48:50.5446 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 18:00:54.5143 Info Message Template Auto Format enabled
+2021-04-19 18:00:54.5285 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 18:00:54.5846 Info Adding target FileTarget(Name=alldata)
+2021-04-19 18:00:54.5938 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 18:00:54.6303 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 22:05:17.9625 Info Message Template Auto Format enabled
+2021-04-19 22:05:18.0065 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 22:05:18.1027 Info Adding target FileTarget(Name=alldata)
+2021-04-19 22:05:18.1167 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 22:05:18.1527 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-19 22:22:38.6523 Info Message Template Auto Format enabled
+2021-04-19 22:22:38.6644 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-19 22:22:38.7087 Info Adding target FileTarget(Name=alldata)
+2021-04-19 22:22:38.7087 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-19 22:22:38.7479 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 08:51:19.5057 Info Message Template Auto Format enabled
+2021-04-20 08:51:19.6320 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 08:51:19.8122 Info Adding target FileTarget(Name=alldata)
+2021-04-20 08:51:19.9364 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 08:51:19.9767 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 09:13:19.2664 Info Message Template Auto Format enabled
+2021-04-20 09:13:19.2804 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 09:13:19.3310 Info Adding target FileTarget(Name=alldata)
+2021-04-20 09:13:19.3381 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 09:13:19.3723 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 09:23:51.0206 Info Message Template Auto Format enabled
+2021-04-20 09:23:51.0206 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 09:23:51.0898 Info Adding target FileTarget(Name=alldata)
+2021-04-20 09:23:51.1041 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 09:23:51.1464 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 09:29:41.0127 Info Message Template Auto Format enabled
+2021-04-20 09:29:41.0352 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 09:29:41.0913 Info Adding target FileTarget(Name=alldata)
+2021-04-20 09:29:41.1049 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 09:29:41.1510 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 09:47:26.7618 Info Message Template Auto Format enabled
+2021-04-20 09:47:26.7770 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 09:47:26.8395 Info Adding target FileTarget(Name=alldata)
+2021-04-20 09:47:26.8493 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 09:47:26.8921 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 09:52:08.6541 Info Message Template Auto Format enabled
+2021-04-20 09:52:08.6763 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 09:52:08.7299 Info Adding target FileTarget(Name=alldata)
+2021-04-20 09:52:08.7519 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 09:52:08.8025 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:10:47.9605 Info Message Template Auto Format enabled
+2021-04-20 10:10:47.9780 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:10:48.0320 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:10:48.0426 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:10:48.0802 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:26:08.5389 Info Message Template Auto Format enabled
+2021-04-20 10:26:08.5683 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:26:08.6307 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:26:08.6307 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:26:08.6909 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:28:56.9757 Info Message Template Auto Format enabled
+2021-04-20 10:28:57.0027 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:28:57.0608 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:28:57.0679 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:28:57.1110 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:31:04.7203 Info Message Template Auto Format enabled
+2021-04-20 10:31:04.7403 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:31:04.8013 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:31:04.8236 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:31:04.8805 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:33:45.7316 Info Message Template Auto Format enabled
+2021-04-20 10:33:45.7628 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:33:45.8253 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:33:45.8338 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:33:45.8963 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:36:12.3736 Info Message Template Auto Format enabled
+2021-04-20 10:36:12.4867 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:36:12.6458 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:36:12.6843 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:36:12.7407 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 10:45:50.6117 Info Message Template Auto Format enabled
+2021-04-20 10:45:50.6230 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 10:45:50.6643 Info Adding target FileTarget(Name=alldata)
+2021-04-20 10:45:50.6643 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 10:45:50.7028 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:00:44.7978 Info Message Template Auto Format enabled
+2021-04-20 11:00:44.8268 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:00:44.9160 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:00:44.9279 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:00:44.9803 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:05:05.5530 Info Message Template Auto Format enabled
+2021-04-20 11:05:05.5781 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:05:05.6517 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:05:05.6861 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:05:05.7472 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:16:40.3992 Info Message Template Auto Format enabled
+2021-04-20 11:16:40.4397 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:16:40.4966 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:16:40.5278 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:16:40.5777 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:20:05.1522 Info Message Template Auto Format enabled
+2021-04-20 11:20:05.2016 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:20:05.2558 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:20:05.3015 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:20:05.3587 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:40:11.7552 Info Message Template Auto Format enabled
+2021-04-20 11:40:11.8193 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:40:11.9497 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:40:12.0051 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:40:12.0861 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:45:12.7907 Info Message Template Auto Format enabled
+2021-04-20 11:45:12.8146 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:45:12.8838 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:45:12.8957 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:45:12.9401 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:50:02.6830 Info Message Template Auto Format enabled
+2021-04-20 11:50:02.7212 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:50:02.7972 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:50:02.8288 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:50:02.8917 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 11:54:21.6377 Info Message Template Auto Format enabled
+2021-04-20 11:54:21.6533 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 11:54:21.7210 Info Adding target FileTarget(Name=alldata)
+2021-04-20 11:54:21.7333 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 11:54:21.7929 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 12:33:08.2984 Info Message Template Auto Format enabled
+2021-04-20 12:33:08.3197 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 12:33:08.3779 Info Adding target FileTarget(Name=alldata)
+2021-04-20 12:33:08.3874 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 12:33:08.4290 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 12:58:50.4417 Info Message Template Auto Format enabled
+2021-04-20 12:58:50.4638 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 12:58:50.5616 Info Adding target FileTarget(Name=alldata)
+2021-04-20 12:58:50.5747 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 12:58:50.6286 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 13:01:43.7823 Info Message Template Auto Format enabled
+2021-04-20 13:01:43.8226 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 13:01:43.8904 Info Adding target FileTarget(Name=alldata)
+2021-04-20 13:01:43.9131 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 13:01:44.0117 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 13:08:55.9218 Info Message Template Auto Format enabled
+2021-04-20 13:08:55.9494 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 13:08:56.0175 Info Adding target FileTarget(Name=alldata)
+2021-04-20 13:08:56.0293 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 13:08:56.0857 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 13:16:44.2941 Info Message Template Auto Format enabled
+2021-04-20 13:16:44.3154 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 13:16:44.3892 Info Adding target FileTarget(Name=alldata)
+2021-04-20 13:16:44.4147 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 13:16:44.5169 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 13:21:10.9747 Info Message Template Auto Format enabled
+2021-04-20 13:21:10.9901 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 13:21:11.0434 Info Adding target FileTarget(Name=alldata)
+2021-04-20 13:21:11.0532 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 13:21:11.0991 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 13:25:24.7573 Info Message Template Auto Format enabled
+2021-04-20 13:25:24.7710 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 13:25:24.8252 Info Adding target FileTarget(Name=alldata)
+2021-04-20 13:25:24.8325 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 13:25:24.8744 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:15:24.2068 Info Message Template Auto Format enabled
+2021-04-20 14:15:24.2068 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:15:24.2770 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:15:24.2908 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:15:24.3321 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:16:36.2367 Info Message Template Auto Format enabled
+2021-04-20 14:16:36.2657 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:16:36.3228 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:16:36.3350 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:16:36.3773 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:20:24.4673 Info Message Template Auto Format enabled
+2021-04-20 14:20:24.5201 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:20:24.6475 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:20:24.6937 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:20:24.7499 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:28:23.7547 Info Message Template Auto Format enabled
+2021-04-20 14:28:23.8186 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:28:23.9527 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:28:23.9961 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:28:24.0583 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:31:05.2719 Info Message Template Auto Format enabled
+2021-04-20 14:31:05.3291 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:31:05.4124 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:31:05.4273 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:31:05.5924 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:38:28.2107 Info Message Template Auto Format enabled
+2021-04-20 14:38:28.2234 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:38:28.2690 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:38:28.2764 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:38:28.3096 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 14:40:57.0036 Info Message Template Auto Format enabled
+2021-04-20 14:40:57.0631 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 14:40:57.1371 Info Adding target FileTarget(Name=alldata)
+2021-04-20 14:40:57.1547 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 14:40:57.2306 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 15:19:27.2337 Info Message Template Auto Format enabled
+2021-04-20 15:19:27.2877 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 15:19:27.3526 Info Adding target FileTarget(Name=alldata)
+2021-04-20 15:19:27.3845 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 15:19:27.4274 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 15:49:09.1233 Info Message Template Auto Format enabled
+2021-04-20 15:49:09.1526 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 15:49:09.2232 Info Adding target FileTarget(Name=alldata)
+2021-04-20 15:49:09.3183 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 15:49:09.3815 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 16:06:27.7874 Info Message Template Auto Format enabled
+2021-04-20 16:06:27.8437 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 16:06:27.9202 Info Adding target FileTarget(Name=alldata)
+2021-04-20 16:06:27.9356 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 16:06:27.9732 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 16:28:29.6631 Info Message Template Auto Format enabled
+2021-04-20 16:28:29.6796 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 16:28:29.7517 Info Adding target FileTarget(Name=alldata)
+2021-04-20 16:28:29.7799 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 16:28:29.8287 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 16:29:34.9869 Info Message Template Auto Format enabled
+2021-04-20 16:29:35.0072 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 16:29:35.0645 Info Adding target FileTarget(Name=alldata)
+2021-04-20 16:29:35.0977 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 16:29:35.1397 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 16:32:53.7300 Info Message Template Auto Format enabled
+2021-04-20 16:32:53.8266 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 16:32:54.0079 Info Adding target FileTarget(Name=alldata)
+2021-04-20 16:32:54.0585 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 16:32:54.1667 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-20 17:10:43.5908 Info Message Template Auto Format enabled
+2021-04-20 17:10:43.6148 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-20 17:10:43.6638 Info Adding target FileTarget(Name=alldata)
+2021-04-20 17:10:43.6638 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-20 17:10:43.7020 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 09:30:15.0751 Info Message Template Auto Format enabled
+2021-04-21 09:30:15.1896 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 09:30:15.2949 Info Adding target FileTarget(Name=alldata)
+2021-04-21 09:30:15.3392 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 09:30:15.4004 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 09:32:19.4395 Info Message Template Auto Format enabled
+2021-04-21 09:32:19.4540 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 09:32:19.5115 Info Adding target FileTarget(Name=alldata)
+2021-04-21 09:32:19.5214 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 09:32:19.5691 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 09:39:52.0387 Info Message Template Auto Format enabled
+2021-04-21 09:39:52.0592 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 09:39:52.1185 Info Adding target FileTarget(Name=alldata)
+2021-04-21 09:39:52.1185 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 09:39:52.1669 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 09:42:16.5402 Info Message Template Auto Format enabled
+2021-04-21 09:42:16.5576 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 09:42:16.6077 Info Adding target FileTarget(Name=alldata)
+2021-04-21 09:42:16.6149 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 09:42:16.6517 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 09:46:29.6461 Info Message Template Auto Format enabled
+2021-04-21 09:46:29.6626 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 09:46:29.7128 Info Adding target FileTarget(Name=alldata)
+2021-04-21 09:46:29.7232 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 09:46:29.7648 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:15:03.2161 Info Message Template Auto Format enabled
+2021-04-21 12:15:03.2470 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:15:03.3110 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:15:03.3344 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:15:03.4059 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:19:27.8071 Info Message Template Auto Format enabled
+2021-04-21 12:19:27.8507 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:19:27.9264 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:19:27.9456 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:19:28.0038 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:27:20.4108 Info Message Template Auto Format enabled
+2021-04-21 12:27:20.4622 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:27:20.5286 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:27:20.5420 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:27:20.6052 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:29:44.9977 Info Message Template Auto Format enabled
+2021-04-21 12:29:45.0207 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:29:45.0754 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:29:45.0836 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:29:45.1267 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:33:38.2198 Info Message Template Auto Format enabled
+2021-04-21 12:33:38.2554 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:33:38.3078 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:33:38.3208 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:33:38.3517 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:40:33.2719 Info Message Template Auto Format enabled
+2021-04-21 12:40:33.4882 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:40:33.6742 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:40:33.7545 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:40:34.0185 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 12:44:04.1095 Info Message Template Auto Format enabled
+2021-04-21 12:44:04.1320 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 12:44:04.1895 Info Adding target FileTarget(Name=alldata)
+2021-04-21 12:44:04.1972 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 12:44:04.2403 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 13:24:45.5041 Info Message Template Auto Format enabled
+2021-04-21 13:24:45.5194 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 13:24:45.5632 Info Adding target FileTarget(Name=alldata)
+2021-04-21 13:24:45.5702 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 13:24:46.2161 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 13:42:19.2223 Info Message Template Auto Format enabled
+2021-04-21 13:42:19.2392 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 13:42:19.2905 Info Adding target FileTarget(Name=alldata)
+2021-04-21 13:42:19.2905 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 13:42:19.3321 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 15:11:25.8791 Info Message Template Auto Format enabled
+2021-04-21 15:11:25.9019 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 15:11:25.9527 Info Adding target FileTarget(Name=alldata)
+2021-04-21 15:11:25.9625 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 15:11:26.0002 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 15:30:24.8446 Info Message Template Auto Format enabled
+2021-04-21 15:30:24.8789 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 15:30:24.9593 Info Adding target FileTarget(Name=alldata)
+2021-04-21 15:30:24.9593 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 15:30:25.0201 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 15:50:59.6046 Info Message Template Auto Format enabled
+2021-04-21 15:50:59.6175 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 15:50:59.6718 Info Adding target FileTarget(Name=alldata)
+2021-04-21 15:50:59.6792 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 15:50:59.7163 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-21 15:51:36.4705 Info Message Template Auto Format enabled
+2021-04-21 15:51:36.5690 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-21 15:51:36.6607 Info Adding target FileTarget(Name=alldata)
+2021-04-21 15:51:36.6607 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-21 15:51:36.7387 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 10:36:45.1935 Info Message Template Auto Format enabled
+2021-04-22 10:36:45.2117 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 10:36:45.2666 Info Adding target FileTarget(Name=alldata)
+2021-04-22 10:36:45.2771 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 10:36:45.3209 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 10:40:09.3812 Info Message Template Auto Format enabled
+2021-04-22 10:40:09.3812 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 10:40:09.4445 Info Adding target FileTarget(Name=alldata)
+2021-04-22 10:40:09.4445 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 10:40:09.4985 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 11:20:11.8945 Info Message Template Auto Format enabled
+2021-04-22 11:20:11.9098 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 11:20:11.9655 Info Adding target FileTarget(Name=alldata)
+2021-04-22 11:20:11.9655 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 11:20:12.0140 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 12:28:45.9916 Info Message Template Auto Format enabled
+2021-04-22 12:28:46.0315 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 12:28:46.1225 Info Adding target FileTarget(Name=alldata)
+2021-04-22 12:28:46.1472 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 12:28:46.1993 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 12:44:47.0414 Info Message Template Auto Format enabled
+2021-04-22 12:44:47.0597 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 12:44:47.1270 Info Adding target FileTarget(Name=alldata)
+2021-04-22 12:44:47.1383 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 12:44:47.1789 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:20:10.4828 Info Message Template Auto Format enabled
+2021-04-22 13:20:10.4975 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:20:10.5773 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:20:10.5886 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:20:10.6309 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:22:07.4509 Info Message Template Auto Format enabled
+2021-04-22 13:22:07.5431 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:22:07.6395 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:22:07.6805 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:22:07.7288 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:23:45.9655 Info Message Template Auto Format enabled
+2021-04-22 13:23:45.9848 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:23:46.0584 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:23:46.0744 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:23:46.1171 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:26:12.7271 Info Message Template Auto Format enabled
+2021-04-22 13:26:12.7424 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:26:12.8155 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:26:12.8488 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:26:12.9229 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:41:48.8012 Info Message Template Auto Format enabled
+2021-04-22 13:41:48.8399 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:41:48.9029 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:41:48.9029 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:41:48.9532 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:48:10.1986 Info Message Template Auto Format enabled
+2021-04-22 13:48:10.2148 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:48:10.2676 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:48:10.2776 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:48:10.3211 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:50:28.6350 Info Message Template Auto Format enabled
+2021-04-22 13:50:28.6350 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:50:28.7309 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:50:28.7927 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:50:28.9043 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:57:35.3367 Info Message Template Auto Format enabled
+2021-04-22 13:57:35.3994 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:57:35.4868 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:57:35.5006 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:57:35.6016 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 13:58:38.3181 Info Message Template Auto Format enabled
+2021-04-22 13:58:38.3628 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 13:58:38.4962 Info Adding target FileTarget(Name=alldata)
+2021-04-22 13:58:38.5253 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 13:58:38.5907 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 14:57:55.6725 Info Message Template Auto Format enabled
+2021-04-22 14:57:55.7109 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 14:57:55.7700 Info Adding target FileTarget(Name=alldata)
+2021-04-22 14:57:55.7801 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 14:57:55.8205 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:09:39.9582 Info Message Template Auto Format enabled
+2021-04-22 15:09:39.9954 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:09:40.0557 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:09:40.0856 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:09:40.1245 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:11:01.3622 Info Message Template Auto Format enabled
+2021-04-22 15:11:01.3844 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:11:01.4379 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:11:01.4453 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:11:01.4798 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:13:21.9789 Info Message Template Auto Format enabled
+2021-04-22 15:13:21.9942 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:13:22.0466 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:13:22.0582 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:13:22.1019 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:17:36.6478 Info Message Template Auto Format enabled
+2021-04-22 15:17:36.6632 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:17:36.7141 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:17:36.7141 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:17:36.7669 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:18:53.3695 Info Message Template Auto Format enabled
+2021-04-22 15:18:53.4046 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:18:53.5019 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:18:53.5267 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:18:53.5698 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:19:42.0692 Info Message Template Auto Format enabled
+2021-04-22 15:19:42.0842 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:19:42.1369 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:19:42.1487 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:19:42.1804 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:33:32.8847 Info Message Template Auto Format enabled
+2021-04-22 15:33:32.8973 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:33:32.9429 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:33:32.9518 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:33:32.9848 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:43:50.4078 Info Message Template Auto Format enabled
+2021-04-22 15:43:50.4514 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:43:50.5051 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:43:50.5174 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:43:50.5575 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 15:45:31.6313 Info Message Template Auto Format enabled
+2021-04-22 15:45:31.6313 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 15:45:31.6956 Info Adding target FileTarget(Name=alldata)
+2021-04-22 15:45:31.6956 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 15:45:31.7460 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 16:41:06.2297 Info Message Template Auto Format enabled
+2021-04-22 16:41:06.2590 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 16:41:06.3201 Info Adding target FileTarget(Name=alldata)
+2021-04-22 16:41:06.3201 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 16:41:06.3667 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 16:53:24.2962 Info Message Template Auto Format enabled
+2021-04-22 16:53:24.3100 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 16:53:24.3615 Info Adding target FileTarget(Name=alldata)
+2021-04-22 16:53:24.3682 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 16:53:24.4017 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 16:56:05.6675 Info Message Template Auto Format enabled
+2021-04-22 16:56:05.6811 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 16:56:05.7284 Info Adding target FileTarget(Name=alldata)
+2021-04-22 16:56:05.7415 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 16:56:05.7744 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 17:01:31.6076 Info Message Template Auto Format enabled
+2021-04-22 17:01:31.6231 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 17:01:31.6803 Info Adding target FileTarget(Name=alldata)
+2021-04-22 17:01:31.6943 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 17:01:31.7332 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 17:07:57.1080 Info Message Template Auto Format enabled
+2021-04-22 17:07:57.1341 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 17:07:57.1958 Info Adding target FileTarget(Name=alldata)
+2021-04-22 17:07:57.1958 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 17:07:57.2644 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 17:19:12.7622 Info Message Template Auto Format enabled
+2021-04-22 17:19:12.7765 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 17:19:12.8291 Info Adding target FileTarget(Name=alldata)
+2021-04-22 17:19:12.8400 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 17:19:12.8826 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-22 17:37:41.3971 Info Message Template Auto Format enabled
+2021-04-22 17:37:41.3971 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-22 17:37:41.4594 Info Adding target FileTarget(Name=alldata)
+2021-04-22 17:37:41.4594 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-22 17:37:41.5031 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-23 13:15:12.0896 Info Message Template Auto Format enabled
+2021-04-23 13:15:12.1021 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-23 13:15:12.1503 Info Adding target FileTarget(Name=alldata)
+2021-04-23 13:15:12.1503 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-23 13:15:12.1922 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-23 22:10:26.2255 Info Message Template Auto Format enabled
+2021-04-23 22:10:26.2586 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-23 22:10:26.3883 Info Adding target FileTarget(Name=alldata)
+2021-04-23 22:10:26.4658 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-23 22:10:26.5455 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-25 20:10:30.6777 Info Message Template Auto Format enabled
+2021-04-25 20:10:30.6954 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-25 20:10:30.7557 Info Adding target FileTarget(Name=alldata)
+2021-04-25 20:10:30.7557 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-25 20:10:30.8491 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-25 20:14:41.7991 Info Message Template Auto Format enabled
+2021-04-25 20:14:41.8172 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-25 20:14:41.8755 Info Adding target FileTarget(Name=alldata)
+2021-04-25 20:14:41.8880 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-25 20:14:41.9426 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:09:02.7361 Info Message Template Auto Format enabled
+2021-04-26 09:09:02.7570 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:09:02.8251 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:09:02.8544 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:09:02.8981 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:14:54.5310 Info Message Template Auto Format enabled
+2021-04-26 09:14:54.5531 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:14:54.6130 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:14:54.6263 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:14:54.6764 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:39:03.4802 Info Message Template Auto Format enabled
+2021-04-26 09:39:03.5007 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:39:03.5614 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:39:03.5711 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:39:03.6169 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:42:31.7573 Info Message Template Auto Format enabled
+2021-04-26 09:42:31.8046 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:42:31.8746 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:42:31.8935 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:42:31.9372 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:45:41.7311 Info Message Template Auto Format enabled
+2021-04-26 09:45:41.7518 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:45:41.8097 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:45:41.8208 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:45:41.8639 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:48:31.9202 Info Message Template Auto Format enabled
+2021-04-26 09:48:31.9443 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:48:32.0052 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:48:32.0186 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:48:32.0624 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:57:09.1429 Info Message Template Auto Format enabled
+2021-04-26 09:57:09.1682 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:57:09.2323 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:57:09.2437 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:57:09.2934 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 09:58:35.5754 Info Message Template Auto Format enabled
+2021-04-26 09:58:35.6069 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 09:58:35.6913 Info Adding target FileTarget(Name=alldata)
+2021-04-26 09:58:35.7271 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 09:58:35.7829 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 10:05:06.8520 Info Message Template Auto Format enabled
+2021-04-26 10:05:06.9124 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 10:05:06.9895 Info Adding target FileTarget(Name=alldata)
+2021-04-26 10:05:07.0064 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 10:05:07.0749 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 11:19:35.1644 Info Message Template Auto Format enabled
+2021-04-26 11:19:35.1916 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 11:19:35.2546 Info Adding target FileTarget(Name=alldata)
+2021-04-26 11:19:35.2696 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 11:19:35.3332 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 11:23:44.1338 Info Message Template Auto Format enabled
+2021-04-26 11:23:44.3046 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 11:23:44.4264 Info Adding target FileTarget(Name=alldata)
+2021-04-26 11:23:44.4554 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 11:23:44.5104 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 11:34:16.6354 Info Message Template Auto Format enabled
+2021-04-26 11:34:16.6480 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 11:34:16.7012 Info Adding target FileTarget(Name=alldata)
+2021-04-26 11:34:16.7091 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 11:34:16.7465 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 11:39:35.4297 Info Message Template Auto Format enabled
+2021-04-26 11:39:35.4539 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 11:39:35.5168 Info Adding target FileTarget(Name=alldata)
+2021-04-26 11:39:35.5168 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 11:39:35.5725 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 11:41:51.8230 Info Message Template Auto Format enabled
+2021-04-26 11:41:51.8403 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 11:41:51.8919 Info Adding target FileTarget(Name=alldata)
+2021-04-26 11:41:51.9077 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 11:41:51.9496 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 12:05:41.8615 Info Message Template Auto Format enabled
+2021-04-26 12:05:42.0654 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 12:05:42.1652 Info Adding target FileTarget(Name=alldata)
+2021-04-26 12:05:42.1842 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 12:05:42.2468 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 12:06:47.7922 Info Message Template Auto Format enabled
+2021-04-26 12:06:47.8252 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 12:06:47.8937 Info Adding target FileTarget(Name=alldata)
+2021-04-26 12:06:47.9125 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 12:06:47.9785 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 12:43:30.4365 Info Message Template Auto Format enabled
+2021-04-26 12:43:30.4578 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 12:43:30.5201 Info Adding target FileTarget(Name=alldata)
+2021-04-26 12:43:30.5201 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 12:43:30.5891 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 12:50:57.0932 Info Message Template Auto Format enabled
+2021-04-26 12:50:57.1124 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 12:50:57.1728 Info Adding target FileTarget(Name=alldata)
+2021-04-26 12:50:57.1728 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 12:50:57.2277 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 13:03:16.7026 Info Message Template Auto Format enabled
+2021-04-26 13:03:16.7304 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 13:03:16.7791 Info Adding target FileTarget(Name=alldata)
+2021-04-26 13:03:16.7863 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 13:03:16.8189 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 13:06:34.3213 Info Message Template Auto Format enabled
+2021-04-26 13:06:34.3385 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 13:06:34.3887 Info Adding target FileTarget(Name=alldata)
+2021-04-26 13:06:34.3966 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 13:06:34.4271 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 13:41:53.8962 Info Message Template Auto Format enabled
+2021-04-26 13:41:53.9142 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 13:41:53.9729 Info Adding target FileTarget(Name=alldata)
+2021-04-26 13:41:53.9729 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 13:41:54.0184 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 13:52:39.9716 Info Message Template Auto Format enabled
+2021-04-26 13:52:39.9925 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 13:52:40.0567 Info Adding target FileTarget(Name=alldata)
+2021-04-26 13:52:40.0661 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 13:52:40.1160 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 14:35:20.7755 Info Message Template Auto Format enabled
+2021-04-26 14:35:20.8022 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 14:35:20.9754 Info Adding target FileTarget(Name=alldata)
+2021-04-26 14:35:20.9938 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 14:35:21.0340 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 14:39:55.8613 Info Message Template Auto Format enabled
+2021-04-26 14:39:55.8890 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 14:39:55.9609 Info Adding target FileTarget(Name=alldata)
+2021-04-26 14:39:55.9763 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 14:39:56.0207 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 14:41:34.3396 Info Message Template Auto Format enabled
+2021-04-26 14:41:34.3657 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 14:41:34.4319 Info Adding target FileTarget(Name=alldata)
+2021-04-26 14:41:34.4480 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 14:41:34.5485 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 14:46:28.7312 Info Message Template Auto Format enabled
+2021-04-26 14:46:28.7471 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 14:46:28.8141 Info Adding target FileTarget(Name=alldata)
+2021-04-26 14:46:28.8380 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 14:46:28.8857 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 15:41:33.6864 Info Message Template Auto Format enabled
+2021-04-26 15:41:33.7114 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 15:41:33.7866 Info Adding target FileTarget(Name=alldata)
+2021-04-26 15:41:33.8086 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 15:41:33.8642 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 16:03:52.4489 Info Message Template Auto Format enabled
+2021-04-26 16:03:52.4609 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 16:03:52.5124 Info Adding target FileTarget(Name=alldata)
+2021-04-26 16:03:52.5202 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 16:03:52.5712 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 16:09:15.6751 Info Message Template Auto Format enabled
+2021-04-26 16:09:15.7237 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 16:09:15.7860 Info Adding target FileTarget(Name=alldata)
+2021-04-26 16:09:15.8038 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 16:09:15.8632 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 16:33:42.5971 Info Message Template Auto Format enabled
+2021-04-26 16:33:42.6174 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 16:33:42.6925 Info Adding target FileTarget(Name=alldata)
+2021-04-26 16:33:42.7076 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 16:33:42.7567 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 16:42:28.9513 Info Message Template Auto Format enabled
+2021-04-26 16:42:28.9632 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 16:42:29.0217 Info Adding target FileTarget(Name=alldata)
+2021-04-26 16:42:29.0217 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 16:42:29.0732 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 16:48:04.4847 Info Message Template Auto Format enabled
+2021-04-26 16:48:04.5214 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 16:48:04.6382 Info Adding target FileTarget(Name=alldata)
+2021-04-26 16:48:04.6629 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 16:48:04.7239 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 17:03:41.1032 Info Message Template Auto Format enabled
+2021-04-26 17:03:41.2173 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 17:03:41.3050 Info Adding target FileTarget(Name=alldata)
+2021-04-26 17:03:41.3470 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 17:03:41.4063 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 17:06:37.1663 Info Message Template Auto Format enabled
+2021-04-26 17:06:37.1873 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 17:06:37.2537 Info Adding target FileTarget(Name=alldata)
+2021-04-26 17:06:37.2663 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 17:06:37.3093 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-26 17:08:43.6442 Info Message Template Auto Format enabled
+2021-04-26 17:08:43.6600 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-26 17:08:43.7262 Info Adding target FileTarget(Name=alldata)
+2021-04-26 17:08:43.7387 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-26 17:08:43.7793 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 08:57:46.5844 Info Message Template Auto Format enabled
+2021-04-27 08:57:46.6400 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 08:57:46.7345 Info Adding target FileTarget(Name=alldata)
+2021-04-27 08:57:46.7457 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 08:57:46.7910 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 09:03:04.1771 Info Message Template Auto Format enabled
+2021-04-27 09:03:04.1939 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 09:03:04.2504 Info Adding target FileTarget(Name=alldata)
+2021-04-27 09:03:04.2504 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 09:03:04.3155 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 10:13:00.9708 Info Message Template Auto Format enabled
+2021-04-27 10:13:00.9708 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 10:13:01.0397 Info Adding target FileTarget(Name=alldata)
+2021-04-27 10:13:01.0567 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 10:13:01.1050 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:01:25.1981 Info Message Template Auto Format enabled
+2021-04-27 18:01:25.2124 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:01:25.2795 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:01:25.3055 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:01:25.3586 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:07:19.6666 Info Message Template Auto Format enabled
+2021-04-27 18:07:19.7026 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:07:19.7629 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:07:19.7843 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:07:19.8304 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:11:14.6536 Info Message Template Auto Format enabled
+2021-04-27 18:11:14.6822 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:11:14.7547 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:11:14.7726 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:11:14.8186 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:29:14.9407 Info Message Template Auto Format enabled
+2021-04-27 18:29:14.9931 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:29:15.0711 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:29:15.0937 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:29:15.2166 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:37:18.9973 Info Message Template Auto Format enabled
+2021-04-27 18:37:19.0316 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:37:19.1162 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:37:19.1471 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:37:19.1985 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:40:18.1751 Info Message Template Auto Format enabled
+2021-04-27 18:40:18.1926 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:40:18.2541 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:40:18.2666 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:40:18.3107 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:44:05.6493 Info Message Template Auto Format enabled
+2021-04-27 18:44:05.6649 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:44:05.7445 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:44:05.7603 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:44:05.8061 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:45:56.6672 Info Message Template Auto Format enabled
+2021-04-27 18:45:56.6915 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:45:56.7709 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:45:56.7859 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:45:56.8608 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:50:04.0064 Info Message Template Auto Format enabled
+2021-04-27 18:50:04.0320 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:50:04.1330 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:50:04.2032 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:50:04.2703 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:51:58.3448 Info Message Template Auto Format enabled
+2021-04-27 18:51:58.3763 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:51:58.4391 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:51:58.4891 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:51:58.5424 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:54:09.0216 Info Message Template Auto Format enabled
+2021-04-27 18:54:09.1767 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:54:09.2948 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:54:09.3133 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:54:09.3729 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:55:13.1794 Info Message Template Auto Format enabled
+2021-04-27 18:55:13.2027 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:55:13.2689 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:55:13.2851 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:55:13.3431 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-27 18:56:44.3718 Info Message Template Auto Format enabled
+2021-04-27 18:56:44.4055 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-27 18:56:44.4589 Info Adding target FileTarget(Name=alldata)
+2021-04-27 18:56:44.4727 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-27 18:56:44.5243 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 11:07:11.2363 Info Message Template Auto Format enabled
+2021-04-28 11:07:11.2501 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 11:07:11.3033 Info Adding target FileTarget(Name=alldata)
+2021-04-28 11:07:11.3155 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 11:07:11.3567 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 11:13:12.2591 Info Message Template Auto Format enabled
+2021-04-28 11:13:12.2764 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 11:13:12.3410 Info Adding target FileTarget(Name=alldata)
+2021-04-28 11:13:12.3760 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 11:13:12.4402 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 11:16:56.4616 Info Message Template Auto Format enabled
+2021-04-28 11:16:56.4877 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 11:16:56.5667 Info Adding target FileTarget(Name=alldata)
+2021-04-28 11:16:56.5874 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 11:16:56.6357 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 11:26:26.0439 Info Message Template Auto Format enabled
+2021-04-28 11:26:26.0594 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 11:26:26.1108 Info Adding target FileTarget(Name=alldata)
+2021-04-28 11:26:26.1108 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 11:26:26.1670 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 11:31:16.4475 Info Message Template Auto Format enabled
+2021-04-28 11:31:16.4835 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 11:31:16.5706 Info Adding target FileTarget(Name=alldata)
+2021-04-28 11:31:16.6250 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 11:31:16.7050 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 11:51:18.9926 Info Message Template Auto Format enabled
+2021-04-28 11:51:19.0102 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 11:51:19.0879 Info Adding target FileTarget(Name=alldata)
+2021-04-28 11:51:19.0991 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 11:51:19.1609 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 17:20:54.0106 Info Message Template Auto Format enabled
+2021-04-28 17:20:54.0260 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 17:20:54.0856 Info Adding target FileTarget(Name=alldata)
+2021-04-28 17:20:54.1341 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 17:20:54.1767 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 17:52:07.9453 Info Message Template Auto Format enabled
+2021-04-28 17:52:07.9591 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 17:52:08.0159 Info Adding target FileTarget(Name=alldata)
+2021-04-28 17:52:08.0159 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 17:52:08.1032 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-28 17:53:55.5098 Info Message Template Auto Format enabled
+2021-04-28 17:53:55.5258 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-28 17:53:55.5812 Info Adding target FileTarget(Name=alldata)
+2021-04-28 17:53:55.5946 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-28 17:53:55.6442 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-29 16:40:18.6541 Info Message Template Auto Format enabled
+2021-04-29 16:40:18.6813 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-29 16:40:18.7463 Info Adding target FileTarget(Name=alldata)
+2021-04-29 16:40:18.7750 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-29 16:40:18.8583 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-29 16:56:48.3704 Info Message Template Auto Format enabled
+2021-04-29 16:56:48.3838 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-29 16:56:48.4445 Info Adding target FileTarget(Name=alldata)
+2021-04-29 16:56:48.4557 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-29 16:56:48.5038 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-04-29 17:04:29.1452 Info Message Template Auto Format enabled
+2021-04-29 17:04:29.1827 Info Loading assembly: NLog.Web.AspNetCore
+2021-04-29 17:04:29.2587 Info Adding target FileTarget(Name=alldata)
+2021-04-29 17:04:29.2820 Info Adding target FileTarget(Name=otherFile-web)
+2021-04-29 17:04:29.3245 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Officials\AYO\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-24 16:14:56.0807 Info Message Template Auto Format enabled
+2021-05-24 16:14:56.0930 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 16:14:56.1319 Info Adding target FileTarget(Name=alldata)
+2021-05-24 16:14:56.1377 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 16:14:56.1621 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 16:19:46.0276 Info Message Template Auto Format enabled
+2021-05-24 16:19:46.0276 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 16:19:46.0709 Info Adding target FileTarget(Name=alldata)
+2021-05-24 16:19:46.0762 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 16:19:46.1010 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 16:24:33.2636 Info Message Template Auto Format enabled
+2021-05-24 16:24:33.2636 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 16:24:33.3059 Info Adding target FileTarget(Name=alldata)
+2021-05-24 16:24:33.3110 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 16:24:33.3371 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 16:33:11.6899 Info Message Template Auto Format enabled
+2021-05-24 16:33:11.7001 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 16:33:11.7348 Info Adding target FileTarget(Name=alldata)
+2021-05-24 16:33:11.7348 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 16:33:11.7648 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 16:37:38.2643 Info Message Template Auto Format enabled
+2021-05-24 16:37:38.2643 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 16:37:38.3097 Info Adding target FileTarget(Name=alldata)
+2021-05-24 16:37:38.3097 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 16:37:38.3468 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 17:08:55.3090 Info Message Template Auto Format enabled
+2021-05-24 17:08:55.3090 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 17:08:55.3629 Info Adding target FileTarget(Name=alldata)
+2021-05-24 17:08:55.3717 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 17:08:55.4137 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 17:36:35.2676 Info Message Template Auto Format enabled
+2021-05-24 17:36:35.2676 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 17:36:35.3122 Info Adding target FileTarget(Name=alldata)
+2021-05-24 17:36:35.3122 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 17:36:35.3447 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 17:44:51.1037 Info Message Template Auto Format enabled
+2021-05-24 17:44:51.1152 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 17:44:51.1518 Info Adding target FileTarget(Name=alldata)
+2021-05-24 17:44:51.1571 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 17:44:51.1827 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:06:11.3900 Info Message Template Auto Format enabled
+2021-05-24 18:06:11.3900 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:06:11.4405 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:06:11.4405 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:06:11.4809 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:10:37.5933 Info Message Template Auto Format enabled
+2021-05-24 18:10:37.5933 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:10:37.6368 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:10:37.6368 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:10:37.6739 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:13:13.5048 Info Message Template Auto Format enabled
+2021-05-24 18:13:13.5138 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:13:13.5498 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:13:13.5498 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:13:13.5803 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:16:22.0570 Info Message Template Auto Format enabled
+2021-05-24 18:16:22.0675 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:16:22.1019 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:16:22.1075 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:16:22.1316 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:36:10.7891 Info Message Template Auto Format enabled
+2021-05-24 18:36:10.7993 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:36:10.8379 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:36:10.8434 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:36:10.8674 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:36:39.1545 Info Message Template Auto Format enabled
+2021-05-24 18:36:39.1545 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:36:39.2023 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:36:39.2023 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:36:39.2324 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:43:43.7041 Info Message Template Auto Format enabled
+2021-05-24 18:43:43.7041 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:43:43.7495 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:43:43.7495 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:43:43.7829 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:53:21.9406 Info Message Template Auto Format enabled
+2021-05-24 18:53:21.9521 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:53:21.9984 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:53:21.9984 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:53:22.0344 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:57:15.6865 Info Message Template Auto Format enabled
+2021-05-24 18:57:15.6865 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:57:15.7345 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:57:15.7345 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:57:15.7666 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 18:59:13.0629 Info Message Template Auto Format enabled
+2021-05-24 18:59:13.0629 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 18:59:13.1073 Info Adding target FileTarget(Name=alldata)
+2021-05-24 18:59:13.1073 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 18:59:13.1367 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Release\net5.0\nlog.config
+2021-05-24 19:00:20.5376 Info Message Template Auto Format enabled
+2021-05-24 19:00:20.5924 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 19:00:20.6402 Info Adding target FileTarget(Name=alldata)
+2021-05-24 19:00:20.6402 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 19:00:20.6853 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-24 19:14:34.6790 Info Message Template Auto Format enabled
+2021-05-24 19:14:34.6887 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 19:14:34.7220 Info Adding target FileTarget(Name=alldata)
+2021-05-24 19:14:34.7220 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 19:14:34.7509 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-24 19:21:17.5234 Info Message Template Auto Format enabled
+2021-05-24 19:21:17.5326 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-24 19:21:17.5674 Info Adding target FileTarget(Name=alldata)
+2021-05-24 19:21:17.5674 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-24 19:21:17.5981 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 09:11:32.8833 Info Message Template Auto Format enabled
+2021-05-25 09:11:32.8926 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 09:11:32.9324 Info Adding target FileTarget(Name=alldata)
+2021-05-25 09:11:32.9403 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 09:11:32.9711 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 09:27:25.7652 Info Message Template Auto Format enabled
+2021-05-25 09:27:25.7652 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 09:27:25.8076 Info Adding target FileTarget(Name=alldata)
+2021-05-25 09:27:25.8128 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 09:27:25.8377 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 12:21:31.4967 Info Message Template Auto Format enabled
+2021-05-25 12:21:31.4967 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 12:21:31.5418 Info Adding target FileTarget(Name=alldata)
+2021-05-25 12:21:31.5481 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 12:21:31.5780 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 12:27:18.1350 Info Message Template Auto Format enabled
+2021-05-25 12:27:18.1452 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 12:27:18.1823 Info Adding target FileTarget(Name=alldata)
+2021-05-25 12:27:18.1881 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 12:27:18.2150 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 12:42:09.7908 Info Message Template Auto Format enabled
+2021-05-25 12:42:09.8009 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 12:42:09.8376 Info Adding target FileTarget(Name=alldata)
+2021-05-25 12:42:09.8434 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 12:42:09.8674 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 12:58:50.8464 Info Message Template Auto Format enabled
+2021-05-25 12:58:50.8569 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 12:58:50.8966 Info Adding target FileTarget(Name=alldata)
+2021-05-25 12:58:50.9027 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 12:58:50.9298 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:01:02.9338 Info Message Template Auto Format enabled
+2021-05-25 13:01:02.9497 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:01:02.9863 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:01:02.9863 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:01:03.0232 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:01:44.5995 Info Message Template Auto Format enabled
+2021-05-25 13:01:44.6101 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:01:44.6475 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:01:44.6532 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:01:44.6796 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:12:24.6641 Info Message Template Auto Format enabled
+2021-05-25 13:12:24.6765 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:12:24.7137 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:12:24.7209 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:12:24.7474 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:16:33.0994 Info Message Template Auto Format enabled
+2021-05-25 13:16:33.0994 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:16:33.1371 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:16:33.1371 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:16:33.1584 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:17:44.9394 Info Message Template Auto Format enabled
+2021-05-25 13:17:44.9502 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:17:44.9868 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:17:44.9868 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:17:45.0182 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:26:27.9597 Info Message Template Auto Format enabled
+2021-05-25 13:26:27.9726 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:26:28.0131 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:26:28.0131 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:26:28.0543 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:51:17.0659 Info Message Template Auto Format enabled
+2021-05-25 13:51:17.0857 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:51:17.1247 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:51:17.1247 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:51:17.1895 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:51:46.2498 Info Message Template Auto Format enabled
+2021-05-25 13:51:46.2498 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:51:46.2964 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:51:46.2964 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:51:46.3272 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 13:59:00.2118 Info Message Template Auto Format enabled
+2021-05-25 13:59:00.2215 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 13:59:00.2557 Info Adding target FileTarget(Name=alldata)
+2021-05-25 13:59:00.2557 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 13:59:00.2851 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 14:48:16.6289 Info Message Template Auto Format enabled
+2021-05-25 14:48:16.6404 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 14:48:16.6801 Info Adding target FileTarget(Name=alldata)
+2021-05-25 14:48:16.6857 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 14:48:16.7101 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 14:59:56.9720 Info Message Template Auto Format enabled
+2021-05-25 14:59:56.9831 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 14:59:57.0194 Info Adding target FileTarget(Name=alldata)
+2021-05-25 14:59:57.0194 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 14:59:57.0518 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 15:36:10.3101 Info Message Template Auto Format enabled
+2021-05-25 15:36:10.3101 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 15:36:10.3669 Info Adding target FileTarget(Name=alldata)
+2021-05-25 15:36:10.3792 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 15:36:10.4161 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 15:54:58.7026 Info Message Template Auto Format enabled
+2021-05-25 15:54:58.7026 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 15:54:58.7461 Info Adding target FileTarget(Name=alldata)
+2021-05-25 15:54:58.7461 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 15:54:58.7805 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 15:56:11.9662 Info Message Template Auto Format enabled
+2021-05-25 15:56:11.9662 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 15:56:12.0125 Info Adding target FileTarget(Name=alldata)
+2021-05-25 15:56:12.0125 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 15:56:12.0462 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 15:58:52.7944 Info Message Template Auto Format enabled
+2021-05-25 15:58:52.7944 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 15:58:52.8420 Info Adding target FileTarget(Name=alldata)
+2021-05-25 15:58:52.8420 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 15:58:52.8724 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 16:20:23.7514 Info Message Template Auto Format enabled
+2021-05-25 16:20:23.7629 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 16:20:23.7975 Info Adding target FileTarget(Name=alldata)
+2021-05-25 16:20:23.7975 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 16:20:23.8278 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 16:21:14.7595 Info Message Template Auto Format enabled
+2021-05-25 16:21:14.7699 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 16:21:14.8043 Info Adding target FileTarget(Name=alldata)
+2021-05-25 16:21:14.8105 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 16:21:14.8382 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 16:29:34.7161 Info Message Template Auto Format enabled
+2021-05-25 16:29:34.7161 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 16:29:34.7725 Info Adding target FileTarget(Name=alldata)
+2021-05-25 16:29:34.7799 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 16:29:34.8115 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 16:47:27.3336 Info Message Template Auto Format enabled
+2021-05-25 16:47:27.3472 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 16:47:27.3881 Info Adding target FileTarget(Name=alldata)
+2021-05-25 16:47:27.3881 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 16:47:27.4198 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 16:54:36.4772 Info Message Template Auto Format enabled
+2021-05-25 16:54:36.4887 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 16:54:36.5237 Info Adding target FileTarget(Name=alldata)
+2021-05-25 16:54:36.5291 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 16:54:36.5553 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 17:16:08.8375 Info Message Template Auto Format enabled
+2021-05-25 17:16:08.8495 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 17:16:08.8896 Info Adding target FileTarget(Name=alldata)
+2021-05-25 17:16:08.8896 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 17:16:08.9200 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 17:18:08.9443 Info Message Template Auto Format enabled
+2021-05-25 17:18:08.9552 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 17:18:08.9934 Info Adding target FileTarget(Name=alldata)
+2021-05-25 17:18:08.9995 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 17:18:09.0252 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 17:34:41.4335 Info Message Template Auto Format enabled
+2021-05-25 17:34:41.4335 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 17:34:41.4793 Info Adding target FileTarget(Name=alldata)
+2021-05-25 17:34:41.4858 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 17:34:41.5122 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 17:49:24.2931 Info Message Template Auto Format enabled
+2021-05-25 17:49:24.2931 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 17:49:24.3463 Info Adding target FileTarget(Name=alldata)
+2021-05-25 17:49:24.3463 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 17:49:24.3785 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 18:26:45.1605 Info Message Template Auto Format enabled
+2021-05-25 18:26:45.1709 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 18:26:45.2107 Info Adding target FileTarget(Name=alldata)
+2021-05-25 18:26:45.2159 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 18:26:45.2412 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 18:29:00.1831 Info Message Template Auto Format enabled
+2021-05-25 18:29:00.1929 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 18:29:00.2309 Info Adding target FileTarget(Name=alldata)
+2021-05-25 18:29:00.2309 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 18:29:00.2629 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 18:34:24.0917 Info Message Template Auto Format enabled
+2021-05-25 18:34:24.1066 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 18:34:24.1477 Info Adding target FileTarget(Name=alldata)
+2021-05-25 18:34:24.1540 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 18:34:24.1806 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 18:48:20.4387 Info Message Template Auto Format enabled
+2021-05-25 18:48:20.4497 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 18:48:20.4986 Info Adding target FileTarget(Name=alldata)
+2021-05-25 18:48:20.4986 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 18:48:20.5362 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 18:53:56.7044 Info Message Template Auto Format enabled
+2021-05-25 18:53:56.7169 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 18:53:56.7518 Info Adding target FileTarget(Name=alldata)
+2021-05-25 18:53:56.7518 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 18:53:56.7839 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 18:59:43.1574 Info Message Template Auto Format enabled
+2021-05-25 18:59:43.1574 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 18:59:43.2014 Info Adding target FileTarget(Name=alldata)
+2021-05-25 18:59:43.2014 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 18:59:43.2311 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 19:01:07.6805 Info Message Template Auto Format enabled
+2021-05-25 19:01:07.6913 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 19:01:07.7270 Info Adding target FileTarget(Name=alldata)
+2021-05-25 19:01:07.7332 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 19:01:07.7587 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 19:07:35.1199 Info Message Template Auto Format enabled
+2021-05-25 19:07:35.1294 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 19:07:35.1684 Info Adding target FileTarget(Name=alldata)
+2021-05-25 19:07:35.1684 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 19:07:35.2011 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-25 19:17:26.3680 Info Message Template Auto Format enabled
+2021-05-25 19:17:26.3798 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-25 19:17:26.4220 Info Adding target FileTarget(Name=alldata)
+2021-05-25 19:17:26.4220 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-25 19:17:26.4569 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-26 09:18:35.0382 Info Message Template Auto Format enabled
+2021-05-26 09:18:35.0496 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-26 09:18:35.0840 Info Adding target FileTarget(Name=alldata)
+2021-05-26 09:18:35.0840 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-26 09:18:35.1131 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-26 09:27:59.7929 Info Message Template Auto Format enabled
+2021-05-26 09:27:59.7929 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-26 09:27:59.8410 Info Adding target FileTarget(Name=alldata)
+2021-05-26 09:27:59.8410 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-26 09:27:59.8760 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-31 16:11:03.8682 Info Message Template Auto Format enabled
+2021-05-31 16:11:03.8682 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-31 16:11:03.9213 Info Adding target FileTarget(Name=alldata)
+2021-05-31 16:11:03.9213 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-31 16:11:03.9560 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-31 16:12:39.3918 Info Message Template Auto Format enabled
+2021-05-31 16:12:39.4043 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-31 16:12:39.4495 Info Adding target FileTarget(Name=alldata)
+2021-05-31 16:12:39.4495 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-31 16:12:39.5028 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-31 16:16:03.6673 Info Message Template Auto Format enabled
+2021-05-31 16:16:03.6809 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-31 16:16:03.7191 Info Adding target FileTarget(Name=alldata)
+2021-05-31 16:16:03.7191 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-31 16:16:03.7511 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-31 16:17:15.8241 Info Message Template Auto Format enabled
+2021-05-31 16:17:15.8366 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-31 16:17:15.8760 Info Adding target FileTarget(Name=alldata)
+2021-05-31 16:17:15.8833 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-31 16:17:15.9175 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-31 16:24:28.9660 Info Message Template Auto Format enabled
+2021-05-31 16:24:28.9660 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-31 16:24:29.0105 Info Adding target FileTarget(Name=alldata)
+2021-05-31 16:24:29.0105 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-31 16:24:29.0409 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-05-31 16:24:55.4258 Info Message Template Auto Format enabled
+2021-05-31 16:24:55.4350 Info Loading assembly: NLog.Web.AspNetCore
+2021-05-31 16:24:55.4697 Info Adding target FileTarget(Name=alldata)
+2021-05-31 16:24:55.4776 Info Adding target FileTarget(Name=otherFile-web)
+2021-05-31 16:24:55.5030 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-06-01 09:28:39.7435 Info Message Template Auto Format enabled
+2021-06-01 09:28:39.7531 Info Loading assembly: NLog.Web.AspNetCore
+2021-06-01 09:28:39.7879 Info Adding target FileTarget(Name=alldata)
+2021-06-01 09:28:39.7879 Info Adding target FileTarget(Name=otherFile-web)
+2021-06-01 09:28:39.8188 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\GAHealthCare\gahealthcarenurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-17 17:48:21.1263 Info Message Template Auto Format enabled
+2021-08-17 17:48:21.1425 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-17 17:48:21.1944 Info Adding target FileTarget(Name=alldata)
+2021-08-17 17:48:21.2053 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-17 17:48:21.2479 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 08:59:21.9870 Info Message Template Auto Format enabled
+2021-08-18 08:59:22.0108 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 08:59:22.0524 Info Adding target FileTarget(Name=alldata)
+2021-08-18 08:59:22.0524 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 08:59:22.0877 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 09:13:32.2362 Info Message Template Auto Format enabled
+2021-08-18 09:13:32.2521 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 09:13:32.3004 Info Adding target FileTarget(Name=alldata)
+2021-08-18 09:13:32.3004 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 09:13:32.3467 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 09:30:53.4881 Info Message Template Auto Format enabled
+2021-08-18 09:30:53.4881 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 09:30:53.5390 Info Adding target FileTarget(Name=alldata)
+2021-08-18 09:30:53.5475 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 09:30:53.5907 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 09:47:22.4245 Info Message Template Auto Format enabled
+2021-08-18 09:47:22.4399 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 09:47:22.5010 Info Adding target FileTarget(Name=alldata)
+2021-08-18 09:47:22.5010 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 09:47:22.5500 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 09:48:17.3812 Info Message Template Auto Format enabled
+2021-08-18 09:48:17.3945 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 09:48:17.4348 Info Adding target FileTarget(Name=alldata)
+2021-08-18 09:48:17.4427 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 09:48:17.4712 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 10:58:25.8739 Info Message Template Auto Format enabled
+2021-08-18 10:58:25.8892 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 10:58:25.9359 Info Adding target FileTarget(Name=alldata)
+2021-08-18 10:58:25.9454 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 10:58:25.9756 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 11:16:05.4565 Info Message Template Auto Format enabled
+2021-08-18 11:16:05.4709 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 11:16:05.5128 Info Adding target FileTarget(Name=alldata)
+2021-08-18 11:16:05.5216 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 11:16:05.5548 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 11:24:55.3516 Info Message Template Auto Format enabled
+2021-08-18 11:24:55.3516 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 11:24:55.4072 Info Adding target FileTarget(Name=alldata)
+2021-08-18 11:24:55.4072 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 11:24:55.4587 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 11:29:44.5199 Info Message Template Auto Format enabled
+2021-08-18 11:29:44.5334 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 11:29:44.5742 Info Adding target FileTarget(Name=alldata)
+2021-08-18 11:29:44.5826 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 11:29:44.6178 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 11:41:49.3045 Info Message Template Auto Format enabled
+2021-08-18 11:41:49.3179 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 11:41:49.3578 Info Adding target FileTarget(Name=alldata)
+2021-08-18 11:41:49.3650 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 11:41:49.3952 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 11:45:08.5580 Info Message Template Auto Format enabled
+2021-08-18 11:45:08.5757 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 11:45:08.6158 Info Adding target FileTarget(Name=alldata)
+2021-08-18 11:45:08.6242 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 11:45:08.6533 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config
+2021-08-18 12:40:09.9207 Info Message Template Auto Format enabled
+2021-08-18 12:40:09.9350 Info Loading assembly: NLog.Web.AspNetCore
+2021-08-18 12:40:09.9782 Info Adding target FileTarget(Name=alldata)
+2021-08-18 12:40:09.9875 Info Adding target FileTarget(Name=otherFile-web)
+2021-08-18 12:40:10.0291 Info Validating config: TargetNames=alldata, otherFile-web, ConfigItems=45, FilePath=D:\Official\USHealthCareNurses\GaHealthcareNurses.WebService\Server\bin\Debug\net5.0\nlog.config

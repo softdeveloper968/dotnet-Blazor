@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Optima';
+  src: url('Optima.ttf') format('truetype'),
+       url('Optima.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Optima-Medium';
+  src: url('Optima-Medium.ttf') format('truetype'),
+       url('Optima-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Optima-Bold';
+  src: url('Optima-Bold.ttf') format('truetype'),
+       url('Optima-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Lato-Medium';
+  src: url('Lato-Medium.ttf') format('truetype'),
+       url('Lato-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+

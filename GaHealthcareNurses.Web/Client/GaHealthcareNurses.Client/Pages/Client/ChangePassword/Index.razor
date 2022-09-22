@@ -1,0 +1,108 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/change-password";
+@inject IToastService toastService
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@using Microsoft.AspNetCore.Components.Forms
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Microsoft.AspNetCore.WebUtilities
+@using System.Collections.Specialized;
+@using System.Web;
+@using Microsoft.AspNetCore.Http;
+@using Syncfusion.Blazor.Inputs;
+
+
+
+<GaHealthcareNurses.Client.Shared.HomepageHeader />
+
+
+<div class="frontend default-padding signin_page">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Change <span>Password</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm class="formSec" Model="@resetPassword" OnValidSubmit="()=>ChangePassword(resetPassword)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="New Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" @bind-Value="resetPassword.Password" class="form-control" />
+                            <ValidationMessage For="@(() => resetPassword.Password)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Confirm Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" @bind-Value="resetPassword.ConfirmPassword" class="form-control" />
+                            <ValidationMessage For="@(() => resetPassword.Password)" />
+                        </div>
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Save Password<i class="fa fa-paper-plane"></i>
+                        </button>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    //private readonly IHttpContextAccessor _httpContextAccessor;
+
+    //public Index(IHttpContextAccessor httpContextAccessor)
+    //{
+    //    _httpContextAccessor = httpContextAccessor;
+    //}
+    ResetPasswordModel resetPassword = new ResetPasswordModel();
+    AccountViewModel accountData = new AccountViewModel();
+    System.Uri uri;
+    public string id;
+    public string token;
+    public string encodedVal;
+
+
+    protected override void OnInitialized()
+    {
+        uri = navigation.ToAbsoluteUri(navigation.Uri);
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("userId", out var aVal))
+        {
+            accountData.UserName = aVal.ToString();
+        }
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("token", out var bVal))
+        {
+            encodedVal = HttpUtility.UrlEncode(bVal).Replace(" ", "+").Replace("%2f", "/");
+            accountData.token = encodedVal;
+        }
+    }
+
+
+    public async Task ChangePassword(ResetPasswordModel resetPassword)
+    {
+        resetPassword.Id = accountData.UserName;
+        resetPassword.Token = accountData.token;
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "ResetUserPassword", resetPassword);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var data = (JsonConvert.DeserializeObject<Response<string>>(response));
+        if (data.Message == "Password reset Successfully!")
+        {
+            toastService.ShowSuccess("Password reset successfully!");
+            navigation.NavigateTo("/");
+            await localStorage.RemoveItemAsync("ForgotPasswordData");
+        }
+        else
+            toastService.ShowError(data.Message);
+    }
+
+}

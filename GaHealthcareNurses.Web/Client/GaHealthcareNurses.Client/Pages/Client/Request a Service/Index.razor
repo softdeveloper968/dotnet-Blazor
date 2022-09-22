@@ -1,0 +1,246 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout;
+@page "/client/request-service";
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@using GaHealthcareNurses.Entity.Models;
+@inject IToastService toastService
+@inject NavigationManager navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+@inject IJSRuntime jsRunTime
+@using GaHealthcareNurses.Client.Helper
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.Buttons
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+@using System
+
+<GaHealthcareNurses.Client.Shared.ClientHeader />
+
+<div class="frontend default-padding">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Request a <span>Service</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm Model="@basicInformation" class="formSec" OnValidSubmit="()=>RegisterServiceRequest(basicInformation)">
+                        <DataAnnotationsValidator />
+                        <div class="chose_service">
+                            <h3 class="reqfrm_head text-left">Choose a service</h3>
+                            <div class="inputFiled form-group">
+                                <InputSelectNumber class="nice-select" ValueChanged="@((int value) => ServiceListHasChanged(value))"
+                                                   ValueExpression="@(() => basicInformation.ServiceListId)"
+                                                   Value="@basicInformation.ServiceListId">
+                                    <option value="0">Select a Service</option>
+                                    @foreach (var service in serviceList)
+                                    {
+                                        <option value="@service.ServiceListId">@service.Name</option>
+                                    }
+
+                                </InputSelectNumber>
+
+
+                                @*<SfDropDownList @bind-Value="basicInformation.ServiceListId" TValue="int" TItem="ServiceList" Placeholder="Select a service" AllowFiltering="true" DataSource="@serviceList">
+                                        <DropDownListEvents TItem="ServiceList" TValue="int" ValueChange="OnServiceChange"></DropDownListEvents>
+                                        <DropDownListFieldSettings Text="Name" Value="ServiceListId"></DropDownListFieldSettings>
+                                    </SfDropDownList>*@
+
+                                <ValidationMessage For="@(() => basicInformation.ServiceListId)" />
+                            </div>
+
+                        </div>
+
+                        <div class="chose_service">
+                            @*<h3 class="reqfrm_head text-left">Start Date</h3>*@
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3 class="reqfrm_head text-left">Start Date</h3>
+                                    <div class="inputFiled form-group">
+                                        <SfDatePicker Min="@MinDate" Placeholder="MM/DD/YYYY" @bind-Value="@basicInformation.Date"></SfDatePicker>
+                                        <ValidationMessage For="@(() => basicInformation.Date)" />
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="reqfrm_head text-left">Start Time</h3>
+                                    <div class="inputFiled form-group">
+                                        <SfTimePicker Placeholder="HH:MM AM" @bind-Value="@basicInformation.Time"></SfTimePicker>
+                                        <ValidationMessage For="@(() => basicInformation.Time)" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="inputFiled form-group">
+                                        <h3 class="reqfrm_head text-left">End Date</h3>
+                                        <SfDatePicker Placeholder="MM/DD/YYYY" @bind-Value="@basicInformation.EndDate"></SfDatePicker>
+                                        <ValidationMessage For="@(() => basicInformation.EndDate)" />
+                                    </div>
+                                    @if (basicInformation.Date != null && basicInformation.EndDate != null)
+                                    {
+                                        @if (DateTime.Compare((DateTime)basicInformation.Date, (DateTime)basicInformation.EndDate) > 0)
+                                        {
+                                            <label class="validation-message">End date should be greater than start date</label>
+                                        }
+                                    }
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="reqfrm_head text-left">Total Hours</h3>
+                                    <div class="inputFiled form-group">
+                                        <SfNumericTextBox Min="0" FloatLabelType="@FloatLabelType.Auto" @bind-Value="basicInformation.TotalHours"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="select_freq">
+                            <h3 class="reqfrm_head text-left">Select frequency</h3>
+                            <div class="weekDays-selector text-left">
+                                <ul>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Sunday" id="weekday-sun" class="weekday" />
+                                        <label for="weekday-sun">Sunday</label>
+                                    </li>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Monday" id="weekday-mon" class="weekday" />
+                                        <label for="weekday-mon">Monday</label>
+                                    </li>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Tuesday" id="weekday-tue" class="weekday" />
+                                        <label for="weekday-tue">Tuesday</label>
+                                    </li>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Wednesday" id="weekday-wed" class="weekday" />
+                                        <label for="weekday-wed">Wednesday</label>
+                                    </li>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Thursday" id="weekday-thu" class="weekday" />
+                                        <label for="weekday-thu">Thursday</label>
+                                    </li>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Friday" id="weekday-fri" class="weekday" />
+                                        <label for="weekday-fri">Friday</label>
+                                    </li>
+                                    <li>
+                                        <InputCheckbox @bind-Value="basicInformation.Days.Saturday" id="weekday-sat" class="weekday" />
+                                        <label for="weekday-sat">Saturday</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            @if (freqMsg)
+                            {
+                                <label class="validation-message">Frequency is required</label>
+                            }
+                        </div>
+
+
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Next
+                        </button>
+                    </EditForm>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+
+    public DateTime TimeValue { get; set; } = DateTime.Now;
+
+    BasicInformationViewModel basicInformation = new BasicInformationViewModel();
+    //   BasicInformationViewModel basicInformationLocal = new BasicInformationViewModel();
+    WeekDays days = new WeekDays();
+    private List<ServiceList> serviceList = new List<ServiceList>();
+    private int serviceListId = 0;
+    Boolean freqMsg = false;
+    public DateTime MinDate { get; set; } = DateTime.Today.Date;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+            if (clientData != null)
+            {
+                var basicInformationLocal = await localStorage.GetItemAsync<BasicInformationViewModel>("serviceRequest");
+                if (basicInformationLocal != null)
+                {
+                    basicInformation = basicInformationLocal;
+                }
+                //await jsRunTime.InvokeVoidAsync("test");
+                StateHasChanged();
+            }
+            else
+            {
+                navigation.NavigateTo("client/sign-in");
+
+            }
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //  basicInformation.Time = DateTime.Now.ToString("hh:mm tt", System.Globalization.CultureInfo.InvariantCulture);
+        basicInformation.Days = days;
+        var responseMessage = await Http.GetAsync(wsp.Path + "ServiceList");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        serviceList = (JsonConvert.DeserializeObject<Response<List<ServiceList>>>(response)).Data;
+    }
+
+    private async Task ServiceListHasChanged(int value)
+    {
+        basicInformation.ServiceListId = value;
+        serviceListId = value;
+    }
+
+    public async Task RegisterServiceRequest(BasicInformationViewModel basicInformation)
+    {
+        @if (DateTime.Compare((DateTime)basicInformation.Date, (DateTime)basicInformation.EndDate) > 0)
+        {
+            return;
+        }
+
+        var frequency = GetFrequencyValue.GetFrequency(basicInformation.Days);
+        if (!frequency.ToList().Any(x => x.Value == true))
+        {
+
+            freqMsg = true; return;
+        }
+        else
+        {
+            var frequencyValue = JsonConvert.SerializeObject(frequency);
+            basicInformation.Frequency = frequencyValue;
+            basicInformation.WhenToStart = $"{basicInformation.Date.Value.ToShortDateString()} {basicInformation.Time.Value.ToShortTimeString()}";
+            //  basicInformation.Time = Convert.ToDateTime(basicInformation.WhenToStart).ToString("hh:mm tt", System.Globalization.CultureInfo.InvariantCulture);
+            await localStorage.SetItemAsync("serviceRequest", basicInformation);
+            navigation.NavigateTo("client/patient-info");
+        }
+
+    }
+
+    public async Task OnServiceChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, ServiceList> args)
+    {
+        if (args.ItemData != null)
+        {
+            basicInformation.ServiceListId = args.ItemData.ServiceListId;
+            serviceListId = args.ItemData.ServiceListId;
+        }
+    }
+
+}

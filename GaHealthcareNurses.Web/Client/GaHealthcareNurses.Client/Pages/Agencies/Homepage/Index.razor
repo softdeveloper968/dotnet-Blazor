@@ -1,0 +1,254 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/agency";
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@inject HttpClient Http
+@inject IMapper _mapper
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Entity.ViewModels
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment env
+@using Newtonsoft.Json;
+@inject IToastService toastService
+@inject NavigationManager navigation
+@inject IJSRuntime jsRunTime
+@using GaHealthcareNurses.Client.Helper
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using System.Net.Http.Headers
+@using System.Text
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+<GaHealthcareNurses.Client.Shared.TopHeader />
+
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<!-- Start Breadcrumb
+============================================= -->
+<div class="breadcrumb-area shadow dark gry_lght bg-fixed text-light" style="background-image: url(assets/img/agency-banner.jpg);">
+    <div class="container">
+        <h1 data-aos="fade-left" class="agn_txt">Agencies</h1>
+
+        <div class="row">
+            <div class="col-md-6 item">
+                <h4 data-aos="fade-right">Do you need access to qualified nurses?</h4>
+                <h2 data-aos="fade-up">Sign up to gain access to our database of Nurses</h2>
+                @if (agencyData == null)
+                {
+                    <a data-aos="fade-up" class="btn btn-theme effect btn-md" href="agency/register">Sign Up For Free</a>
+                }
+                else
+                {
+                    <a data-aos="fade-up" class="btn btn-theme effect btn-md" href="agency">Sign Up For Free</a>
+                }
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+<!-- End Breadcrumb -->
+<!-- Start Top Entry
+============================================= -->
+<div class="top-entry-area text-center default-padding bottom-less custm_pbot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">How it  <span>works</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item-box">
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-right">
+                    <div class="item">
+                        <i><img src="assets/img/jobs_icon.png"></i>
+                        <h4>SERVICE REQUEST NOTIFICATION</h4>
+                        <p>
+                            Depending on your subscription level, you will get notifications and alerts as soon as a service request is made.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-up">
+                    <div class="item">
+                        <i><img src="assets/img/nurse_icon.png"></i>
+                        <h4>QUOTE FOR THE SERVICE REQUEST</h4>
+                        <p>
+                            You can send your quote to the care recipient which makes the choice on agency to use.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-left">
+                    <div class="item">
+                        <i><img src="assets/img/checkList_icon.png"></i>
+                        <h4>GAIN ACCESS TO MORE NURSES</h4>
+                        <p>
+                            You will have access to our database of nurses and be able to pick the nurse of your choice and negotiate the best rate.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Entry -->
+<!-- Start Doctors
+   ============================================= -->
+<!-- <div class="doctor-area bg-gray carousel-shadow default-padding bottom-less custm_pbot wait_post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">Opportunities are waiting for <span>you</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row dur_anmt" data-aos="fade-up">
+            <div class="col-md-12">
+                <div id="carousel" class="doctor-items doctor-carousel owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="#">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="#">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="#">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="#">Apply Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- End Doctors -->
+<!-- Start Services
+============================================= -->
+<div class="services-area inc-icon default-padding bottom-less plan-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">Subscription <span>Plans</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="services-items text-center">
+                @foreach (var subscription in subscriptions)
+                {
+                    <div class="col-md-4 col-sm-6 equal-height">
+                        <div class="item month_plan dur_anmt" data-aos="fade-left">
+                            <div class="info">
+
+                                <h4>
+                                    @if (subscription.SubscriptionLevel == 1)
+                                    {
+                                        <a href="#">Monthly</a>
+                                    }
+                                    else if (subscription.SubscriptionLevel == 2)
+                                    {
+                                        <a href="#">Semi Annual</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#">Annual</a>
+                                    }
+                                </h4>
+                                @if (subscription.SubscriptionLevel == 1)
+                                {
+                                    <div class="overlay">
+                                        <img src="assets/img/month_1.png" />
+                                    </div>
+                                }
+                                else if (subscription.SubscriptionLevel == 2)
+                                {
+                                    <div class="overlay">
+                                        <img src="assets/img/semiannual.png" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="overlay">
+                                        <img src="assets/img/yearly.png" />
+                                    </div>
+                                }
+                                <p>
+                                    @subscription.Description
+                                </p>
+                                <h5>$@subscription.Cost</h5>
+                                @if (orders.Count == 0)
+                                {
+                                    <button id="paypal-button-container" class="btn btn-theme border circle btn-md" @onclick="() => Buy(subscription)">Buy Plan</button>
+                                }
+                                else
+                                {
+                                    <button id="paypal-button-container" disabled class="btn btn-theme border circle btn-md" @onclick="() => Buy(subscription)">Buy Plan</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Services -->
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+
+}
+
+

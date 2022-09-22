@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Template>
+	<NursesReferralEmail>
+		<Subject>Register</Subject>
+		<Body>
+			<![CDATA[
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Email Template</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body style="margin:0px; background:#fafafa;" >
+<div style='background-color:#fff;padding:10px;'>
+<!--<a href=""><img  src="" style='margin-left:0px;width:280px;height:auto;' /></a>-->
+</div>
+<br /><p>Dear <b> @@@username </b> , <br /><br />
+<p>Please click below link to register. <br />
+<p><a href="https://www.ushealthcarenurses.com/nurse/register?referralId=@@@referralId&referralMail=@@@refferalMail"><b>CLICK HERE</b></a></p>
+
+<!--<p><a href="http://localhost:58781/nurse/register?referralId=@@@referralId&referralMail=@@@refferalMail"><b>CLICK HERE</b></a></p>-->
+
+<br /><br />
+<p>Thank you,<br /><b>USHealthcareNurses Team</b></p>
+<br/><br/>
+
+</body></html>
+      ]]>
+		</Body>
+	</NursesReferralEmail>
+</Template>

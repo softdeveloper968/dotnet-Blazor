@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Template>
+	<JobInvitationEmail>
+		<Subject>Job Invitation</Subject>
+		<Body>
+			<![CDATA[
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Email Template</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body style="margin:0px; background:#fafafa;" >
+<div style='background-color:#fff;padding:10px;'>
+<!--<a href=""><img  src="" style='margin-left:0px;width:280px;height:auto;' /></a>-->
+</div>
+<br /><p><b>Hi @@@username </b> , <br /><br />
+<p>You are invited for the given job.<br /><br /><b>@@@job</b></p><br/>
+<p>If you want to apply for the job</p>
+
+<br/>
+<p>Please <a href="https://www.ushealthcarenurses.com/agency/apply_job?id=@@@id"><b>CLICK HERE</b></a></p>
+<!--<p>Please <a href="https://gahealthcareweb.azurewebsites.net/agency/apply_job?id=@@@id"><b>CLICK HERE</b></a></p>-->
+
+<br /><br />
+<p>Thank you,<br /><b>USHealthcareNurses Team</b></p>
+<br/><br/>
+
+</body></html>
+      ]]>
+		</Body>
+	</JobInvitationEmail>
+
+</Template>

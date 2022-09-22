@@ -1,0 +1,398 @@
+﻿body, html {
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #171a1c;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+}
+
+    a:focus {
+        outline: 0px !important;
+        text-decoration: none;
+    }
+
+body, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+.backend {
+    background: #f8fafd;
+}
+
+input.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #9aa9b8;
+}
+
+input.form-control::-moz-placeholder { /* Firefox 19+ */
+    color: #9aa9b8;
+}
+
+input.form-control:-ms-input-placeholder { /* IE 10+ */
+    color: #9aa9b8;
+}
+
+input.form-control:-moz-placeholder { /* Firefox 18- */
+    color: #9aa9b8;
+}
+/*-------------- Sidebar css start here --------*/
+.sidebar_sec {
+    background: #fff;
+    width: 274px;
+    position: fixed;
+    overflow-y: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    z-index: 999999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #2391c4;
+    border-radius: 2px;
+    position: absolute;
+    top: -9px;
+    right: 10px;
+}
+
+.user_img {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    margin: 0 auto;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.22);
+    display: inline-block;
+}
+
+span.menu_icon {
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -ms-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    cursor: pointer;
+}
+
+.menu_list ul li:first-child {
+    padding-top: 0;
+}
+
+.menu_list ul.list-unstyled {
+    padding: 0 10px 10px;
+}
+
+.menu_list ul li a {
+    color: #171a1c;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: block;
+    padding: 12px 12px 12px 10px;
+    position: relative;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s;
+    -moz-transition: ease-in-out .5s;
+    -ms-: ease-in-out .5s;
+}
+
+.menu_list ul li {
+    padding: 8px 0;
+}
+
+    .menu_list ul li a i {
+        font-size: 26px;
+        margin-right: 2px;
+        min-width: 34px;
+        text-align: center;
+        color: #2391c4;
+    }
+
+    .menu_list ul li a:hover, .menu_list ul li.active a {
+        color: #fff !important;
+        background: #2391c4;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.23);
+    }
+
+        .menu_list ul li a:hover i, .menu_list ul li.active a i {
+            -webkit-text-fill-color: #fff !important;
+        }
+
+.logo {
+    position: relative;
+    padding: 15px 10px;
+}
+
+    .logo a {
+        font-weight: 600;
+        text-transform: uppercase;
+        max-width: 153px;
+        color: #131517;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 17px;
+        line-height: normal;
+    }
+
+span.menu_icon {
+    position: absolute;
+    right: 14px;
+    top: 23px;
+}
+/*RIGHT SECTION css START here ============================== */
+a.head_logo {
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.right_user {
+    display: inline-block;
+}
+
+.dashboardHeader {
+    padding: 8px 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    position: relative;
+    z-index: 8;
+}
+
+button#dropdownMenu1 {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #4e4e4e;
+    font-size: 14px;
+}
+
+span.user_img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 100%;
+    vertical-align: middle;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 12px rgba(16, 16, 16, 0.25);
+}
+
+.user_img img {
+    min-height: 100%;
+    max-width: 5000000px;
+}
+
+span.user_name {
+    min-width: 70px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0 0 0 6px;
+    text-transform: uppercase;
+    color: #171a1c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+a.logo_img img {
+    max-width: 51px;
+}
+
+.right_user span.caret {
+    color: #171a1c;
+}
+
+.right_user ul.dropdown-menu {
+    right: 0;
+    left: auto;
+    min-width: 187px;
+    max-width: 200px;
+    font-size: 13px;
+    background: #2391c4;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    top: 51px;
+}
+
+    .right_user ul.dropdown-menu li a {
+        padding: 11px;
+        border-bottom: 1px solid #1c83b3;
+        color: #fff;
+        font-size: 13px;
+        white-space: normal;
+        text-transform: uppercase;
+        font-weight: 500;
+        display:block;
+    }
+
+    .right_user ul.dropdown-menu li:first-child a {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .right_user ul.dropdown-menu li:last-child a {
+        border-bottom: none;
+        border-radius: 0 0 4px 4px;
+    }
+
+    .right_user ul.dropdown-menu li a:hover {
+        color: #ffffff;
+        background: #1c83b3;
+    }
+
+.fa-user-circle-o:before {
+    content: "\f2be" !important;
+}
+
+.right_user ul.dropdown-menu li a i.fa {
+    font-size: 17px;
+    width: 16px;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+
+.btn_gradi {
+    display: inline-block;
+    background: #1a8cd8;
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    border-radius: 100%;
+    vertical-align: middle;
+    border: 3px solid #fff;
+    box-shadow: 0px 2px 1px #1010104d;
+    color: #fff;
+    font-size: 19px;
+}
+
+.noti_list ul li a {
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #1f93e2;
+}
+
+.right_sec {
+    padding-left: 274px;
+}
+
+.head_icons {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+    .head_icons ul {
+        margin-bottom: 0px;
+    }
+
+        .head_icons ul li {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+            .head_icons ul li a {
+                position: relative;
+                display: inline-block;
+                color: #b6bcc0;
+                font-size: 21px;
+                vertical-align: middle;
+                font-size: 22px;
+                margin: 0 9px;
+                margin-bottom: -15px;
+                padding: 0 4px;
+            }
+
+span.noti_spn {
+    position: absolute;
+    top: -13px;
+    background: #fff;
+    border: 1px solid #2391c4;
+    height: 23px;
+    width: 23px;
+    color: #2391c4;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    right: -2px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.head_icons ul li a:hover i {
+    background: #2391c4;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.23);
+}
+
+.menu_list li.dropdown ul {
+    list-style: none;
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    padding: 10px;
+}
+
+.menu_list li.dropdown > a:after {
+    content: '2';
+    font-size: 0;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 5px dashed;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    color: #2a93e4;
+}
+
+.menu_list li.dropdown > a:hover:after {
+    color: #fff;
+}
+
+.menu_list li.dropdown ul.submenu li a {
+    color: #4d555a;
+}
+
+.content {
+    padding: 20px;
+}
+
+@media (max-width:1600px) {
+    .menu_list ul li a i {
+        font-size: 18px;
+        min-width: 26px;
+    }
+}

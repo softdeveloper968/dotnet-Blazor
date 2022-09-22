@@ -1,0 +1,286 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/agency/settings"
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@inject HttpClient Http
+@inject IMapper _mapper
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment env
+@using Newtonsoft.Json
+@inject IToastService toastService
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+
+
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="frontend default-padding">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Settings</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+
+                    <EditForm Model="@updateViewModel" class="formSec" OnValidSubmit="() => UpdateAgency(updateViewModel)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Agency Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@updateViewModel.Name" />
+                            <ValidationMessage For="@(() => updateViewModel.Name)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address Line 1" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@updateViewModel.AddressLine1" />
+                            <ValidationMessage For="@(() => updateViewModel.AddressLine1)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address Line 2" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@updateViewModel.AddressLine2" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+
+                            <SfDropDownList class="form-control" FloatLabelType="@FloatLabelType.Auto" @bind-Value="updateViewModel.StateId" TValue="int" TItem="State" Placeholder="State" AllowFiltering="true" DataSource="@stateList">
+                                <DropDownListEvents TItem="State" TValue="int" ValueChange="OnStateChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Name" Value="StateId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => updateViewModel.StateId)" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+                            <SfDropDownList class="form-control" FloatLabelType="@FloatLabelType.Auto" @bind-Value="updateViewModel.CityId" TValue="int" TItem="City" Placeholder="Select a city" AllowFiltering="true" DataSource="@cityList">
+                                <DropDownListEvents TItem="City" TValue="int" ValueChange="OnCityChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="NameAndZipcode" Value="CityId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => updateViewModel.CityId)" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+                            <SfTextBox Placeholder="Zip Code" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" disabled @bind-Value="updateViewModel.ZipCode" class="form-control" />
+                            <ValidationMessage For="@(() => updateViewModel.ZipCode)" />
+                        </div>
+
+                        <div class="inputFiled form-group">
+                            <SfMaskedTextBox FloatLabelType="@FloatLabelType.Auto" Placeholder="Phone No" @bind-Value="updateViewModel.TelephoneNo" Mask="000-000-0000" class="form-control" />
+                            @*<input class="form-control" placeholder=" " type="text" />*@
+                            <ValidationMessage For="@(() => updateViewModel.TelephoneNo)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Email" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@updateViewModel.EmailAddress" />
+                            <ValidationMessage For="@(() => updateViewModel.EmailAddress)" />
+                        </div>
+                        @*<div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUp.Password" />
+                            <ValidationMessage For="@(() => signUp.Password)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Confirm Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUp.RepeatPassword" />
+                            <ValidationMessage For="@(() => signUp.RepeatPassword)" />
+                        </div>*@
+
+                        <label class="label_dob">Logo</label>
+                        <div class="inputFiled form-group">
+                            @*<SfUploader Placeholder="Upload Logo" FloatLabelType="@FloatLabelType.Auto"  class="form-control">
+                                    <UploaderEvents ValueChange="OnChange"></UploaderEvents>
+                                </SfUploader>*@
+
+                            <InputFile 
+                                       class="form-control" type="file"
+                                       FilterByExtension="true"
+                                       FileTooLargeMessage="File is too large to upload"
+                                       AllowedExtensions=".jpeg;.jpg;.png;"
+                                       OnChange="HandleSelection" />
+
+
+                        </div>
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Update Account <i class="fa fa-paper-plane"></i>
+                        </button>
+                       
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    List<FileData> fileData = new List<FileData>();
+    EmployerUpdateViewModel updateViewModel = new EmployerUpdateViewModel();
+    private List<State> stateList = new List<State>();
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    private int stateId = 0;
+    private List<City> cityList = new List<City>();
+    InputMask mask { get; set; }
+    Employer employer = new Employer();
+    [Inject]
+    protected IJSRuntime JsRuntime { get; set; }
+    LoginViewModel<UserDetails> agencyData = new LoginViewModel<UserDetails>();
+    Employer agencyInformation = new Employer();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + "State");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        stateList = (JsonConvert.DeserializeObject<Response<List<State>>>(response)).Data;
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            agencyData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("agencyData");
+            if (agencyData != null)
+            {
+                var agencyResponseMessage = await Http.GetAsync(wsp.Path + $"Employer/GetById?id={agencyData.UserDetails.UserId}");
+                var agencyResponse = agencyResponseMessage.Content.ReadAsStringAsync().Result;
+                agencyInformation = (JsonConvert.DeserializeObject<Response<Employer>>(agencyResponse)).Data;
+
+                updateViewModel = _mapper.Map<EmployerUpdateViewModel>(agencyInformation);
+
+                var httpResponseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={updateViewModel.StateId}");
+                var responseCity = httpResponseMessage.Content.ReadAsStringAsync().Result;
+                cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(responseCity)).Data;
+
+                StateHasChanged();
+            }
+            else
+            {
+                navigation.NavigateTo("agency/sign-in");
+
+            }
+        }
+    }
+
+
+    public async Task UpdateAgency(EmployerUpdateViewModel update)
+    {
+
+        try
+        {
+            using (var client = new HttpClient())
+            {
+                var file = update.Logo;
+                client.BaseAddress = new Uri(wsp.Path + "Register/Agency");
+                byte[] data;
+                MultipartFormDataContent multiContent = new MultipartFormDataContent();
+                multiContent.Add(new StringContent(update.EmployerId), "EmployerId");
+                multiContent.Add(new StringContent(update.Name), "Name");
+                multiContent.Add(new StringContent(update.AddressLine1), "AddressLine1");
+                if (update.AddressLine2 != null)
+                {
+                    multiContent.Add(new StringContent(update.AddressLine2), "AddressLine2");
+                }
+                multiContent.Add(new StringContent(update.StateId.ToString()), "StateId");
+                multiContent.Add(new StringContent(update.CityId.ToString()), "CityId");
+                multiContent.Add(new StringContent(update.ZipCode), "ZipCode");
+                multiContent.Add(new StringContent(update.TelephoneNo), "TelephoneNo");
+                multiContent.Add(new StringContent(update.EmailAddress), "EmailAddress");
+                //multiContent.Add(new StringContent(signUp.Password), "Password");
+                if (update.FileName != null)
+                    multiContent.Add(new ByteArrayContent(update.LogoData), "Logo", update.FileName);
+                else
+                    multiContent.Add(new ByteArrayContent(new byte[0]), "Logo");
+                var responseMessage = await client.PostAsync(wsp.Path + "Employer/Update", multiContent);
+                var response = responseMessage.Content.ReadAsStringAsync().Result;
+                var result = (JsonConvert.DeserializeObject<Response<Employer>>(response));
+                if (result.Data != null)
+                {
+                    toastService.ShowSuccess("Account Updated Successfully!");
+                    navigation.NavigateTo("agency/dashboard");
+
+                }
+                else
+                {
+                    toastService.ShowError(result.Message);
+
+                }
+
+            }
+        }
+        catch (Exception ex)
+        {
+            var e = ex;
+            throw ex;
+        }
+
+    }
+
+
+    private async Task LoadCities(int stateId)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={stateId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(response)).Data;
+    }
+
+
+    public void OnFileRemove(RemovingEventArgs args)
+    {
+        args.PostRawFile = false;
+    }
+
+
+    private async void HandleSelection(InputFileChangeEventArgs eventArgs)
+    {
+        List<string> imgUrls = new List<string>();
+        List<FileData> fileData = new List<FileData>();
+        var imgFile = eventArgs.File;
+        if (imgFile.ContentType.ToLower().Contains("jpeg") || imgFile.ContentType.ToLower().Contains("jpg") || imgFile.ContentType.ToLower().Contains("png"))
+        {
+            var format = imgFile.ContentType.ToLower().Contains("jpeg") ? "image/jpeg" : (imgFile.ContentType.ToLower().Contains("jpg")) ? "image/jpg" : "image/png";
+            var resizedImageFile = await imgFile.RequestImageFileAsync(format,
+               100, 100);
+            var buffers = new byte[resizedImageFile.Size];
+            await resizedImageFile.OpenReadStream().ReadAsync(buffers);
+            var fileEx = resizedImageFile.ContentType.ToLower().Contains("png") ? "png" : "jpg";
+            updateViewModel.LogoData = buffers;
+            updateViewModel.FileName = $"{Guid.NewGuid()}.{fileEx}";
+        }
+        else
+        {
+            await JsRuntime.InvokeVoidAsync("onResetFile");
+            toastService.ShowError("Accept only jpg, jpeg or png file.");
+        }
+    }
+
+    public async Task OnStateChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, State> args)
+    {
+        updateViewModel.StateId = args.ItemData.StateId;
+        stateId = args.ItemData.StateId;
+
+        if (stateId == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(stateId);
+        }
+    }
+
+    public async Task OnCityChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, City> args)
+    {
+        if (args.ItemData != null)
+        {
+            updateViewModel.CityId = args.ItemData.CityId;
+            var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={updateViewModel.CityId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+            updateViewModel.ZipCode = city.ZipCode.ToString();
+        }
+    }
+}

@@ -1,0 +1,54 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/nurses-map"
+@using Syncfusion.Blazor.Maps;
+@using GaHealthcareNurses.Entity.ViewModels
+@using Syncfusion.Blazor.Buttons
+
+@using Newtonsoft.Json;
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+
+
+<GaHealthcareNurses.Client.Shared.TopHeader />
+
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="col-lg-12 control-section sb-property-border">
+    <SfMaps Format="N0" UseGroupingSeparator="true">
+        <MapsTitleSettings Text="Nurses Map">
+            <MapsTitleTextStyle Size="16px" />
+        </MapsTitleSettings>
+        <MapsZoomSettings ZoomFactor="5" Enable="true" />
+        <MapsCenterPosition Latitude="32.42" Longitude="-99.75"></MapsCenterPosition>
+        <MapsLayers>
+            <MapsLayer  LayerType="ShapeLayerType.OSM" TValue="string">
+                <MapsShapeSettings Fill="#C3E6ED" />
+                <MapsMarkerSettings>
+                    <MapsMarker Visible="true" TValue="NurseDetails" DataSource="@nurseData" Shape="Syncfusion.Blazor.Maps.MarkerType.Circle" Fill="#ff0000">
+                        <MapsMarkerBorder Color="#285255" Width="2" />
+                        <MapsMarkerTooltipSettings Visible="true" Format="First Name: <b>${FirstName}</b><br>Last Initial: <b>${LastName}</b><br>State: <b>${StateName}</b>" />
+                    </MapsMarker>
+                </MapsMarkerSettings>
+            </MapsLayer>
+        </MapsLayers>
+    </SfMaps>
+    @*<div class="urllink">
+        Source:
+        <a href="http://www.citymayors.com/statistics/largest-cities-population-125.html" target="_blank">www.citymayors.com</a>
+    </div>*@
+</div>
+
+    
+@code {
+    public List<NurseDetails> nurseData = new List<NurseDetails>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        var allNurses = await Http.GetAsync(wsp.Path + "Nurses/GetNursesWithState");
+        var response = allNurses.Content.ReadAsStringAsync().Result;
+        nurseData = (JsonConvert.DeserializeObject<List<NurseDetails>>(response));
+      
+    }
+ 
+
+}

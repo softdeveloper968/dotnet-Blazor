@@ -1,0 +1,94 @@
+﻿@page "/client/dashboard-jobDate"
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@using GaHealthcareNurses.Entity.Models;
+@inject IToastService toastService
+@inject NavigationManager navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+
+<div class="right_sec">
+    <header class="dashboardHeader">
+        <div class="row ">
+            <div class="col-md-4">
+                <a href="#" class="logo_img"> <img src="css/img/logo.png" alt="logo"></a>
+            </div>
+            <div class="col-md-8 ">
+                <div class="head_right text-right">
+                    <div class="head_icons">
+                        <ul class="list-unstyled">
+
+                            <li> <a href="client/dashboard" title="Signed Agreements"> <i class="fas fa-pencil-alt"></i> <span class="noti_spn"> 2 </span> </a> </li>
+                            <li> <a href="client/dashboard-jobDate" title="Follow Up letter due"> <i class="fas fa-exclamation-triangle"></i> <span class="noti_spn"> 2 </span> </a> </li>
+                            <li> <a href="client/dashboard" title="Websites Leads"> <i class="fas fa-globe"></i> <span class="noti_spn"> 2 </span> </a> </li>
+                            <li> <a href="client/dashboard" title="Pending Affiliates  referrals"> <i class="fas fa-question"></i> <span class="noti_spn"> 2 </span> </a> </li>
+                            <li> <a href="client/dashboard" title="Message"> <i class="far fa-envelope"></i> <span class="noti_spn"> 2 </span> </a> </li>
+                            <li> <a href="client/dashboard" title="Reminder"> <i class="far fa-bell"></i> <span class="noti_spn"> 2 </span> </a> </li>
+                        </ul>
+                    </div>
+                    <div class="dropdown right_user">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <span class="user_img"> <img src="img/pro_pic.jpg" alt=""></span> <span class="user_name"> Admin </span> <span class="caret"></span> </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="profile_drop">
+                            <li><a href="client/dashboard">  My Account</a> <span class="triangle">&nbsp; </span></li>
+                            <li><a href="client/dashboard">  My Contact</a></li>
+                            <li><a @onclick="()=>LogOut()">  Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="postj_box">
+            <div class="post_tb">
+                <h2 class="job_ser active myser_hd m-0">My Service Request</h2>
+            </div>
+            @foreach (var job in jobs)
+            {
+                <div class="chos_serv serv_reuestbox">
+                    <div class="req_sbtxt serv_tophd">
+                        @*<h3 class="req_sbhd">@job.Title</h3>*@
+                        <h3 class="req_sbpar">@job.PostedTime </h3>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</div>
+
+
+@code{
+    LoginViewModel<UserDetails> clientData = new LoginViewModel<UserDetails>();
+    UserDetails user = new UserDetails();
+    IEnumerable<Job> jobs = new List<Job>();
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+            user = clientData.UserDetails;
+            var responseMessage = await Http.GetAsync(wsp.Path + $"Job/GetByClientId?id={clientData.UserDetails.UserId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            jobs = (JsonConvert.DeserializeObject<Response<IEnumerable<Job>>>(response)).Data;
+
+            StateHasChanged();
+        }
+    }
+
+    @code {
+        public async Task LogOut()
+        {
+            toastService.ShowSuccess("Logged out successfully!");
+            await localStorage.RemoveItemAsync("clientData");
+            navigation.NavigateTo("client");
+        }
+    }
+
+}

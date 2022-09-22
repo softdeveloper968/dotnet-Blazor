@@ -1,0 +1,195 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/nurses";
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IJSRuntime jsRunTime
+
+
+<GaHealthcareNurses.Client.Shared.TopHeader />
+
+<GaHealthcareNurses.Client.Shared.NurseHeader />
+<!-- Start Breadcrumb
+============================================= -->
+<div class="breadcrumb-area shadow dark gry_lght bg-fixed text-light video_banner position-relative nurse-bnner">
+    <div class="container">
+        <h1 data-aos="fade-left" class="agn_txt">Nurses</h1>
+        <div class="row">
+            <div class="col-md-6 item">
+
+                <h4 data-aos="fade-right">Looking for nursing work?</h4>
+                <h2 data-aos="fade-up">Register with us and get a job nearby you.</h2>
+                <a data-aos="fade-up" class="btn btn-theme effect btn-md" href="nurse/register">Sign Up For Free</a>
+            </div>
+            <div class="col-md-6 item">
+                <div class="nurse_mobile">
+                    <img src="assets/img/nurse-mobileapp.png" />
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="video_box">
+        <video autoplay loop muted class="care__video" preload >
+            <source controls="true" src="assets/img/nurses.mp4">
+        </video>
+    </div>
+</div>
+<!-- End Breadcrumb -->
+<!-- Start Top Entry
+============================================= -->
+<div class="top-entry-area text-center default-padding bottom-less custm_pbot nurses_howrks">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                    <h2>How it  <span>works</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item-box">
+                <!-- Single Item -->
+                <div class="col-md-4 single-item">
+                    <div class="item">
+                        <i><img src="assets/img/jobs_icon.png"></i>
+                        <h4>People post their jobs</h4>
+                        <p>
+                            We have thousands of jobs posted each day by clients waiting to match a perfect nurse for their jobs.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-ite">
+                    <div class="item">
+                        <i><img src="assets/img/professional.png"></i>
+                        <h4>Agencies filter jobs for you</h4>
+                        <p>
+                            USHCNs has a list of high agencies which filter out jobs with locations and based on skills for you.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item">
+                    <div class="item">
+                        <i><img src="assets/img/checkList_icon.png"></i>
+                        <h4>You get a job near by</h4>
+                        <p>
+                            Once agency has filtered jobs based on location and type of skill that job need, they will hire appropriate nurses
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Entry -->
+<!-- Start Doctors
+   ============================================= -->
+<!-- <div class="doctor-area bg-gray carousel-shadow default-padding bottom-less custm_pbot wait_post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">Jobs near to <span>you</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row dur_anmt" data-aos="fade-up">
+            <div class="col-md-12">
+                <div id="carousel" class="doctor-items doctor-carousel owl-carousel owl-theme">
+
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="nurse/sign-in">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="nurse/sign-in">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="nurse/sign-in">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="info">
+                            <div class="opp_dte">
+                                Published on: <b>Jan 21, 2020</b>
+                            </div>
+                            <h4>Nurse need for daily dressing and health check for grandma</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat velit non dictum dignissim. Aenean cursus tellus at convallis elementum. Aliquam eu sodales diam, at elementum quam.</h5>
+                            <p class="locationTxt">Location: <b>New Jersey</b></p>
+                            <a class="btn btn-theme border circle btn-md" href="nurse/sign-in">Apply Now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- End Doctors -->
+<!-- Last section
+============================================= -->
+<div class="default-padding bottom-less professona_assist down_google">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumb">
+                  <a href="https://play.google.com/store/apps/details?id=com.gahealthcarenurses.dev" target="_blank"> <img src="assets/img/google_pay.png" alt="Thumb" class="zoom_duration" data-aos="zoom-in"></a>
+                   <a href="https://apps.apple.com/in/app/ushealthcarenurses/id1553040897" target="_blank"> <img src="assets/img/app_store.png" alt="Thumb" class="zoom_duration" data-aos="zoom-in"></a>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info">
+                    <h2 data-aos="fade-left">Download our app</h2>
+                    <p data-aos="fade-up">
+                        Please visit the Google Play store or Apple store to download our app. You can also create the first part of your profile on this website but you have to complete it on your mobile device.
+                    </p>
+                    <p data-aos="fade-up"><a class="btn btn-theme border btn-md" href="nurse/register">Get Started</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Last section -->
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await jsRunTime.InvokeVoidAsync("Slider");
+    }
+}

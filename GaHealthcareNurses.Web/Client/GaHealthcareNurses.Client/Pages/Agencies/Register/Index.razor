@@ -1,0 +1,337 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/agency/register"
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@inject HttpClient Http
+@inject IMapper _mapper
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Http
+@inject IWebHostEnvironment env
+@using Newtonsoft.Json;
+@using System.Text;
+@using System.IO
+@inject IToastService toastService
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Data
+
+
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="frontend default-padding">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Sign Up : <span>Agency</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm Model="@signUp" class="formSec" OnValidSubmit="() => RegisterAgency(signUp)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Agency Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.Name" />
+                            <ValidationMessage For="@(() => signUp.Name)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address Line 1" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.AddressLine1" />
+                            <ValidationMessage For="@(() => signUp.AddressLine1)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address Line 2" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.AddressLine2" />
+                        </div>
+                        @*<div class="inputFiled form-group brow_fl">
+                                <SfTextBox Placeholder="Zip Code" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Number" @onchange="OnZipEnter" @bind-Value="signUp.ZipCode" class="form-control" />
+                                <ValidationMessage For="@(() => signUp.ZipCode)" />
+                            </div>*@
+
+
+                        <div class="inputFiled form-group brow_fl">
+
+                            <SfDropDownList class="form-control" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUp.StateId" TValue="int" TItem="State" Placeholder="State" AllowFiltering="true" DataSource="@stateList">
+                                <DropDownListEvents TItem="State" ValueChange="OnStateChange" TValue="int"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Name" Value="StateId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => signUp.StateId)" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+                            <SfDropDownList class="form-control" @ref="ddlObj" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUp.CityId" TValue="int" TItem="City" Placeholder="Select a city" AllowFiltering="true" DataSource="@cityList">
+                                <DropDownListEvents TItem="City" ValueChange="OnCityChange" TValue="int" Filtering="OnFilter"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="NameAndZipcode" Value="CityId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            @*<SfDropDownList class="form-control" EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUp.CityId" TValue="int" TItem="City" Placeholder="City" AllowFiltering="true" DataSource="@cityList">
+                                    <DropDownListEvents TItem="City" TValue="int" ValueChange="OnCityChange"></DropDownListEvents>
+                                    <DropDownListFieldSettings Text="NameAndZipcode" Value="CityId"></DropDownListFieldSettings>
+                                </SfDropDownList>*@
+
+                            <ValidationMessage For="@(() => signUp.CityId)" />
+                        </div>
+                        <div class="inputFiled form-group brow_fl">
+                            <SfTextBox Placeholder="Zip Code" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" disabled @bind-Value="signUp.ZipCode" class="form-control" />
+                            <ValidationMessage For="@(() => signUp.ZipCode)" />
+                        </div>
+                        <!--<div class="inputFiled form-group brow_fl">
+                        <SfNumericTextBox TValue="int" FloatLabelType="@FloatLabelType.Auto" Enabled="false" @bind-Value="@signUp.ZipCode" >
+                            <NumericTextBoxEvents TValue="int" ValueChange="OnZipCodeChange"></NumericTextBoxEvents>
+                            <ValidationMessage For="@(() => signUp.ZipCode)" />
+                        </SfNumericTextBox>-->
+                        @*<InputText Value="@signUp.ZipCode.ToString()" ValueChanged="OnZipCodeChange" ValueExpression="() => signUp.ZipCode.ToString()" />*@
+                        <!--</div>-->
+
+                        <div class="inputFiled form-group">
+                            <SfMaskedTextBox FloatLabelType="@FloatLabelType.Auto" Placeholder="Phone No" @bind-Value="signUp.TelephoneNo" Mask="000-000-0000" class="form-control" />
+                            <ValidationMessage For="@(() => signUp.TelephoneNo)" />
+                            @*<input class="form-control" placeholder=" " type="text" />*@
+
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Email" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUp.EmailAddress" />
+                            <ValidationMessage For="@(() => signUp.EmailAddress)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUp.Password" />
+                            <ValidationMessage For="@(() => signUp.Password)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Confirm Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUp.RepeatPassword" />
+                            <ValidationMessage For="@(() => signUp.RepeatPassword)" />
+                        </div>
+
+                        <label class="label_dob">Logo</label>
+                        <div class="inputFiled form-group">
+                            @*<SfUploader Placeholder="Upload Logo" FloatLabelType="@FloatLabelType.Auto"  class="form-control">
+                                    <UploaderEvents ValueChange="OnChange"></UploaderEvents>
+                                </SfUploader>*@
+
+                            <InputFile class="form-control" type="file"
+                                       accept=".jpeg, .jpg, .png;"
+                                       FilterByExtension="true"
+                                       FileTooLargeMessage="File is too large to upload"
+                                       AllowedExtensions=".jpeg;.jpg;.png;"
+                                       OnChange="HandleSelection" />
+
+
+                        </div>
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Create Account <i class="fa fa-paper-plane"></i>
+                        </button>
+                        <div class="formFooterLink text-center"><p class="subheading"> Or <span><br /><a href="agency/sign-in">Sign In</a></span></p></div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    List<FileData> fileData = new List<FileData>();
+    EmployerSignUp signUp = new EmployerSignUp();
+    private List<State> stateList = new List<State>();
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    private int stateId = 0;
+    private List<City> cityList = new List<City>();
+    private List<City> filteredCityList = new List<City>();
+    SfDropDownList<int, City> ddlObj { get; set; }
+    InputMask mask { get; set; }
+    [Inject]
+    protected IJSRuntime JsRuntime { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + "State");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        stateList = (JsonConvert.DeserializeObject<Response<List<State>>>(response)).Data;
+        //await LoadAllCities();
+    }
+
+    private async Task OnFilter(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var query = new Query().Where(new WhereFilter() { Field = "NameAndZipCode", Operator = "contains", value = args.Text, IgnoreCase = true });
+
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+        filteredCityList = cityList.Where(item => item.NameAndZipcode.ToLower().Contains(args.Text.ToLower())).ToList();
+        await ddlObj.Filter(filteredCityList, query);
+    }
+
+    public async Task RegisterAgency(EmployerSignUp signUp)
+    {
+
+        try
+        {
+            using (var client = new HttpClient())
+            {
+
+                var citiesResponse = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUp.CityId}");
+                var resultData = citiesResponse.Content.ReadAsStringAsync().Result;
+                City city = (JsonConvert.DeserializeObject<Response<City>>(resultData)).Data;
+                var zip = Convert.ToString(city.ZipCode);
+                if (zip != signUp.ZipCode)
+                {
+                    toastService.ShowError("This is not a valid zip code for selected location!");
+                }
+                else
+                {
+                    var file = signUp.Logo;
+                    client.BaseAddress = new Uri(wsp.Path + "Register/Agency");
+                    byte[] data;
+                    MultipartFormDataContent multiContent = new MultipartFormDataContent();
+                    multiContent.Add(new StringContent(signUp.Name), "Name");
+                    multiContent.Add(new StringContent(signUp.AddressLine1), "AddressLine1");
+                    if (signUp.AddressLine2 != null)
+                    {
+                        multiContent.Add(new StringContent(signUp.AddressLine2), "AddressLine2");
+                    }
+                    multiContent.Add(new StringContent(signUp.StateId.ToString()), "StateId");
+                    multiContent.Add(new StringContent(signUp.CityId.ToString()), "CityId");
+                    multiContent.Add(new StringContent(Convert.ToString(signUp.ZipCode)), "ZipCode");
+                    multiContent.Add(new StringContent(signUp.TelephoneNo), "TelephoneNo");
+                    multiContent.Add(new StringContent(signUp.EmailAddress), "EmailAddress");
+                    multiContent.Add(new StringContent(signUp.Password), "Password");
+                    if (signUp.FileName != null)
+                        multiContent.Add(new ByteArrayContent(signUp.LogoData), "Logo", signUp.FileName);
+                    else
+                        multiContent.Add(new ByteArrayContent(new byte[0]), "Logo");
+                    var responseMessage = await client.PostAsync(wsp.Path + "Register/Agency", multiContent);
+                    var response = responseMessage.Content.ReadAsStringAsync().Result;
+                    var result = (JsonConvert.DeserializeObject<Response<LoginViewModel<UserDetails>>>(response));
+                    if (result.Data != null)
+                    {
+                        toastService.ShowSuccess("Agency Registered Successfully!");
+                        navigation.NavigateTo("agency/sign-in");
+
+                    }
+                    else if (result.Message == "User already exists!")
+                    {
+                        toastService.ShowError("Email is already exist!");
+                    }
+                    else
+                    {
+                        toastService.ShowError("Agency name is already exist!");
+
+                    }
+
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            var e = ex;
+            throw ex;
+        }
+
+    }
+    private async Task StateHasChanged(int value)
+    {
+        signUp.StateId = value;
+        stateId = value;
+
+        if (value == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(value);
+        }
+    }
+
+    private async Task CityHasChanged(int value)
+    {
+        signUp.CityId = value;
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUp.CityId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+        signUp.ZipCode = Convert.ToString(city.ZipCode);
+
+    }
+
+
+    private async Task LoadCities(int stateId)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={stateId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(response)).Data;
+    }
+
+    private async Task LoadAllCities()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetAll");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(response)).Data;
+    }
+
+
+
+    public void OnFileRemove(RemovingEventArgs args)
+    {
+        args.PostRawFile = false;
+    }
+
+
+    private async void HandleSelection(InputFileChangeEventArgs eventArgs)
+    {
+        List<string> imgUrls = new List<string>();
+        List<FileData> fileData = new List<FileData>();
+        var imgFile = eventArgs.File;
+        if (imgFile.ContentType.ToLower().Contains("jpeg") || imgFile.ContentType.ToLower().Contains("jpg") || imgFile.ContentType.ToLower().Contains("png"))
+        {
+            var format = imgFile.ContentType.ToLower().Contains("jpeg") ? "image/jpeg" : (imgFile.ContentType.ToLower().Contains("jpg")) ? "image/jpg" : "image/png";
+            var resizedImageFile = await imgFile.RequestImageFileAsync(format,
+               100, 100);
+            var buffers = new byte[resizedImageFile.Size];
+            await resizedImageFile.OpenReadStream().ReadAsync(buffers);
+            var fileEx = resizedImageFile.ContentType.ToLower().Contains("png") ? "png" : "jpg";
+            signUp.LogoData = buffers;
+            signUp.FileName = $"{Guid.NewGuid()}.{fileEx}";
+        }
+        else
+        {
+            await JsRuntime.InvokeVoidAsync("onResetFile");
+            toastService.ShowError("Accept only jpg, jpeg or png file.");
+        }
+    }
+
+    public async Task OnStateChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, State> args)
+    {
+        signUp.StateId = args.ItemData.StateId;
+        stateId = args.ItemData.StateId;
+        signUp.CityId = 0;
+        signUp.ZipCode = string.Empty;
+
+        if (stateId == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(stateId);
+        }
+    }
+
+    public async Task OnCityChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, City> args)
+    {
+        if (args.ItemData != null)
+        {
+            signUp.CityId = args.ItemData.CityId;
+            var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUp.CityId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+            signUp.ZipCode = Convert.ToString(city.ZipCode);
+        }
+    }
+}

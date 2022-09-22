@@ -1,0 +1,24 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/nurse/paymentfailed"
+@inject IToastService toastService
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Microsoft.AspNetCore.WebUtilities
+@using System.Net.Http.Headers
+@inject IJSRuntime jsRunTime
+
+<GaHealthcareNurses.Client.Shared.NurseHeader />
+<div class="container" style="height:500px;">
+    <br />
+    <h2>Payment Failed</h2>
+    <p>We are sorry to see you go...</p>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+

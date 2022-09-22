@@ -1,0 +1,59 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/client/thank_you"
+@inject IToastService toastService
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@using Microsoft.AspNetCore.Components.Forms
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Microsoft.AspNetCore.WebUtilities
+@using System.Net.Http.Headers
+@inject IJSRuntime jsRunTime
+@using System.Text
+
+
+
+<section class="sucess_sms">
+    <div class="container">
+        <div class="thankYou_contant">
+            <div class="thankYou_img">
+                <img class="w-100" src="assets/img/thanks.png" />
+            </div>
+            <h2 class="h2">For Hiring!</h2>
+            <a href="/" class="create_account btn-theme border prev_button hire_agen">
+                Go to home
+            </a>
+        </div>
+     
+    </div>
+
+
+</section>
+
+
+@code {
+
+    System.Uri uri;
+    string jobApplyId = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        uri = navigation.ToAbsoluteUri(navigation.Uri);
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("id", out var aVal))
+        {
+            jobApplyId = aVal;
+        }
+
+        var responseMessage = await Http.GetAsync(wsp.Path + $"JobApplyForEmployer/HireAgency?jobApplyId={jobApplyId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+
+    }
+
+}
+

@@ -1,0 +1,259 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/nurse/register"
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IMapper _mapper
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment env
+@inject IToastService toastService
+@using System
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Calendars
+@using Microsoft.AspNetCore.WebUtilities
+
+<GaHealthcareNurses.Client.Shared.NurseHeader />
+<div class="frontend default-padding">
+    <div class="login_sec">
+        <div class="center_login">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="site-heading text-center">
+                        <h2 data-aos="fade-up">Sign Up : <span>Nurse</span></h2>
+
+                    </div>
+                </div>
+            </div>
+            <div class="login_box">
+                <div class="inner_box">
+                    <EditForm Model="@signUpViewModel" class="formSec" OnValidSubmit="() => RegisterNurse(signUpViewModel,finish)">
+                        <DataAnnotationsValidator />
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="First Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUpViewModel.FirstName" />
+                            <ValidationMessage For="@(() => signUpViewModel.FirstName)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Middle Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUpViewModel.MiddleInitial" />
+                            <ValidationMessage For="@(() => signUpViewModel.MiddleInitial)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Last Name" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUpViewModel.LastName" />
+                            <ValidationMessage For="@(() => signUpViewModel.LastName)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Email" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUpViewModel.EmailAddress" />
+                            <ValidationMessage For="@(() => signUpViewModel.EmailAddress)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUpViewModel.Password" />
+                            <ValidationMessage For="@(() => signUpViewModel.Password)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Confirm Password" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Password" class="form-control" @bind-Value="@signUpViewModel.ConfirmPassword" />
+                            <ValidationMessage For="@(() => signUpViewModel.ConfirmPassword)" />
+                        </div>
+                        <div class="inputFiled form-group">
+                            <SfTextBox Placeholder="Address" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" class="form-control" @bind-Value="@signUpViewModel.AddressLine1" />
+                            <ValidationMessage For="@(() => signUpViewModel.AddressLine1)" />
+                        </div>
+                        <div class="inputFiled form-group brow_fl">
+
+                            <SfDropDownList class="form-control" EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUpViewModel.StateId" TValue="int" TItem="State" Placeholder="State" AllowFiltering="true" DataSource="@stateList">
+                                <DropDownListEvents TItem="State" TValue="int" ValueChange="OnStateChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Name" Value="StateId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => signUpViewModel.StateId)" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+                            <SfDropDownList class="form-control" EnableVirtualization="true" FloatLabelType="@FloatLabelType.Auto" @bind-Value="signUpViewModel.CityId" TValue="int" TItem="City" Placeholder="City" AllowFiltering="true" DataSource="@cityList">
+                                <DropDownListEvents TItem="City" TValue="int" ValueChange="OnCityChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="NameAndZipcode" Value="CityId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+
+                            <ValidationMessage For="@(() => signUpViewModel.CityId)" />
+                        </div>
+
+                        <div class="inputFiled form-group brow_fl">
+                            <SfTextBox Placeholder="Zip Code" FloatLabelType="@FloatLabelType.Auto" Type="InputType.Text" disabled @bind-Value="signUpViewModel.ZipCode" class="form-control" />
+                            <ValidationMessage For="@(() => signUpViewModel.ZipCode)" />
+                        </div>
+
+                        <div class="inputFiled form-group">
+                            <SfMaskedTextBox FloatLabelType="@FloatLabelType.Auto" Placeholder="Phone No" @bind-Value="signUpViewModel.TelephoneNo" Mask="000-000-0000" class="form-control" />
+                            <ValidationMessage For="@(() => signUpViewModel.TelephoneNo)" />
+                        </div>
+
+                        <div class="inputFiled form-group">
+                            <SfMaskedTextBox FloatLabelType="@FloatLabelType.Auto" Placeholder="Social Security Number" @bind-Value="signUpViewModel.SocialSecurityNo" Mask="000-00-0000" class="form-control" />
+                            <ValidationMessage For="@(() => signUpViewModel.SocialSecurityNo)" />
+                        </div>
+
+                        <label class="label_dob">Date Of Birth</label>
+                        <div class="inputFiled form-group ">
+                            <SfDatePicker Placeholder="MM/DD/YYYY" @bind-Value="signUpViewModel.DateOfBirth" Max="@MaxDate" class="form-control" />
+                            <ValidationMessage For="@(() => signUpViewModel.DateOfBirth)" />
+                        </div>
+                        @*<SfMaskedTextBox Placeholder="Social Security Number" @bind-Value="DateTime.Now" class="form-control" hidden/>*@
+                        <button type="submit" name="submit" class="create_account btn-theme border ">
+                            Create Account <i class="fa fa-paper-plane"></i>
+                        </button>
+                        <div class="formFooterLink text-center"><p class="subheading"> Or <span><br /><a href="nurse/sign-in">Sign In</a></span></p></div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+
+@code {
+
+    public DateTime MaxDate { get; set; } = DateTime.Now;
+    Finish finish = new Finish();
+    ReferralSignUp referralSign = new ReferralSignUp();
+    NurseSignUp signUpViewModel = new NurseSignUp();
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    private List<State> stateList = new List<State>();
+    private int stateId = 0;
+    private List<City> cityList = new List<City>();
+    InputMask maskTelephone { get; set; }
+    InputMask maskSsn { get; set; }
+
+    System.Uri uri;
+    public int referralId;
+    public string referralMail;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        uri = navigation.ToAbsoluteUri(navigation.Uri);
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("referralId", out var aVal))
+        {
+            referralId = Convert.ToInt32(aVal);
+        }
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("referralMail", out var bVal))
+        {
+            //encodedVal = HttpUtility.UrlEncode(bVal).Replace(" ", "+").Replace("%2f", "/");
+            referralMail = bVal;
+        }
+
+
+        var responseMessage = await Http.GetAsync(wsp.Path + "State");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        stateList = (JsonConvert.DeserializeObject<Response<List<State>>>(response)).Data;
+    }
+
+
+    public async Task RegisterNurse(NurseSignUp signUpObject, Finish finish)
+    {
+        //var unMaskedTelephoneNo = signUpObject.TelephoneNo;
+        //var unMaskedSsn = signUpObject.SocialSecurityNo;
+        //signUpObject.TelephoneNo = maskTelephone.rawValue;
+        //signUpObject.SocialSecurityNo = maskSsn.rawValue;
+        //signUpObject.CreatedDate = DateTime.Now;
+        //signUpObject.UpdatedDate = DateTime.Now;
+        var referralnurses = _mapper.Map<ReferralSignUp>(signUpObject);
+        if (referralId > 0 && referralMail != null)
+        {
+            referralnurses.ReferralId = referralId;
+            var responseRefer = await Http.PostAsJsonAsync(wsp.Path + "RegisterReferralNurse", referralnurses);
+        }
+
+        UserViewModel userViewModel = new UserViewModel();
+
+        var nurses = _mapper.Map<SignUp>(signUpObject);
+        userViewModel.SignUp = nurses;
+        userViewModel.BasicInfo = new BasicInfo();
+        userViewModel.WorkExperience = new WorkExperienceViewModel();
+        userViewModel.Education = new EducationViewModel();
+        userViewModel.Finish = finish;
+
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "Register", userViewModel);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var data = (JsonConvert.DeserializeObject<Response<LoginViewModel<UserDetails>>>(response)).Data;
+        if (data != null)
+        {
+            toastService.ShowSuccess("Nurse Registered Successfully!");
+            navigation.NavigateTo("nurse/registered");
+        }
+        else
+        {
+            //signUpObject.TelephoneNo = unMaskedTelephoneNo;
+            //signUpObject.SocialSecurityNo = unMaskedSsn;
+            toastService.ShowError("Email is already exist!");
+        }
+    }
+
+
+    private async Task StateHasChanged(int value)
+    {
+        signUpViewModel.StateId = value;
+        stateId = value;
+
+        if (value == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(value);
+        }
+    }
+
+    private async Task CityHasChanged(int value)
+    {
+        signUpViewModel.CityId = value;
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUpViewModel.CityId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+        signUpViewModel.ZipCode = city.ZipCode.ToString();
+    }
+
+
+    private async Task LoadCities(int stateId)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetByStateId?stateId={stateId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        cityList = (JsonConvert.DeserializeObject<Response<List<City>>>(response)).Data;
+    }
+
+    public async Task OnStateChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, State> args)
+    {
+        signUpViewModel.StateId = args.ItemData.StateId;
+        stateId = args.ItemData.StateId;
+
+        if (stateId == 0)
+        {
+            cityList.Clear();
+        }
+        else
+        {
+            await LoadCities(stateId);
+        }
+    }
+
+    public async Task OnCityChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, City> args)
+    {
+        if (args.ItemData != null)
+        {
+            signUpViewModel.CityId = args.ItemData.CityId;
+            var responseMessage = await Http.GetAsync(wsp.Path + $"City/GetById?id={signUpViewModel.CityId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            City city = (JsonConvert.DeserializeObject<Response<City>>(response)).Data;
+            signUpViewModel.ZipCode = city.ZipCode.ToString();
+        }
+    }
+
+}

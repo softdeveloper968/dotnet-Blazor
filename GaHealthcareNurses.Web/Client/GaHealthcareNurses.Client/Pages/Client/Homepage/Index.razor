@@ -1,0 +1,189 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/client";
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IJSRuntime jsRunTime
+@using Syncfusion.Blazor.SplitButtons
+
+
+<GaHealthcareNurses.Client.Shared.TopHeader/>
+
+<GaHealthcareNurses.Client.Shared.ClientHeader/>
+
+<!-- Start Breadcrumb
+============================================= -->
+<div class="breadcrumb-area shadow dark gry_lght bg-fixed text-light video_banner position-relative">
+    <div class="text-wrap vide_content">
+        <h1 data-aos="fade-left" class="agn_txt aos-init aos-animate">Care Recipients</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 item">
+                        <h2 data-aos="fade-up">Find an angel with a stethoscope</h2>
+                        <a href="javascript:void(0)" @onclick="()=>CheckLogin()" data-aos="fade-left" class="btn btn-theme effect btn-md req_btn">Create A Free Service request</a>
+                    </div>
+
+                </div>
+            </div>
+</div>
+    <div class="video_box">
+        <video autoplay loop muted class="care__video" preload>
+            <source controls="true" src="assets/img/bnnr-video.mp4">
+        </video>
+    </div>
+</div>
+<!-- End Breadcrumb -->
+<!-- Start Top Entry
+============================================= -->
+<div class="top-entry-area text-center default-padding bottom-less custm_pbot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">How it  <span>works</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item-box">
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-right">
+                    <div class="item">
+                        <i><img src="assets/img/jobs_icon.png"></i>
+                        <h4>Browse through jobs</h4>
+                        <p>
+                            We have thousands of jobs posted each day by clients waiting to match a perfect nurse for their jobs.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-up">
+                    <div class="item">
+                        <i><img src="assets/img/nurse_icon.png"></i>
+                        <h4>List of qualified nurses</h4>
+                        <p>
+                            Our database has a list of highly qualified nurses for every kind of job posted on our platform and ready to start work immediately.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-left">
+                    <div class="item">
+                        <i><img src="assets/img/checkList_icon.png"></i>
+                        <h4>Match a nurse for the job</h4>
+                        <p>
+                            We will let you broadcast jobs and nurses will apply for that.You have to find a relevant nurse to do that job.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Entry -->
+<!-- Start Testimonials
+============================================= -->
+<div class="testimonials-area carousel-shadow default-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                    <h2>USHCNs <span>Testimonials</span></h2>
+                  
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="testimonial-items testimonial-carousel owl-carousel owl-theme">
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="content">
+                            <p>
+                                Great site! I have been able to get jobs from here. Their mobile app is the best and I always receive notifications as soon as jobs are posted.<br>
+                                USHCNs- Agency
+                            </p>
+                        </div>
+                        <div class="provider">
+                            <div class="thumb">
+                                <img src="assets/img/black-female-executive-ushcns.jpg" alt="Thumb" />
+                            </div>
+                            <div class="info">
+                                <h4>Sheila Jones</h4>
+                                <h5>USHCNs</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="content">
+                            <p>
+                                @*UShealthcarenurses -Great website with user friendly interface, good options of caregivers and abilities to research. Great customer service.*@
+                                This site is great.. it’s allows me to find PRN work easy and fast!!<br>
+                                USHCNs- Nurse
+                            </p>
+                        </div>
+                        <div class="provider">
+                            <div class="thumb">
+                                <img src="assets/img/cna-for-front-site.jpg" alt="Thumb"/>
+                                @*<img src="assets/img/testimonial.jpg" alt="Thumb">*@
+                            </div>
+                            <div class="info">
+                                <h4>Mallorie Steven</h4>
+                                <h5>USHCNs</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="item">
+                        <div class="content">
+                            <p>
+                                I have found many jobs on UShealthcarenurses and I like the reviews about certain users.
+                            </p>
+                        </div>
+                        <div class="provider">
+                            <div class="thumb">
+                                <img src="assets/img/testimonial.png" alt="Thumb">
+                            </div>
+                            <div class="info">
+                                <h4>Suzie Peterson</h4>
+                                <h5>USHCNs</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+@code{
+    public async Task CheckLogin()
+    {
+        var clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+        if (clientData != null)
+        {
+            navigation.NavigateTo("client/request-service");
+        }
+        else
+        {
+            navigation.NavigateTo("client/sign-in");
+        }
+    }
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            await jsRunTime.InvokeVoidAsync("Slider");
+        }
+    }

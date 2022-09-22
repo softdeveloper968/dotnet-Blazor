@@ -1,0 +1,250 @@
+﻿@page "/client/patient-info-review"
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IMapper _mapper
+@using GaHealthcareNurses.Client.Data.ViewModels
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Client.Data.InputSelectValidation
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment env
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using System;
+@using GaHealthcareNurses.Client.Helper
+@using Syncfusion.Blazor.Spinner
+
+<GaHealthcareNurses.Client.Shared.ClientHeader />
+
+@if (sentRequest == false)
+{
+
+    <div class="spin-row">
+        <SfSpinner Size="40" Type="SpinnerType.Material" Visible="true"></SfSpinner>
+    </div>
+}
+else
+{
+    <div class="frontend default-padding">
+        <div class="login_sec">
+            <div class="center_login">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="site-heading text-center">
+                            <h2 data-aos="fade-up">Post review : <span>You won’t be able to edit after publishing.</span></h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="login_box">
+                    <div class="chos_serv formSec">
+                        <EditForm Model="@patientInfo" OnValidSubmit="() => SendServiceRequest(patientInfo)">
+
+                            <span class="custom-dropdown patin_drop post_rviebox">
+                                <div class="fis_namb">
+                                    <span class="left_nm">First Name:</span>
+                                    <span class="right_nm">@patientInfo.FirstName</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Last Name:</span>
+                                    <span class="right_nm">@patientInfo.LastName</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Middle Name:</span>
+                                    <span class="right_nm">@patientInfo.MiddleInitial</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Age:</span>
+                                    <span class="right_nm">@patientInfo.Age</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Address Line 1:</span>
+                                    <span class="right_nm">@patientInfo.AddressLine1</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">State:</span>
+                                    <span class="right_nm">@state.Name</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">City:</span>
+                                    <span class="right_nm">@city.Name</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Postal Code:</span>
+                                    <span class="right_nm">@city.ZipCode</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Preferred Gender:</span>
+                                    <span class="right_nm">@patientInfo.GenderPreference</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Service Required:</span>
+                                    <span class="right_nm">@service.Name</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Start Date:</span>
+                                    <span class="right_nm">@Convert.ToDateTime(patientInfo.Date).ToShortDateString()</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Time:</span>
+                                    <span class="right_nm">@Convert.ToDateTime(patientInfo.Time).ToShortTimeString()</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Total Hours:</span>
+                                    <span class="right_nm detail_txr">@patientInfo.TotalHours</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">End Date:</span>
+                                    <span class="right_nm">@Convert.ToDateTime(patientInfo.EndDate).ToShortDateString()</span>
+                                </div>
+
+                                <div class="fis_namb">
+                                    <span class="left_nm">Frequency:</span>
+                                    <span class="right_nm">@patientInfo.Frequency</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Job Title:</span>
+                                    <span class="right_nm">@jobTitle.Title</span>
+                                </div>
+                                <div class="fis_namb">
+                                    <span class="left_nm">Job Description:</span>
+                                    <span class="right_nm detail_txr">@patientInfo.MoreInformation</span>
+                                </div>
+
+
+                            </span>
+
+                            <div class="pat_buttobox">
+                                <a href="client/patient-info" class="create_account btn-theme border prev_button">
+                                    Edit
+                                </a>
+                                <button type="submit" name="submit" class="create_account btn-theme border blu_btn">
+                                    Send Service Request
+                                </button>
+                            </div>
+                        </EditForm>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <GaHealthcareNurses.Client.Shared.FormFooter/>
+}
+
+
+@code{
+    JobViewModel jobViewModel = new JobViewModel();
+    CareRecipientInformationModel patientInfo = new CareRecipientInformationModel();
+    State state = new State();
+    City city = new City();
+    ServiceList service = new ServiceList();
+    JobTitle jobTitle = new JobTitle();
+    CareRecipientInformationModel requestSend = new CareRecipientInformationModel();
+    CareRecipient recipient = new CareRecipient();
+    public bool sentRequest = true;
+
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            patientInfo = await localStorage.GetItemAsync<CareRecipientInformationModel>("patientInfo");
+            state = patientInfo.State;
+            city = patientInfo.City;
+            service = patientInfo.ServiceList;
+            jobTitle = patientInfo.JobTitle;
+            var frequencyList = JsonConvert.DeserializeObject<List<Frequency>>(patientInfo.Frequency);
+            string value = string.Empty;
+
+            foreach (var frequency in frequencyList)
+            {
+                if (frequency.Value == true)
+                {
+                    value += frequency.Day + ",";
+
+                }
+            }
+            var lastComma = value.LastIndexOf(',');
+            
+            value = value.Remove(lastComma, 1);
+            patientInfo.Frequency = value;
+            StateHasChanged();
+        }
+    }
+
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    patientInfo = await localStorage.GetItemAsync<CareRecipientInformationModel>("patientInfo");
+    //    state = patientInfo.State;
+    //    city = patientInfo.City;
+    //    service = patientInfo.ServiceList;
+    //    var frequencyList = JsonConvert.DeserializeObject<List<Frequency>>(patientInfo.Frequency);
+    //    string value = string.Empty;
+
+    //    foreach (var frequency in frequencyList)
+    //    {
+    //        if (frequency.Value == true)
+    //        {
+    //            value += frequency.Day + ",";
+    //        }
+    //    }
+    //    patientInfo.Frequency = value;
+    //}
+
+    public async Task SendServiceRequest(CareRecipientInformationModel careRecipient)
+    {
+        sentRequest = false;
+        if (careRecipient == null)
+        {
+            toastService.ShowError("null");
+
+        }
+
+        var careRecipientData = _mapper.Map<CareRecipientViewModel>(careRecipient);
+
+
+        var responseMessage = await Http.PostAsJsonAsync(wsp.Path + "CareRecipient/Post", careRecipientData);
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        var result = (JsonConvert.DeserializeObject<Response<CareRecipient>>(response));
+
+        if (result.Data != null)
+        {
+            jobViewModel.CareRecipientId = result.Data.CareRecipientId;
+            jobViewModel.ClientId = result.Data.ClientId;
+            jobViewModel.Description = result.Data.MoreInformation;
+            jobViewModel.PostedTime = DateTime.Now;
+            jobViewModel.ServiceListId = result.Data.ServiceListId;
+            jobViewModel.JobTitleId = jobTitle.JobTitleId;
+            //   jobViewModel.Title = result.Data.ServiceTitle;
+
+            var httpResponseMessage = await Http.PostAsJsonAsync(wsp.Path + "Job/Post", jobViewModel);
+            var jobResponse = httpResponseMessage.Content.ReadAsStringAsync().Result;
+            var data = (JsonConvert.DeserializeObject<Response<Job>>(jobResponse));
+            if (data.Data != null)
+            {
+                sentRequest = true;
+                toastService.ShowSuccess("Request sent successfully!");
+                await localStorage.RemoveItemAsync("patientInfo");
+                await localStorage.RemoveItemAsync("serviceRequest");
+                navigation.NavigateTo("client/jobs");
+            }
+            else
+            {
+                toastService.ShowError(data.Message);
+            }
+
+        }
+        else
+        {
+            toastService.ShowError("Enter valid details");
+        }
+
+    }
+}

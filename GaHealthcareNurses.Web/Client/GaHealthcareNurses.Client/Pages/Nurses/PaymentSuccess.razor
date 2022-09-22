@@ -1,0 +1,80 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/nurse/paymentsuccess"
+@inject IToastService toastService
+@inject HttpClient Http
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@using GaHealthcareNurses.Client.Data.ViewModels;
+@inject IToastService toastService
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@using Microsoft.AspNetCore.WebUtilities
+@using System.Net.Http.Headers
+@inject IJSRuntime jsRunTime
+@using Syncfusion.Blazor.Spinner
+
+
+<GaHealthcareNurses.Client.Shared.NurseHeader />
+
+  <section class="sucess_sms">
+
+        <div class="container">
+
+            <div class="thankYou_contant">
+
+                <div class="thankYou_img">
+
+                    <img class="w-100" src="assets/img/thanks.png" />
+
+                </div>
+
+                <h2 class="h2">For Buy Courses!</h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+
+@code {
+
+    System.Uri uri;
+    string paymentId, payerId;
+    bool isPaymentExecuted;
+
+    protected override async Task OnInitializedAsync()
+    {
+        uri = navigation.ToAbsoluteUri(navigation.Uri);
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("paymentId", out var aVal))
+        {
+            paymentId = aVal;
+        }
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("PayerID", out var cVal))
+        {
+            payerId = cVal;
+        }
+        if (!string.IsNullOrWhiteSpace(paymentId) && !string.IsNullOrWhiteSpace(payerId))
+        {
+
+            var responseMessage = await Http.GetAsync(wsp.Path + $"Nurses/ExecutePayment?paymentId={paymentId}&payerId={payerId}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            var result = JsonConvert.DeserializeObject<Response<string>>(response);
+
+            if (result.Status == "Success")
+            {
+                isPaymentExecuted = true;
+            }
+          
+        }
+
+    }
+
+}

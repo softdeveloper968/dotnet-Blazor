@@ -1,0 +1,805 @@
+﻿@page "/agency/dashboard";
+@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IToastService toastService
+@inject NavigationManager navigation
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using GaHealthcareNurses.Entity.ViewModels;
+@using GaHealthcareNurses.Entity.Models;
+@inject HttpClient Http;
+@inject GaHealthcareNurses.Client.NewFolder.WebServicePath wsp
+@using Newtonsoft.Json;
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Navigations
+@inject IJSRuntime jsRunTime
+@using Syncfusion.Blazor.Popups
+@using Microsoft.JSInterop
+@using Syncfusion.Blazor.Spinner
+@using Syncfusion.Blazor.Buttons
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@inject IJSRuntime jsRunTime
+<!-- Header
+============================================= -->
+<GaHealthcareNurses.Client.Shared.AgencyHeader />
+
+<div class="top-entry-area client_dashboard">
+    <div class="container">
+        <ul class="nav nav-pills">
+            @if (agencyInformation != null)
+            {
+                <li>
+                    <div style="float:left;padding:45px;padding-top:0">
+                        @if (agencyInformation.Logo != null)
+                        {
+                            <img class="photo" src="@UriHelper.ToAbsoluteUri(agencyInformation.Logo)" alt="@agencyInformation.Name" />
+                        }
+                        else
+                        {
+                            <img class="photo" src="assets/img/DefaultAgencyLogo.png" alt="@agencyInformation.Name" />
+                        }
+                        <br />
+                        <div style="text-align:center">@agencyInformation.Name</div>
+                    </div>
+                </li>
+            }
+
+
+            <li class="active">
+                <a data-toggle="tab" href="#tab1" aria-expanded="true">
+                    <i class="fas fa-th-large"></i> Service Requests (All)
+                </a>
+            </li>
+            <li>
+                <a href="agency/apply_job" aria-expanded="false">
+                    <i class="fas fa-tasks"></i>Bid for Job
+                </a>
+            </li>
+            @*<li>
+                <a href="agency/service-requests" aria-expanded="false">
+                    <i class="fas fa-user-cog"></i> Service Requests (Active)
+                </a>
+            </li>*@
+
+            <li>
+                @*<a data-toggle="tab" href="#tab3" aria-expanded="false">*@
+                <a href="agency/tasklist" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Assign Tasks
+                </a>
+            </li>
+            <li>
+                <a href="/agency/uploaded_docs" aria-expanded="false">
+                    <i class="fas fa-clipboard-list"></i> Documents
+                </a>
+            </li>
+            @*<li>
+            <a href="agency/uploaded_docs" aria-expanded="false">
+                <i class="fas fa-clipboard-list"></i> Uploaded Documents
+            </a>
+        </li>*@
+            @*<li>
+            <a data-toggle="tab" href="#tab4" aria-expanded="false">
+                <i class="fas fa-comment-alt"></i> Messages
+            </a>
+        </li>*@
+            @*<li>
+            <a data-toggle="tab" href="#tab5" aria-expanded="false">
+                <i class="fas fa-user-cog"></i> Settings
+            </a>
+        </li>*@
+        </ul>
+        <div class="col-md-12">
+
+            <div class="tab-content tab-content-info">
+                <!-- Single Item -->
+                <div id="tab1" class="tab-pane fade active in">
+                    <div class='e-statustext'>
+                        This page shows the list of Service Requests (SR) an Agency is connected to.
+                        You can filter the display based on the different statuses represented by the state of the Service Requests.<br />
+                        <strong>Invited</strong> - These are Service Requests that an Agency has been invited to bid for <br />
+                        <strong>Pending</strong> - These are Service Requests that an Agency has bidded for and still expecting reply<br />
+                        <strong>Active</strong> - These are Service Requests currently being serviced by the Agency <br />
+                        <strong>Completed</strong> - These are completed Service Requests.
+                    </div>
+                    <div class="req_service text-left stusagbox">
+                        <div tabindex="0">
+                            <label>Status</label>
+                            <SfDropDownList class="form-control"  TValue="int" TItem="Status" AllowFiltering="true" DataSource="@statusList" Placeholder="Status">
+                                <DropDownListEvents TItem="Status" TValue="int" ValueChange="OnStatusChange"></DropDownListEvents>
+                                <DropDownListFieldSettings Text="Name" Value="StatusId"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                        </div>
+                    </div>
+                    <div class="info title">
+                        <SfGrid DataSource="@jobsApplied" AllowPaging="true">
+                            <GridEvents RowSelected="RowSelecthandler" TValue="JobApplyForAgency"></GridEvents>
+                            <GridPageSettings PageCount="8" PageSize="6" PageSizes="true"></GridPageSettings>
+                            <GridColumns>
+                                <GridColumn Field="Job.PostedTime" HeaderText="Date" TextAlign="TextAlign.Left" Format="d" Type="ColumnType.Date" Width="120"></GridColumn>
+                                <GridColumn Field="Job.Client.FirstName" HeaderText="Client" TextAlign="TextAlign.Left" Width="120"></GridColumn>
+                                <GridColumn Field="Job.CareRecipient.FirstName" HeaderText="Care Recipient" TextAlign="TextAlign.Left" Width="120"></GridColumn>
+                                <GridColumn Field="Job.CareRecipient.City.Name" HeaderText="Location" TextAlign="TextAlign.Left" Width="120"></GridColumn>
+                                <GridColumn Field="Status.Name" HeaderText="Status" TextAlign="TextAlign.Left" Width="120"></GridColumn>
+                            </GridColumns>
+                        </SfGrid>
+                        <br />
+                        <div class='e-statustext'>
+                            The grid below shows the list of Nurses that have applied to the highlighted Service Requests.
+                            You can expand each nurse to gain access to more detailed information like Work Experience, Education, etc.
+                        </div>
+                        <br />
+                        <div class='e-statustext'>
+                            Nurses That Applied For : <b>@SelectedJob</b>
+
+                        </div>
+
+
+                        <SfGrid ID="Grid" AllowSelection="true" @ref="NursesGrid" DataSource="@jobs" AllowPaging="true">
+
+                            <GridSelectionSettings CheckboxOnly="true" PersistSelection="true"></GridSelectionSettings>
+                            <GridTemplates>
+                                <DetailTemplate>
+                                    @{
+                                        var nurse = (context as JobApply);
+
+                                    }
+                                    <div style="padding:20px">
+                                        <SfTab>
+                                            <TabItems>
+                                                <TabItem>
+                                                    <ChildContent>
+                                                        <TabHeader Text="Personal Info"></TabHeader>
+                                                    </ChildContent>
+                                                    <ContentTemplate>
+                                                        <div style="display:inline-flex">
+
+                                                            <div style="float:left;padding:45px;padding-top:70px"><img class="photo" src="@UriHelper.ToAbsoluteUri(nurse.Nurse.ProfliePicture)" alt="@nurse.Nurse.FirstName" /></div>
+
+                                                            <div style="padding-top: 42px;">
+                                                                <div style="width:265px;float:left;padding:40px">
+                                                                    <span><b>First Name:</b></span> <span class="content">@nurse.Nurse.FirstName</span><br />
+                                                                    <span><b>Last Name:</b></span> <span class="content">@nurse.Nurse.LastName</span><br />
+                                                                    <span><b>Middle Initial:</b></span> <span class="content">@nurse.Nurse.MiddleInitial</span><br />
+                                                                    <span><b>SSN:</b></span> <span class="content">@nurse.Nurse.SocialSecurityNo</span><br />
+                                                                    <span><b>Date of Birth:</b></span> <span class="content">@Convert.ToDateTime(@nurse.Nurse.DateOfBirth).ToShortDateString()</span><br />
+                                                                    <span><b>Email:</b></span> <span class="content">@nurse.Nurse.EmailAddress</span><br />
+                                                                    <span><b>Telephone No:</b></span> <span class="content">@nurse.Nurse.TelephoneNo</span><br />
+                                                                    <span><b>Address:</b></span> <span class="content">@nurse.Nurse.AddressLine1</span><br />
+                                                                    <span><b>City:</b></span> <span class="content">@nurse.Nurse.City.Name</span><br />
+                                                                    <span><b>Zip Code:</b></span> <span class="content">@nurse.Nurse.City.ZipCode</span><br />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ContentTemplate>
+                                                </TabItem>
+
+                                                <TabItem>
+                                                    <ChildContent>
+                                                        <TabHeader Text="Basic Info"></TabHeader>
+                                                    </ChildContent>
+                                                    <ContentTemplate>
+                                                        <div style="display:inline-flex">
+
+                                                            <div style="padding-top:30px">
+
+                                                                <div style="padding-top:10px;">
+                                                                    <table class="table">
+                                                                        <tr>
+                                                                            <th>Best time to contact you</th>
+                                                                            <td>@nurse.Nurse.ContactTime</td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <th>May be contact your present employer?</th>
+                                                                            <td>@nurse.Nurse.ContactPresentEmployer</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Are you prevented from lawfully becoming employed in this country?</th>
+                                                                            <td>@nurse.Nurse.LawfullyBecomingEmployed</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Date available to work</th>
+                                                                            <td>@nurse.Nurse.DateAvailableToWork</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Hours per week to work</th>
+                                                                            <td>@nurse.Nurse.HoursPerWeek</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Are you avaiable to work:</th>
+                                                                            <td>@nurse.Nurse.AvailableToWork</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Do you have your own transportation?</th>
+                                                                            <td>@nurse.Nurse.Trasnportation</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Have you ever been excluded or been determined ineligible for participation in medicare?</th>
+                                                                            <td>@nurse.Nurse.IneligibleForParticipation</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Explanation</th>
+                                                                            <td>@nurse.Nurse.ReasonForIneligible</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Have you ever been convicted of any criminal activity?</th>
+                                                                            <td>@nurse.Nurse.CriminalActivity</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ContentTemplate>
+                                                </TabItem>
+
+                                                <TabItem>
+                                                    <ChildContent>
+                                                        <TabHeader Text="Work Experience"></TabHeader>
+                                                    </ChildContent>
+                                                    <ContentTemplate>
+                                                        <div style="display:inline-flex">
+
+                                                            <div style="padding-top:30px">
+
+                                                                <div style="padding-top:10px;">
+                                                                    @foreach (var workExperience in nurse.Nurse.WorkExperiences)
+                                                                    {
+                                                                        <table class="table">
+                                                                            <tr>
+                                                                                <th>Employer Name</th>
+                                                                                <td>@workExperience.Employer</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Address</th>
+                                                                                <td>@workExperience.Address</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Telephone No</th>
+                                                                                <td>@workExperience.PhoneNo</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Starting/Present Job Title</th>
+                                                                                <td>@workExperience.JobTitle</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Employed From</th>
+                                                                                <td>@Convert.ToDateTime(workExperience.StartDate).ToShortDateString()</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Employed To</th>
+                                                                                <td>@Convert.ToDateTime(workExperience.EndDate).ToShortDateString()</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Starting Hourly Rates</th>
+                                                                                <td>@workExperience.HourlyRate</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Final Hourly Rates</th>
+                                                                                <td>@workExperience.FinalHourlyRate</td>
+                                                                            </tr>
+
+                                                                            <tr>
+                                                                                <th>Supervisor Name</th>
+                                                                                <td>@workExperience.NameOfSupervisor</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Reason for leaving</th>
+                                                                                <td>@workExperience.ReasonForLeaving</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>May we contact your employer?</th>
+                                                                                <td>@workExperience.IsContactAllowed</td>
+                                                                            </tr>
+
+                                                                        </table>
+                                                                        <hr />
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ContentTemplate>
+                                                </TabItem>
+
+                                                <TabItem>
+                                                    <ChildContent>
+                                                        <TabHeader Text="Education"></TabHeader>
+                                                    </ChildContent>
+                                                    <ContentTemplate>
+                                                        <div style="display:inline-flex">
+
+                                                            <div style="padding-top:30px">
+
+                                                                <div style="padding-top:10px;">
+                                                                    @foreach (var education in nurse.Nurse.Educations)
+                                                                    {
+                                                                        <h3>@education.EducationType.Name</h3>
+                                                                        <table class="table">
+                                                                            <tr>
+                                                                                <th>Complete Address</th>
+                                                                                <td>@education.CompleteAddress</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Attended From</th>
+                                                                                <td>@Convert.ToDateTime(education.AttendedFrom).ToShortDateString()</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Attended To</th>
+                                                                                <td>@Convert.ToDateTime(education.AttendedTo).ToShortDateString()</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Major</th>
+                                                                                <td>@education.Major</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Type Diploma/Degree</th>
+                                                                                <td>@education.Type</td>
+                                                                            </tr>
+
+                                                                            <tr>
+                                                                                <th>Describe any specialized training,skills and extra-curricular activities</th>
+                                                                                <td>@education.SpecializedTraining</td>
+                                                                            </tr>
+
+                                                                            <tr>
+                                                                                <th>Other Qualifications</th>
+                                                                                <td>@education.OtherQualification</td>
+                                                                            </tr>
+                                                                        </table>
+
+                                                                    }
+                                                                    <h3>Registration/ Certification/ License</h3>
+                                                                    @foreach (var certification in nurse.Nurse.Certifications)
+                                                                    {
+                                                                        <table class="table">
+                                                                            <tr>
+                                                                                <th>Type</th>
+                                                                                <td>@certification.CertificationType</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Number</th>
+                                                                                <td>@certification.CertificationNumber</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>State</th>
+                                                                                <td>@certification.CertificationState</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Expiration</th>
+                                                                                <td>@certification.DateOfExpiration</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Type Diploma/Degree</th>
+                                                                                <td>@certification.Type</td>
+                                                                            </tr>
+
+                                                                        </table>
+                                                                    }
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ContentTemplate>
+                                                </TabItem>
+
+                                                <TabItem>
+                                                    <ChildContent>
+                                                        <TabHeader Text="Other"></TabHeader>
+                                                    </ChildContent>
+                                                    <ContentTemplate>
+                                                        <div style="display:inline-flex">
+
+                                                            <div style="padding-top:30px">
+
+                                                                <div style="padding-top:10px;">
+                                                                    <h3>Personal/Professional References</h3>
+                                                                    @foreach (var reference in nurse.Nurse.References)
+                                                                    {
+                                                                        <table class="table">
+                                                                            <tr>
+                                                                                <th>Name</th>
+                                                                                <td>@reference.Name</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Phone Number</th>
+                                                                                <td>@reference.PhoneNo</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <th>Occupation</th>
+                                                                                <td>@reference.Occupation</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    }
+                                                                    <h3>Emergency Contact</h3>
+                                                                    <table class="table">
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <td>@nurse.Nurse.EmergencyContactName</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Relationship</th>
+                                                                            <td>@nurse.Nurse.EmergencyContactRelationship</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>Address</th>
+                                                                            <td>@nurse.Nurse.EmergencyContactPhone</td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </ContentTemplate>
+                                                </TabItem>
+
+
+                                            </TabItems>
+                                        </SfTab>
+                                    </div>
+                                </DetailTemplate>
+                            </GridTemplates>
+
+                            <GridColumns>
+                                <GridColumn Field="Nurse.FirstName" HeaderText="First Name" Width="110"> </GridColumn>
+                                <GridColumn Field="Nurse.LastName" HeaderText="Last Name" Width="110"></GridColumn>
+                                <GridColumn Field="Nurse.EmailAddress" HeaderText="Email Address" Width="110"></GridColumn>
+                                <GridColumn Field="Nurse.TelephoneNo" HeaderText="Telephone Number" Width="110"></GridColumn>
+                                <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
+                                <GridColumn Width="100" TextAlign="TextAlign.Right">
+                                    <Template>
+                                        <SfButton @onclick="SendOffer">Accept</SfButton>
+                                    </Template>
+                                </GridColumn>
+
+                            </GridColumns>
+                        </SfGrid>
+                    </div>
+                </div>
+
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div id="tab4" class="tab-pane fade">
+
+                    <div class="main-veiw">
+                        <div class="top-nav">
+                            <div class="logo">Messages</div>
+                        </div>
+                        <div class="content">
+                            <div class="message-list">
+                                <!-- <div class="list-top">
+                                    <input type="text">
+                                    <button class="search">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button class="add">
+                                        +
+                                    </button>
+                                    <button class="close-list">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </button>
+                                </div>-->
+                                <div class="list">
+                                    <div class="contact unread">
+                                        <div class="icon">
+                                            <img src="https://placekitten.com/200/200" alt="kitten-image">
+                                        </div>
+                                        <div class="blurb">
+                                            <h2 class="name">
+                                                Steve Wiggins
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="contact unread active">
+                                        <div class="icon">
+                                            <img src="https://placekitten.com/200/200?image=2" alt="kitten-image">
+                                        </div>
+                                        <div class="blurb">
+                                            <h2 class="name">
+                                                Invasion Force
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <div class="icon">
+                                            <img src="https://placekitten.com/550/555" alt="kitten-image">
+                                        </div>
+                                        <div class="blurb">
+                                            <h2 class="name">
+                                                John Doe
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <div class="icon">
+                                            <img src="https://placekitten.com/700/700?image=16" alt="kitten-image">
+                                        </div>
+                                        <div class="blurb">
+                                            <h2 class="name">
+                                                Maria Hugges
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div class="contact">
+                                        <div class="icon">
+                                            <img src="https://placedog.net/400/400" alt="puppy-image">
+                                        </div>
+                                        <div class="blurb">
+                                            <h2 class="name">
+                                                Commander Dave
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat">
+                                <div class="top">
+                                    <div class="open-message">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </div>
+                                    <div class="name" id="open">
+                                        Invasion Force
+                                    </div>
+                                    <!--
+                                    <div class="button-container">
+                                        <button>
+                                            <i class="fa fa-phone"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fa fa-camera"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fa fa-folder"></i>
+                                        </button>
+                                    </div>-->
+                                </div>
+                                <div class="message-container">
+                                    <div class="comment other">
+                                        <img src="https://placekitten.com/700/700?image=16" alt="">
+                                        <div class="bubble">
+                                            yes this is great
+                                        </div>
+                                    </div>
+                                    <div class="divider">
+                                        <span>
+                                            Feb 8 12:01
+                                        </span>
+                                    </div>
+                                    <div class="comment other">
+                                        <img src="https://placekitten.com/700/700?image=12" alt="">
+                                        <div class="bubble">
+                                            Did you find a place for monday's metting?
+                                        </div>
+                                    </div>
+                                    <div class="comment me">
+                                        <img src="https://placekitten.com/300/300?image=10" alt="">
+                                        <div class="bubble">
+                                            I found a couple venues. The one on meeting street seems nice.
+                                        </div>
+                                    </div>
+                                    <div class="comment me">
+                                        <img src="https://placekitten.com/300/300?image=10" alt="">
+                                        <div class="bubble">
+                                            can you give me some guidelines to follow as I look for one?
+                                        </div>
+                                    </div>
+                                    <div class="comment other">
+                                        <img src="https://placekitten.com/1000/1000?image=12" alt="">
+                                        <div class="bubble">
+                                            Here's a link to a good one. It should be avalible.
+                                            <a href="#">venues.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="divider">
+                                        <span>Today 8:58 PM</span>
+                                    </div>
+                                    <div class="comment me">
+                                        <img src="https://placekitten.com/300/300?image=10" alt="">
+                                        <div class="bubble">
+                                            Are we still holding the metting on monday?
+                                        </div>
+                                    </div>
+                                    <div class="comment other">
+                                        <img src="https://placekitten.com/1000/1000?image=12" alt="">
+                                        <div class="bubble">
+                                            Yeah, can you bring napkins?
+                                        </div>
+                                    </div>
+                                    <div class="comment other">
+                                        <img src="https://placekitten.com/700/700?image=16" alt="">
+                                        <div class="bubble">
+                                            I've got napkins covered
+                                        </div>
+                                    </div>
+                                    <div class="comment me">
+                                        <img src="https://placekitten.com/300/300?image=10" alt="">
+                                        <div class="bubble">
+                                            How do you feel about terraforming?
+                                        </div>
+                                    </div>
+                                    <div class="comment other">
+                                        <img src="https://placekitten.com/1000/1000?image=12" alt="">
+                                        <div class="bubble">
+                                            I feel like thats's a bit off topic.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <button class="attach">
+                                        <i class="fa fa-paperclip"></i>
+                                    </button>
+                                    <div class="textarea-container">
+                                        <textarea type="text" placeholder="message"></textarea>
+                                    </div>
+                                    <button class="send">
+                                        <i class="fa fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <button class="close">
+                                    x
+                                </button>
+                                <img src="https://placekitten.com/200/200?image=2" alt="">
+                                <h3>Invasion Force</h3>
+                                <div class="bio">
+                                    A bunch of great weirdos
+                                </div>
+                                <ul class="contact-list">
+                                    <li>
+                                        <img class="contact-img" src="https://placekitten.com/700/700?image=16" alt="">
+                                        <span class="name">
+                                            Maria Hugges
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img class="contact-img" src="https://placekitten.com/1000/1000?image=12" alt="">
+                                        <span class="name">
+                                            Lucy Farrel
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img class="contact-img" src="https://placekitten.com/540/540" alt="">
+                                        <span class="name">
+                                            Your Neighbor
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <img class="contact-img" src="https://placedog.net/300/300" alt="">
+                                        <span class="name">
+                                            Sam Willis
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Single Item -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<SfDialog ResizeHandles="@dialogResizeDirections" EnableResize="true" AllowDragging="true" IsModal="true" ShowCloseIcon="true" Width="400px" Visible="false" @ref="OfferSent">
+    <DialogEvents Closed="@OfferSentDialogClose"></DialogEvents>
+    <DialogPositionData X="center" Y="center"></DialogPositionData>
+    <DialogTemplates>
+        <Header>
+            <h3>Congratulations!</h3>
+        </Header>
+        <Content>
+            <div>
+                <span>Job offer is sent successfully!</span>
+            </div>
+
+        </Content>
+    </DialogTemplates>
+    <DialogAnimationSettings Effect="@DialogEffect.Zoom"></DialogAnimationSettings>
+</SfDialog>
+
+
+<SfSpinner @ref="sfSpinner" Size="40" Type="SpinnerType.Bootstrap4" Visible="false"></SfSpinner>
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+@*<GaHealthcareNurses.Client.Shared.Footer />*@
+
+@code{
+    LoginViewModel<UserDetails> agencyData = new LoginViewModel<UserDetails>();
+    IEnumerable<JobApplyForAgency> jobsApplied;
+    List<Status> statusList = new List<Status>();
+    List<JobApply> jobs = new List<JobApply>();
+    public string SelectedJob { get; set; }
+    public int? RowIndex { get; set; }
+    SfDialog OfferSent;
+    SfSpinner sfSpinner;
+    SfGrid<JobApply> NursesGrid;
+    Employer agencyInformation = new Employer();
+    JobApply sentOfferToNurse = new JobApply();
+    private ResizeDirection[] dialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
+
+    protected override async Task OnInitializedAsync()
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"Status/GetByTypeId?id={3}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        statusList = (JsonConvert.DeserializeObject<Response<List<Status>>>(response)).Data;
+    }
+
+
+    public void OfferSentDialogClose(object args)
+    {
+        OfferSent.Hide();
+        navigation.NavigateTo("agency/dashboard", forceLoad: true);
+    }
+
+
+    public async Task RowSelecthandler(RowSelectEventArgs<JobApplyForAgency> Args)
+    {
+        SelectedJob = Args.Data.Job.JobTitle.Title;
+        RowIndex = Args.Data.JobId;
+
+        var responseMessage = await Http.GetAsync(wsp.Path + $"JobApply/GetByJobIdAndStatusId?jobId={Args.Data.JobId}&statusId={4}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        jobs = (JsonConvert.DeserializeObject<Response<List<JobApply>>>(response)).Data;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            agencyData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("agencyData");
+            if (agencyData != null)
+            {
+                await jsRunTime.InvokeAsync<object>("removeHeaderCheckBox");
+
+                var responseMessage = await Http.GetAsync(wsp.Path + $"JobApplyForEmployer/GetByEmployerId?id={agencyData.UserDetails.UserId}");
+                var response = responseMessage.Content.ReadAsStringAsync().Result;
+                jobsApplied = (JsonConvert.DeserializeObject<Response<List<JobApplyForAgency>>>(response)).Data;
+
+                var agencyResponseMessage = await Http.GetAsync(wsp.Path + $"Employer/GetById?id={agencyData.UserDetails.UserId}");
+                var agencyResponse = agencyResponseMessage.Content.ReadAsStringAsync().Result;
+                agencyInformation = (JsonConvert.DeserializeObject<Response<Employer>>(agencyResponse)).Data;
+
+                StateHasChanged();
+            }
+            else
+            {
+                navigation.NavigateTo("agency/sign-in");
+
+            }
+        }
+    }
+
+    public async Task OnStatusChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<int, Status> args)
+    {
+        var responseMessage = await Http.GetAsync(wsp.Path + $"JobApplyForEmployer/GetByStatusId?employerId={agencyData.UserDetails.UserId}&statusId={args.ItemData.StatusId}");
+        var response = responseMessage.Content.ReadAsStringAsync().Result;
+        jobsApplied = (JsonConvert.DeserializeObject<Response<IEnumerable<JobApplyForAgency>>>(response)).Data;
+
+    }
+
+
+    public async Task SendOffer()
+    {
+        await sfSpinner.ShowAsync();
+        var jobData = await NursesGrid.GetSelectedRecords();
+        if (jobData.Count == 0)
+        {
+            toastService.ShowError("Please select nurse");
+            await sfSpinner.HideAsync();
+        }
+        else
+        {
+            var responseMessage = await Http.GetAsync(wsp.Path + $"JobApply/HireNurse?id={jobData.First().Id}");
+            var response = responseMessage.Content.ReadAsStringAsync().Result;
+            sentOfferToNurse = (JsonConvert.DeserializeObject<Response<JobApply>>(response)).Data;
+            if (sentOfferToNurse != null)
+            {
+                await sfSpinner.HideAsync();
+                await OfferSent.Show();
+            }
+        }
+    }
+
+}

@@ -1,0 +1,126 @@
+﻿@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IToastService toastService
+@inject NavigationManager navigation
+<!-- Header
+============================================= -->
+<header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default attr-border navbar-sticky bootsnav on no-full">
+
+        <div class="container">
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="assets/img/logo.png" class="logo logo-display" alt="Logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                    <li class="dropdown ">
+                        <a href="/" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                        <ul class="dropdown-menu animated">
+                            @if (adminData == null)
+                            {
+                                <li><a href="admin">Admin Login</a></li>
+                            }
+                            else
+                            {
+                                <li><a @onclick="AdminLogout">Admin LogOut</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="client">Care Recipients</a>
+
+                    </li>
+                    <li class="active">
+                        <a href="agency">Agencies</a>
+
+                    </li>
+                    <li>
+                        <a href="nurses">Nurses</a>
+
+                    </li>
+                    <li>
+                        <a href="http://www.ushealthcarenurses.blog/" target="_blank">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://us-healthcare-nurses.myshopify.com/" target="_blank">Shop</a>
+                    </li>
+                    <li>
+                        <a href="https://ushealthcarenurses.ceu360.com" target="_blank">Education</a>
+                    </li>
+
+                    @*<li>
+            <a href="">contact</a>
+        </li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown"><i class="fas fa-user"></i></a>
+                        <ul class="dropdown-menu animated">
+
+                            @if (agencyData == null)
+                            {
+                                <li><a href="agency/sign-in">Sign In</a></li>
+                                <li><a href="agency/register">Sign Up</a></li>
+                                <li><a href="nurses-map">Nurses Map</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="agency/dashboard">Dashboard</a></li>
+                                <li><a href="agency/settings">Settings</a></li>
+                                <li><a @onclick="Logout">Sign Out</a></li>
+                                <li><a href="nurses-map">Nurses Map</a></li>
+                            }
+
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+
+</header>
+<!-- End Header -->
+
+@code{
+    LoginViewModel<UserDetails> agencyData = new LoginViewModel<UserDetails>();
+    Response<string> adminData = new Response<string>();
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            agencyData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("agencyData");
+            adminData = await localStorage.GetItemAsync<Response<string>>("adminData");
+        }
+        StateHasChanged();
+    }
+
+    public async Task Logout()
+    {
+        await localStorage.RemoveItemAsync("agencyData");
+        toastService.ShowSuccess("Logout successfull!");
+        navigation.NavigateTo("agency", forceLoad: true);
+    }
+
+
+
+
+    public async Task AdminLogout()
+    {
+        await localStorage.RemoveItemAsync("adminData");
+        toastService.ShowSuccess("Logout successfull!");
+        // Task.Delay(2000);
+        navigation.NavigateTo("/", forceLoad: true);
+    }
+}

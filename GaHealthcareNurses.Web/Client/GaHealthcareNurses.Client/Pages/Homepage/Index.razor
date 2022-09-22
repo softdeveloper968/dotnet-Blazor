@@ -1,0 +1,424 @@
+﻿@layout GaHealthcareNurses.Client.Shared.SecondaryLayout
+@page "/home";
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject NavigationManager navigation
+@using GaHealthcareNurses.Entity.ViewModels
+@using GaHealthcareNurses.Entity.Models
+@inject IJSRuntime jsRunTime
+
+
+<GaHealthcareNurses.Client.Shared.TopHeader />
+
+<GaHealthcareNurses.Client.Shared.HomepageHeader />
+
+<!-- Start Banner
+============================================= -->
+
+
+
+<div class="breadcrumb-area shadow dark gry_lght bg-fixed text-light video_banner position-relative">
+    <div class="text-wrap vide_content banner-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 item content">
+                    <p data-animation="animated slideInLeft">
+                        Do you need access to qualified nurses?
+                    </p>
+                    <h1 data-animation="animated slideInUp">Find an angel with a <span>stethoscope</span></h1>
+                    <a href="javascript:void(0)" @onclick="()=>CheckLogin()" data-aos="fade-left" class="btn btn-theme effect btn-md req_btn">Create A Free Service Request</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="video_box">
+        <video autoplay loop muted class="care__video" preload >
+            <source controls="true" src="assets/img/merge-video.mp4">
+        </video>
+    </div>
+</div>
+
+
+<!--<div class="banner-area heading-exchange text-dark custm_pbot">
+    <div id="bootcarousel" class="carousel transparent-nav inc-top-heading slide carousel-fade animate_text" data-ride="carousel">-->
+<!-- Wrapper for slides -->
+<!--<div class="carousel-inner carousel-zoom">
+    <div class="item active">
+        <div class="slider-thumb bg-cover" style="background-image: url(assets/img/7-4.jpg);"></div>
+        <div class="box-table">
+            <div class="box-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="content">
+                                <p data-animation="animated slideInLeft">
+                                    Request your nursing service for free
+                                </p>
+                                <h1 data-animation="animated slideInUp">Find an angel with a <span>stethoscope</span></h1>
+
+                                <a href="javascript:void(0)" @onclick="()=>CheckLogin()" data-animation="animated slideInUp" class="btn btn-theme effect btn-md">Create A Free Service request</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item ">
+        <div class="slider-thumb bg-cover" style="background-image: url(assets/img/5-4.jpg);"></div>
+        <div class="box-table">
+            <div class="box-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="content">
+                                <p data-animation="animated slideInLeft">
+                                    Do you need access to qualified nurses?
+                                </p>
+                                <h1 data-animation="animated slideInUp">Gain access to our database of <span>Nurses</span></h1>
+
+                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="agency/register">Sign Up For Free</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="slider-thumb bg-cover" style="background-image: url(assets/img/6-3.jpg);"></div>
+        <div class="box-table">
+            <div class="box-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="content">
+                                <p data-animation="animated slideInLeft">
+                                    Looking for nursing work?
+                                </p>
+                                <h1 data-animation="animated slideInUp">Register with us and get a job nearby <span>you</span></h1>
+
+                                <a data-animation="animated slideInUp" class="btn btn-theme effect btn-md" href="nurse/register">Sign up For Free</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>-->
+<!-- End Wrapper for slides -->
+<!-- Left and right controls -->
+<!--<a class="left carousel-control" href="#bootcarousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#bootcarousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>-->
+<!-- End Banner -->
+<!-- Start Top Entry
+============================================= -->
+<div class="top-entry-area text-center default-padding bottom-less custm_pbot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">How it  <span>works</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item-box">
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-right">
+                    <div class="item">
+                        <i><img src="assets/img/post_jobs.png"></i>
+                        <h4>CREATE A SERVICE REQUEST FOR FREE</h4>
+                        <p>
+                            You can create a service request to take care of a loved one, your child, or a dependant.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-up">
+                    <div class="item">
+                        <i><img src="assets/img/professional.png"></i>
+                        <h4>GET A LIST OF AGENCIES</h4>
+                        <p>
+                            We will send you a list of agencies and their rates so that you can pick the one the best meets your need.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-4 single-item dur_anmt" data-aos="fade-left">
+                    <div class="item">
+                        <i><img src="assets/img/nurse_icon.png"></i>
+                        <h4>QUALIFIED NURSE FOR YOU</h4>
+                        <p>
+                            The agency will get you the nurse with the required skills that best suits your need.
+                        </p>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Entry -->
+<!-- Start Department
+============================================= -->
+<div class="departments-area bg-gray default-padding bottom-less custm_pbot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">Available <span>Services</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="department-items text-center">
+                <!-- Single Item -->
+                <div class="col-md-6 ">
+                    <div class="item zoom_duration" data-aos="zoom-in">
+                        <div class="thumb ">
+                            <a><img src="assets/img/pediatric-care.png" alt="Thumb"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="#">Pediatric Care</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-6 ">
+                    @*<div class="col-md-3 col-sm-6 equal-height">*@
+                    <div class="item zoom_duration" data-aos="zoom-in">
+                        <div class="thumb">
+                           @* <a href="#"><img src="assets/img/skilled-nursing.png" alt="Thumb"></a>*@
+                            <a><img src="assets/img/skilled-nursing1.jpg" alt="Thumb"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="#">Skilled Nursing</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="department-items text-center">
+                <!-- Single Item -->
+                <div class="col-md-6 ">
+                    <div class="item zoom_duration" data-aos="zoom-in">
+                        <div class="thumb">
+                            <a><img src="assets/img/companion-sitters.png" alt="Thumb"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="#">Companion Sitters</a></h4>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                <!-- Single Item -->
+                <div class="col-md-6 ">
+                    <div class="item zoom_duration" data-aos="zoom-in">
+                        <div class="thumb">
+                            <a><img src="assets/img/home-healthcare.png" alt="Thumb"></a>
+                        </div>
+                        <div class="info">
+                            <h4><a href="#">Home Healthcare</a></h4>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Department -->
+<!-- Start Doctors
+============================================= -->
+<!-- <div class="doctor-area carousel-shadow default-padding bottom-less custm_pbot">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="site-heading text-center">
+                    <h2 data-aos="fade-up">Caring people on their weakest <span>moments</span></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row dur_anmt" data-aos="fade-up">
+            <div class="col-md-12">
+                <div id="carousel" class="doctor-items doctor-carousel owl-carousel owl-theme text-center">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/specialist1.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#!"><i class="fas fa-user-md"></i></a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>Mary Barra</h4>
+                            <h5>Critical Care Nurse, New Jersey</h5>
+                            <p>Her description here Lorem ipsum dolor adipiscing elit. Mauris volutpat velit non dictum dignissim.</p>
+                            <div class="starsDiv">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/specialist2.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#!"><i class="fas fa-user-md"></i></a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>Ahel Natasha</h4>
+                            <h5>Dental surgeon</h5>
+                            <p>Her description here Lorem ipsum dolor adipiscing elit. Mauris volutpat velit non dictum dignissim.</p>
+                            <div class="starsDiv">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/specialist3.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#!"><i class="fas fa-user-md"></i></a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>Gabriela Beckett</h4>
+                            <h5>Cosmetic Surgeon</h5>
+                            <p>Her description here Lorem ipsum dolor adipiscing elit. Mauris volutpat velit non dictum dignissim.</p>
+                            <div class="starsDiv">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/specialist4.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#!"><i class="fas fa-user-md"></i></a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>Ahel Natasha</h4>
+                            <h5>Dental surgeon</h5>
+                            <p>Her description here Lorem ipsum dolor adipiscing elit. Mauris volutpat velit non dictum dignissim.</p>
+                            <div class="starsDiv">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/img/specialist5.jpg" alt="Thumb">
+                            <div class="overlay">
+                                <a href="#!"><i class="fas fa-user-md"></i></a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>Gabriela Beckett</h4>
+                            <h5>Cosmetic Surgeon</h5>
+                            <p>Her description here Lorem ipsum dolor adipiscing elit. Mauris volutpat velit non dictum dignissim.</p>
+                            <div class="starsDiv">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- End Doctors -->
+<!-- Last section
+============================================= -->
+<div class="default-padding bottom-less professona_assist ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumb zoom_duration" data-aos="zoom-in">
+                    <img src="assets/img/getJobs.jpg" alt="Thumb">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info">
+                    <h2 data-aos="fade-left">Are you a Registered Nurse, Certified Nursing Assistant looking for work?</h2>
+                    <p data-aos="fade-up">
+                        We have a network of agencies constantly looking for nurses to service healthcare needs all across the United States.
+                    </p>
+                    <p data-aos="fade-up">
+                        You can register on our platform free of charge and our mobile will send you notifications as shifts become available in your area. Sign up today.
+                    </p>
+                    <p data-aos="fade-up"><a class="btn btn-theme border btn-md" href="nurse/register">Get Started</a></p>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Last section -->
+
+<GaHealthcareNurses.Client.Shared.FormFooter />
+
+
+@code{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await jsRunTime.InvokeVoidAsync("HomePageSlider");
+    }
+    public async Task CheckLogin()
+    {
+        var clientData = await localStorage.GetItemAsync<LoginViewModel<UserDetails>>("clientData");
+        if (clientData != null)
+        {
+            navigation.NavigateTo("client/request-service");
+        }
+        else
+        {
+            navigation.NavigateTo("client/sign-in");
+        }
+    }
+
+}
